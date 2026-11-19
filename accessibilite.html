@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accessibilité – Tous prêts</title>
+<meta name="description" content="Engagement d’accessibilité de l’application Tous prêts (gros caractères, mode sombre, hors ligne).">
+<link rel="canonical" href="https://tousprets.fr/accessibilite.html">
+
+<meta name="theme-color" content="#F2F5EF">
+<style>
+:root{--bg:#F2F5EF;--raised:#FFF;--line:#D7E0D1;--text:#26342B;--dim:#657266;--teal:#3F6F5E;--brick:#B0503B;--gold-soft:#F5EBD8}
+@media (prefers-color-scheme:dark){:root{--bg:#1B211C;--raised:#232B25;--line:#36423A;--text:#E6EDE6;--dim:#A3B0A5;--teal:#7FB8A2;--brick:#E08A74;--gold-soft:#3A3122}}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;max-width:680px;margin:0 auto;padding:28px 18px 60px;font-size:17px}
+h1{font-family:Georgia,serif;font-weight:400;font-size:26px;margin:0 0 4px}h2{font-size:19px;margin:28px 0 6px;color:var(--teal)}
+a{color:var(--teal)}a:focus{outline:3px solid var(--teal);outline-offset:2px}.meta{color:var(--dim);font-size:14px}
+.box{background:var(--raised);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:16px 0}
+.warn{border-left:4px solid var(--brick)}.todo{background:var(--gold-soft);font-weight:700;padding:0 4px}
+nav{font-size:15px;margin-bottom:18px}footer{margin-top:40px;font-size:14px;color:var(--dim);border-top:1px solid var(--line);padding-top:12px}
+</style>
+</head>
+<body>
+<nav><a href="./">← Retour à l'appli Tous prêts</a></nav>
+<main>
+<h1>Déclaration d'accessibilité</h1>
+<p class="meta">Établie le 16 novembre 2026</p>
+<p>L'éditeur de « Tous prêts » s'engage à rendre son application accessible, conformément à l'article 47 de la loi n° 2005-102 du 11 février 2005, en s'appuyant sur le Référentiel général d'amélioration de l'accessibilité (RGAA 4.1).</p><p>Cette déclaration s'applique à l'application web progressive « Tous prêts » et à ses pages d'information.</p>
+<h2>État de conformité</h2><p>« Tous prêts » est <strong>partiellement conforme</strong> au RGAA 4.1. Ce constat repose sur une <strong>auto-évaluation outillée</strong> (axe-core 4, tests automatisés et vérifications clavier scriptées) réalisée le 16 novembre 2026. <strong>Aucun audit externe</strong> n'a été réalisé : le taux de conformité aux 106 critères du RGAA n'est donc pas mesuré.</p>
+<h2>Résultats des tests</h2>
+<p>Outil : axe-core (règles WCAG 2.0/2.1 niveaux A et AA et bonnes pratiques), injecté avec Playwright (Chromium, écran mobile 360 × 740 px).</p>
+<p>Écrans testés : les 7 onglets (Accueil, Scénarios, Guides, Stock, Foyer, Contacts, Voisins), un guide ouvert, Réglages, Mode urgence, Mode Exercice, Mode Atelier ; chacun en thème clair, sombre et mode nuit (filtre rouge), en taille de texte normale et « très grand » (66 combinaisons). Pages statiques : accessibilité, confidentialité, mentions légales, sources (thèmes clair et sombre).</p>
+<div class="box"><ul>
+<li>Avant corrections : 349 non-conformités « sérieuses » détectées, toutes de contraste (dont texte blanc sur fond accentué en thème sombre et en mode nuit, liens du pied de page, bouton Urgence) ; 0 « critique ».</li>
+<li>Après corrections : <strong>0 non-conformité détectée</strong> par axe-core sur l'ensemble des combinaisons testées (critiques, sérieuses, modérées, mineures).</li>
+<li>Débordement horizontal : aucun, y compris en taille « très grand » sur 360 px de large (équivalent ou plus contraignant qu'un zoom à 200 %).</li>
+<li>Clavier (test scripté) : lien d'évitement en premier ; fenêtres Réglages, Urgence, Exercice et Atelier déclarées modales (<code>aria-modal</code>), focus placé sur leur titre, piégé dans la fenêtre (0 sortie sur 80 tabulations), fermeture par Échap et retour du focus au bouton d'origine ; cartes de l'accueil et questions des guides utilisables au clavier (Entrée / Espace, état « déplié » annoncé).</li>
+<li>Annonces : changement d'écran, de thème et de taille de texte annoncés par une zone <code>aria-live</code> ; confirmations « Copié » et étapes du mode Exercice également annoncées.</li>
+</ul></div>
+<p>Un outil automatique ne détecte qu'une partie des défauts : ces résultats ne remplacent pas un audit humain.</p>
+<h2>Contenus non accessibles connus ou non vérifiés</h2><ul><li>Pas encore de test réel avec lecteurs d'écran (NVDA, TalkBack, VoiceOver).</li><li>Les pictogrammes émoji sont masqués aux lecteurs d'écran quand ils sont décoratifs, mais certains textes générés peuvent encore en contenir.</li><li>Le partage par QR code nécessite la caméra ; une alternative par code texte copiable existe.</li><li>Les messages d'erreur de sauvegarde utilisent des boîtes de dialogue natives du navigateur.</li><li>Critères RGAA non automatisables (pertinence des alternatives, cohérence de la navigation, documents téléchargés…) non évalués.</li></ul>
+<h2>Établissement de cette déclaration</h2><p>Technologies utilisées : HTML, CSS, JavaScript. Outils : axe-core, Playwright (Chromium). Environnement de test : navigateur Chromium, affichage mobile. Prochaine étape prévue : audit par un tiers et tests avec lecteurs d'écran.</p>
+<h2>Retour d'information et contact</h2><p>Si vous n'arrivez pas à accéder à un contenu ou à un service, contactez l'éditeur pour être orienté vers une alternative accessible ou obtenir le contenu sous une autre forme : <a href="mailto:relaxvendome@gmail.com">relaxvendome@gmail.com</a>.</p>
+<h2>Voies de recours</h2><p>Si vous avez signalé un défaut d'accessibilité sans obtenir de réponse satisfaisante, vous pouvez :</p><ul><li>écrire un message au <a href="https://formulaire.defenseurdesdroits.fr/">Défenseur des droits</a> ;</li><li>contacter le délégué du Défenseur des droits dans votre région (<a href="https://www.defenseurdesdroits.fr/carte-des-delegues">liste des délégués</a>) ;</li><li>envoyer un courrier gratuit, sans timbre : Défenseur des droits, Libre réponse 71120, 75342 Paris CEDEX 07.</li></ul>
+</main>
+<footer><a href="confidentialite.html">Confidentialité</a> · <a href="mentions-legales.html">Mentions légales</a> · <a href="accessibilite.html">Accessibilité</a> · <a href="sources.html">Sources et méthode</a></footer>
+</body>
+</html>
