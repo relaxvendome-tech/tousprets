@@ -1,0 +1,26 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.thesurvivaliste.prep",
+      "sha256_cert_fingerprints": [
+        "D8:39:DA:4B:F5:44:AB:7F:C2:03:BD:6A:F3:2B:6F:82:C0:E4:A2:2B:7F:DF:99:4D:72:FD:63:DF:B4:8C:1F:B6"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.thesurvivaliste.app",
+      "sha256_cert_fingerprints": [
+        "2C:FA:16:80:B9:BF:DE:E5:AD:D7:65:36:3F:CF:79:E3:BD:6B:90:48:31:3F:0D:44:02:56:94:69:FB:6B:62:8D"
+      ]
+    }
+  }
+]
