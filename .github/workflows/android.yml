@@ -1,0 +1,63 @@
+name: Android (AAB non signé)
+
+on:
+  push:
+    branches: [android-app]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Projet Android
+        uses: actions/checkout@v4
+
+      - name: Site (branche main)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: site-src
+
+      - name: Copier le site dans les assets
+        run: |
+          dest=android/app/src/main/assets/site
+          mkdir -p "$dest"
+          rsync -a --exclude '.git' --exclude '.github' --exclude '.well-known' \
+            --exclude 'CNAME' --exclude '.nojekyll' --exclude 'README.md' \
+            --exclude '*.txt' --exclude 'robots.txt' --exclude 'sitemap.xml' \
+            site-src/ "$dest/"
+          ls "$dest" | head -50
+          test -f "$dest/index.html"
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - uses: android-actions/setup-android@v3
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.14.3"
+
+      - name: Build AAB + APK
+        working-directory: android
+        run: gradle --no-daemon bundleRelease assembleDebug
+
+      - name: Rassembler les sorties
+        run: |
+          mkdir out
+          cp android/app/build/outputs/bundle/release/app-release.aab out/tous-prets-unsigned.aab
+          cp android/app/build/outputs/apk/debug/app-debug.apk out/tous-prets-debug.apk
+          ls -la out
+
+      - name: Publier en release GitHub
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: android-build-${{ github.run_number }}
+          name: Build Android ${{ github.run_number }}
+          prerelease: true
+          files: out/*

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tous prêts</string>
+    <string name="share_title">Partager</string>
+    <string name="saved">Sauvegarde enregistrée</string>
+    <string name="save_failed">Impossible d\'enregistrer le fichier</string>
+    <string name="no_app">Aucune application disponible pour cette action</string>
+    <string name="camera_denied">Autorisation caméra refusée : le scan de QR code est indisponible</string>
+</resources>
