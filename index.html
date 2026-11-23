@@ -88,7 +88,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;}
   display:flex;align-items:center;justify-content:space-between;
 }
 .topbar .brand{display:flex;align-items:center;gap:8px;}
-.topbar .brand h1{font-size:17px;}
+.topbar .brand h1,.topbar .brand .brand-name{font-size:17px;margin:0;font-family:var(--serif);font-weight:400;line-height:1.2;}
 .emergency-btn{
   background:var(--brick);color:#fff;border:none;border-radius:10px;
   padding:9px 14px;font-weight:700;font-size:13px;cursor:pointer;
@@ -340,7 +340,7 @@ html.ts-xlarge body{zoom:1.3;}
 .welcome-actions button{width:auto;flex:1 1 auto}
 .backup-card{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--bg-soft);border-radius:12px;padding:10px 14px;margin:12px 0;font-size:14px}
 .backup-card button{width:auto;margin:0}
-.topbar{display:grid!important;grid-template-columns:1fr auto 1fr;align-items:center}.topbar::before{content:""}.topbar>div:last-child{justify-self:end}.topbar .brand h1{font-size:24px!important}.topbar .brand{justify-self:center}@media (max-width:560px){.topbar{grid-template-columns:1fr;justify-items:center;row-gap:8px}.topbar::before{display:none}.topbar>div:last-child{justify-self:center}}
+.topbar{display:grid!important;grid-template-columns:1fr auto 1fr;align-items:center}.topbar::before{content:""}.topbar>div:last-child{justify-self:end}.topbar .brand h1,.topbar .brand .brand-name{font-size:24px!important}.topbar .brand{justify-self:center}@media (max-width:560px){.topbar{grid-template-columns:1fr;justify-items:center;row-gap:8px}.topbar::before{display:none}.topbar>div:last-child{justify-self:center}}
 #scenarioChips{flex-direction:column;align-items:stretch;overflow:visible;position:static;gap:8px;margin:0 0 14px}
 #scenarioChips .chip{width:100%;justify-content:flex-start;border-radius:12px;padding:12px 14px;font-size:15px;white-space:normal;text-align:left}
 @media (min-width:900px){#screen-scenarios{display:grid;grid-template-columns:240px minmax(0,1fr);column-gap:24px;align-items:start}#screen-scenarios>*{grid-column:2}#screen-scenarios>.section-title{grid-column:1/-1}#scenarioChips{grid-column:1;grid-row:2/span 4;position:sticky;top:80px}}
@@ -351,7 +351,7 @@ html.ts-xlarge body{zoom:1.3;}
 <a class="skip-link" href="#contenu">Aller au contenu</a>
 
 <header class="topbar">
-  <div class="brand"><span style="font-size:19px;" aria-hidden="true">🧭</span><h1>Tous prêts</h1></div>
+  <div class="brand"><span style="font-size:19px;" aria-hidden="true">🧭</span><p class="brand-name">Tous prêts</p></div>
   <div style="display:flex;gap:8px;">
     <button class="emergency-btn" id="openSettings" aria-label="Réglages" style="background:var(--bg-soft);color:var(--text);"><span aria-hidden="true">⚙️</span></button>
     <button class="emergency-btn" id="openEmergency"><span aria-hidden="true">🆘</span> Urgence</button>
@@ -376,7 +376,7 @@ html.ts-xlarge body{zoom:1.3;}
         <li><strong>Votre stock</strong> : cochez ce que vous avez déjà, l'eau d'abord.</li>
         <li><strong>Vos contacts</strong> : un proche à prévenir en cas de besoin.</li>
       </ol>
-      <p class="welcome-privacy">🔒 Aucun compte, aucune donnée envoyée : tout reste sur votre téléphone.</p>
+      <p class="welcome-privacy">🔒 Aucun compte : tout ce que vous saisissez reste sur votre téléphone.</p>
       <div class="welcome-actions">
         <button class="btn-primary" type="button" id="welcomeStart">Commencer par mon foyer</button>
         <button class="btn-secondary" type="button" id="welcomeLater">Plus tard</button>
@@ -649,10 +649,10 @@ html.ts-xlarge body{zoom:1.3;}
   </section>
 
   <style>.seo-about a{color:var(--text);text-decoration:underline}</style><section class="seo-about" aria-labelledby="seo-about-t" style="max-width:720px;margin:24px auto 8px;padding:0 16px;font-size:15px;line-height:1.6">
-<h2 id="seo-about-t" style="font-size:18px">Préparez votre kit d’urgence 72h en quelques minutes</h2>
+<h1 id="seo-about-t" style="font-size:20px">Kit d’urgence 72h : préparez-le en quelques minutes avec la checklist gratuite</h1>
 <p>Le guide « Tous responsables » du Gouvernement recommande à chaque foyer de pouvoir tenir 72 heures en autonomie en cas de crise : coupure d’électricité, inondation, tempête… Tous prêts transforme cette recommandation en outil simple et concret.</p>
 <p>L’application calcule les quantités d’eau et de nourriture selon la taille de votre foyer, vous permet de cocher ce que vous avez déjà et de suivre votre niveau de préparation. Tout fonctionne hors ligne et reste sur votre téléphone : aucune donnée n’est envoyée.</p>
-<ul><li>La liste du kit d’urgence 72h du guide officiel</li><li>Des quantités adaptées à votre foyer</li><li>Des guides pratiques : <a href="coupure-electricite-que-faire.html">coupure</a>, <a href="inondation-que-faire.html">inondation</a>, <a href="canicule-que-faire.html">canicule</a></li><li>Une <a href="checklist-kit-urgence-72h.html">checklist imprimable</a></li><li>Un espace contacts et voisinage, stocké uniquement sur votre appareil</li></ul>
+<ul><li>La liste du kit d’urgence 72h du guide officiel</li><li>Des quantités adaptées à votre foyer</li><li>Des guides pratiques : <a href="coupure-electricite-que-faire.html">coupure</a>, <a href="inondation-que-faire.html">inondation</a>, <a href="canicule-que-faire.html">canicule</a></li><li>Une <a href="checklist-kit-urgence-72h.html">checklist imprimable</a></li><li>Un espace contacts et voisinage, stocké uniquement sur votre appareil</li><li>Des listes par besoin : <a href="combien-eau-stocker-par-personne.html">réserve d’eau</a>, <a href="aliments-sans-cuisson-kit-urgence.html">aliments sans cuisson</a>, <a href="kit-urgence-bebe.html">kit bébé</a>, <a href="kit-urgence-animaux.html">kit animaux</a>, <a href="frigo-congelateur-coupure-electricite.html">frigo et congélateur</a>, <a href="recharger-telephone-coupure-courant.html">recharger son téléphone</a></li></ul>
 <p>Gratuit, sans publicité, sans inscription. Basé sur le guide « Tous responsables » (SGDSN, 2025). Tous prêts est une initiative citoyenne indépendante, pas un service de l’État.</p>
 </section>
 <footer class="legal">
@@ -2008,7 +2008,7 @@ const BACKUP_KEYS = [
 document.getElementById('openSettings').addEventListener('click', ()=>{
   document.getElementById('settingsOverlay').classList.add('active');
   renderThemeChips();
-  document.getElementById('versionInfo').textContent = `Tous prêts — version ${APP_VERSION}, mise à jour le ${APP_UPDATED}. 100% gratuit, aucune donnée envoyée en ligne.`;
+  document.getElementById('versionInfo').textContent = `Tous prêts — version ${APP_VERSION}, mise à jour le ${APP_UPDATED}. 100% gratuit, vos données restent sur votre appareil.`;
 });
 document.getElementById('closeSettings').addEventListener('click', ()=>{
   document.getElementById('settingsOverlay').classList.remove('active');
@@ -2125,7 +2125,7 @@ if('serviceWorker' in navigator){
   <h2>Scannez pour installer Tous prêts</h2>
   <div id="vxAtelierQr"></div>
   <p class="vx-url" id="vxAtelierUrl"></p>
-  <p>Application gratuite, 100 % hors ligne, aucune donnée envoyée.</p>
+  <p>Application gratuite, 100 % hors ligne, vos données restent sur votre appareil.</p>
   <div class="vx-noprint">
     <button type="button" class="vx-btn" id="vxAtelierPrint">🖨️ Imprimer</button>
     <button type="button" class="vx-btn" id="vxAtelierClose" style="background:#555">Fermer</button>
