@@ -48,6 +48,7 @@ CAT = {
  "pourquoi": ("apropos", "info", "#3F6F5E", "#5B8C78", "Pourquoi cette appli"),
  "sources": ("apropos", "scale", "#3F6F5E", "#5B8C78", "Sources et méthode"),
  "licence-visuels": ("apropos", "image", "#3F6F5E", "#5B8C78", "Réutiliser nos visuels"),
+ "diagnostic-suis-je-pret": ("bases", "clipboard-check", "#2F5D4E", "#4E8A73", "Test : suis-je prêt ?"),
  "tous-les-guides": ("apropos", "layout-grid", "#3F6F5E", "#5B8C78", "Tous les guides"),
  # Ajouts 2026-11-23 (pages rédigées avec les IA, vérifiées)
  "kit-urgence-enfants-ecole": ("foyer", "school", "#8A6420", "#B88A36", "Les enfants et l'école"),
@@ -85,7 +86,7 @@ GROUPS = [
  ("materiel", "Le matériel, poste par poste", "Radio, lampes, piles, trousse de secours, batteries, eau potable : des critères de choix neutres, sans marques."),
  ("outremer", "Outre-mer", "Cyclones, séismes, volcans : ce qui change dans le kit selon votre territoire."),
 ]
-NAV = [("kit-de-survie-72h.html", "Kit 72 h"), ("checklist-kit-urgence-72h.html", "Ma liste"),
+NAV = [("diagnostic-suis-je-pret.html", "Suis-je prêt ?"), ("kit-de-survie-72h.html", "Kit 72 h"), ("checklist-kit-urgence-72h.html", "Ma liste"),
        ("tous-les-guides.html#foyer", "Par foyer"), ("tous-les-guides.html#risques", "Risques"),
        ("combien-eau-stocker-par-personne.html", "Eau"), ("tous-les-guides.html#materiel", "Matériel"), ("tous-les-guides.html#outremer", "Outre-mer"),
        ("kit-de-survie-gouvernement-pdf.html", "Guide officiel"), ("questions-reponses-kit-urgence.html", "Questions"),
