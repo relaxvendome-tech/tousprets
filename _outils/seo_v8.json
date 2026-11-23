@@ -58,7 +58,8 @@
   "kit-urgence-guyane": "Le kit d'urgence en Guyane",
   "kit-urgence-la-reunion": "Le kit d'urgence à La Réunion",
   "kit-urgence-mayotte": "Le kit d'urgence à Mayotte",
-  "kit-urgence-saint-martin-saint-barthelemy": "Le kit d'urgence à Saint-Martin et Saint-Barthélemy"
+  "kit-urgence-saint-martin-saint-barthelemy": "Le kit d'urgence à Saint-Martin et Saint-Barthélemy",
+  "panne-numerique-cyberattaque-72h": "Panne numérique : tenir 72 h sans réseau ni carte"
  },
  "pages": {
   "accessibilite.html": {
@@ -504,6 +505,7 @@
    "date_modifiee": "2026-11-23",
    "alt_hero": "Écran d'ordinateur affichant des lignes de code",
    "complementaires": [
+    "panne-numerique-cyberattaque-72h",
     "recharger-telephone-coupure-courant",
     "radio-a-piles-kit-urgence",
     "combien-eau-stocker-par-personne",
@@ -2047,6 +2049,33 @@
    ],
    "date_verifiee": "2026-11-23",
    "_commit_texte": "5d6783d"
+  },
+  "panne-numerique-cyberattaque-72h.html": {
+   "title": "Panne numérique, cyberattaque : tenir 72 h sans réseau",
+   "description": "Paiement par carte bloqué, réseau coupé, rumeurs : les 4 réflexes simples pour tenir 72 h pendant une panne numérique ou une cyberattaque, sans paniquer.",
+   "source_title": "rédaction v9",
+   "source_description": "rédaction v9",
+   "intention": "pratique",
+   "requete": "panne numérique que faire",
+   "secondaires": [
+    "cyberattaque paiement carte",
+    "argent liquide crise",
+    "tenir sans internet"
+   ],
+   "cannibalisation": [
+    "cyberattaque-que-faire.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "alt_hero": "Écran d'ordinateur affichant des lignes de code",
+   "complementaires": [
+    "cyberattaque-que-faire",
+    "coupure-electricite-que-faire",
+    "radio-a-piles-kit-urgence",
+    "batterie-externe-station-electrique",
+    "recharger-telephone-coupure-courant"
+   ],
+   "date_verifiee": "2026-11-23"
   }
  },
  "familles": {
@@ -2077,6 +2106,7 @@
    "vague-de-froid-que-faire",
    "coupure-electricite-que-faire",
    "cyberattaque-que-faire",
+   "panne-numerique-cyberattaque-72h",
    "tensions-internationales-se-preparer",
    "preparation-catastrophe-naturelle"
   ],

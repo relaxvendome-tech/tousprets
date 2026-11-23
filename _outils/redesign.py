@@ -38,6 +38,7 @@ CAT = {
  "confinement-que-faire": ("risques", "house", "#4E4A6B", "#706A96", "Confinement"),
  "attaque-terroriste-que-faire": ("risques", "shield-alert", "#6B2E2E", "#934545", "Attaque terroriste"),
  "cyberattaque-que-faire": ("risques", "laptop", "#2E3A5B", "#4A5A86", "Cyberattaque"),
+ "panne-numerique-cyberattaque-72h": ("risques", "wifi-off", "#2E3A5B", "#4A5A86", "Panne numérique : tenir 72 h"),
  "tensions-internationales-se-preparer": ("risques", "globe", "#2E5B5B", "#468686", "Tensions internationales"),
  "preparation-catastrophe-naturelle": ("risques", "mountain", "#4E5B2E", "#718446", "Catastrophe naturelle"),
  # Matériel et pratique
@@ -104,7 +105,7 @@ UNIV = {
  "reagir": [  # v6 : situations les plus urgentes d'abord (alerte, mise à l'abri, danger immédiat), puis les autres
   "signal-alerte-sirene","fr-alert-que-faire","confinement-que-faire","attaque-terroriste-que-faire","accident-nucleaire-iode",
   "feu-de-foret-que-faire","inondation-que-faire","seisme-que-faire","cyclone-que-faire","tempete-que-faire",
-  "canicule-que-faire","vague-de-froid-que-faire","coupure-electricite-que-faire","cyberattaque-que-faire",
+  "canicule-que-faire","vague-de-froid-que-faire","coupure-electricite-que-faire","cyberattaque-que-faire","panne-numerique-cyberattaque-72h",
   "tensions-internationales-se-preparer","preparation-catastrophe-naturelle"],
  "foyer": ["kit-urgence-72h-famille-appartement-voiture","kit-urgence-bebe","kit-urgence-enfants-ecole","kit-urgence-personne-agee","kit-urgence-handicap","kit-urgence-animaux","kit-urgence-voiture","plan-familial-mise-en-surete"],
  "equiper": ["radio-a-piles-kit-urgence","lampe-frontale-lanterne-kit-urgence","piles-kit-urgence","batterie-externe-station-electrique","recharger-telephone-coupure-courant","couverture-de-survie","detecteur-de-fumee","trousse-de-secours-kit-urgence","purifier-eau-pastilles-filtre","groupe-electrogene-securite","frigo-congelateur-coupure-electricite"],
@@ -193,6 +194,8 @@ EXTRA_REL = {
  "fr-alert-que-faire": ["signal-alerte-sirene", "arnaque-kit-urgence-gratuit"],
  "entraide-voisins-crise": ["kit-urgence-personne-agee", "plan-familial-mise-en-surete"],
  "combien-eau-stocker-par-personne": ["purifier-eau-pastilles-filtre"],
+ "panne-numerique-cyberattaque-72h": ["cyberattaque-que-faire", "coupure-electricite-que-faire", "radio-a-piles-kit-urgence", "batterie-externe-station-electrique"],
+ "cyberattaque-que-faire": ["panne-numerique-cyberattaque-72h"],
  "questions-reponses-kit-urgence": ["glossaire-preparation-crise", "diagnostic-suis-je-pret"],
  "guide-tous-responsables-resume": ["glossaire-preparation-crise", "kit-de-survie-gouvernement-pdf"],
  "kit-urgence-72h-gouvernement": ["arnaque-kit-urgence-gratuit", "kit-de-survie-gouvernement-pdf"],
@@ -344,9 +347,10 @@ if __name__ == "__main__":
     _o = os.path.join(SITE, "_outils")
     # v5 : pages légales (legal_v5), précédent/suivant (prevnext_v5), accueil (apply_landing)
     # v6 : v6_structure (outils des pages test, guides, questions, glossaire, checklist, privacy)
+    # v9 : lisibilite_v9 (bloc CSS v9 de style.css, FAQ de sécurité ouvertes, sources avant la FAQ, appli : CSS, progression, confirmation)
     # v8 : seo_v8 (titles, descriptions, JSON-LD, Guides complémentaires, sitemap ; données dans seo_v8.json)
     for _cmd in (["legal_v5.py"], ["nav_v4.py"], ["template_v4.py"], ["essentiels.py"], ["merge_now.py"], ["template_v4.py"],
-                 ["prevnext_v5.py"], ["v6_structure.py"], ["apply_landing.py", "@index"], ["webp.py", "--lazy"], ["typo_fr.py"], ["brand_v7.py"], ["seo_v8.py"]):
+                 ["prevnext_v5.py"], ["v6_structure.py"], ["apply_landing.py", "@index"], ["webp.py", "--lazy"], ["typo_fr.py"], ["brand_v7.py"], ["seo_v8.py"], ["lisibilite_v9.py"]):
         _f = os.path.join(_o, _cmd[0])
         if os.path.exists(_f):
             _args = [os.path.join(SITE, "index.html")] if _cmd[1:] == ["@index"] else [SITE] + _cmd[1:]

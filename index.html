@@ -108,166 +108,154 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;}
 .score-bar-fill{height:100%;background:var(--teal);border-radius:6px;transition:width .3s;}
 .note.tip{font-size:12.5px;line-height:1.5;margin:6px 0 4px}.note.tip a{font-weight:600}.note.tip.warn{border-left:3px solid var(--brick)}
 /* ===== Accueil éditorial v4 (.lp) — mobile d'abord ===== */
+/* v9 (lisibilité) : ordre du cahier des charges (proposition de valeur, 1 bouton principal, 3 bénéfices, checklist,
+   guides, foyer, hors ligne et confidentialité, sources) ; textes 15 px minimum ; un seul niveau d'accent orange. */
 .lp{--lp-night:#0F2440;--lp-blue:#1E4F8C;--lp-orange:#D9731A;--lp-green:#2E7D4F;margin:0 0 8px;color:var(--text)}
 .lp *{box-sizing:border-box}
 .lp ul{list-style:none;margin:0;padding:0}
 .lp img{display:block;max-width:100%}
 .lp a{-webkit-tap-highlight-color:transparent}
-.lp a:focus-visible{outline:3px solid var(--lp-orange);outline-offset:2px}
+.lp a:focus-visible{outline:3px solid var(--lp-orange);outline-offset:3px;border-radius:6px}
+.lp small{display:block}
 
-/* Héros */
-.lp-hero{position:relative;isolation:isolate;overflow:hidden;margin:0 -18px 8px;padding:44px 20px 26px;min-height:440px;display:flex;align-items:flex-end;color:#fff;background:var(--lp-night)}
+/* Héros : titre, ligne explicite, 1 seul bouton principal */
+.lp-hero{position:relative;isolation:isolate;overflow:hidden;margin:0 -18px;padding:48px 20px 28px;min-height:420px;display:flex;align-items:flex-end;color:#fff;background:var(--lp-night)}
 .lp-hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%;z-index:-2}
-.lp-hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(15,36,64,.35) 0%,rgba(15,36,64,.72) 42%,rgba(11,26,48,.95) 100%)}
+.lp-hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(15,36,64,.45) 0%,rgba(15,36,64,.80) 40%,rgba(11,26,48,.96) 100%)}
 .lp-hero-in{width:100%;max-width:640px}
-.lp-kicker{margin:0 0 12px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.82)}
-.lp-hero h1{font-family:var(--sans);font-weight:800;font-size:30px;line-height:1.12;letter-spacing:-.02em;margin:0 0 12px;color:#fff;text-wrap:balance}
-.lp-sub{font-size:15.5px;line-height:1.55;margin:0 0 20px;color:rgba(255,255,255,.92);max-width:36em}
-.lp-cta{display:flex;flex-direction:column;gap:10px}
-.lp-btn{display:block;text-align:center;font-weight:700;font-size:15.5px;line-height:1.25;padding:14px 18px;border-radius:12px;text-decoration:none;transition:transform .15s ease,background-color .15s ease}
-.lp-btn:active{transform:translateY(1px)}
+.lp-hero h1{font-family:var(--sans);font-weight:800;font-size:clamp(2.125rem,1.5rem + 2.6vw,3rem);line-height:1.08;letter-spacing:-.025em;margin:0 0 14px;color:#fff;text-wrap:balance}
+.lp-value{margin:0 0 10px;font-size:clamp(1.1875rem,1.1rem + .4vw,1.375rem);line-height:1.4;font-weight:650;color:#fff;max-width:30em;text-wrap:pretty}
+.lp-sub{font-size:1.0625rem;line-height:1.55;margin:0 0 22px;color:rgba(255,255,255,.9);max-width:34em}
+.lp-cta{margin:0}
+.lp-btn{display:flex;align-items:center;justify-content:center;min-height:52px;text-align:center;font-weight:750;font-size:1.0625rem;line-height:1.25;padding:14px 26px;border-radius:12px;text-decoration:none}
 .lp-btn1{background:var(--lp-orange);color:#0F2440}
 .lp-btn1:hover{background:#E8873A;color:#0F2440}
-.lp-btn2{background:#fff;color:var(--lp-night)}
-.lp-btn2:hover{background:#E8EEF6}
-.lp-btn3{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.45)}
-.lp-btn3:hover{background:rgba(255,255,255,.16)}
-.lp-pledges{display:flex;flex-wrap:wrap;gap:6px 14px;margin:18px 0 0!important;font-size:13px;line-height:1.4;color:#fff}
-.lp-pledges li{position:relative;padding-left:17px}
-.lp-pledges li::before{content:"";position:absolute;left:1px;top:.42em;width:9px;height:5px;border:solid #F3B37A;border-width:0 0 2px 2px;transform:rotate(-45deg)}
-.lp-pl-n{color:rgba(255,255,255,.75)}
-.lp-eval{margin:12px 0 0;font-size:13.5px;color:rgba(255,255,255,.85)}
-.lp-eval a{color:#fff;font-weight:600;text-underline-offset:3px}
+.lp-alt{margin:18px 0 0!important;display:grid;gap:8px;font-size:.9375rem;line-height:1.45;color:rgba(255,255,255,.88)}
+.lp-alt a{color:#fff;font-weight:650;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.lp-alt a:hover{text-decoration-thickness:2px}
+
+/* Trois bénéfices */
+.lp-benefits{display:grid;grid-template-columns:minmax(0,1fr);gap:0;margin:0 -18px!important;padding:6px 18px 4px!important;background:var(--bg-raised);border-bottom:1px solid var(--line)}
+.lp-benefits li{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-top:1px solid var(--line)}
+.lp-benefits li:first-child{border-top:0}
+.lp-b-n{flex:0 0 32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;background:var(--teal-soft);color:var(--teal)}
+.lp-benefits strong{display:block;font-size:1.0625rem;line-height:1.3;margin:4px 0 3px}
+.lp-benefits small{font-size:.9375rem;line-height:1.5;color:var(--text-dim)}
 
 /* Sections */
-.lp-sec{margin:34px 0 0}
-.lp-head{margin:0 0 14px}
-.lp-h{font-family:var(--sans);font-weight:800;font-size:22px;line-height:1.2;letter-spacing:-.015em;margin:0 0 6px;color:var(--text)}
-.lp-intro{margin:0;font-size:14.5px;line-height:1.55;color:var(--text-dim);max-width:40em}
-.lp-eyebrow{margin:0 0 6px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--lp-orange)}
+.lp-sec{margin:44px 0 0}
+.lp-head{margin:0 0 18px}
+.lp-h{font-family:var(--sans);font-weight:800;font-size:clamp(1.5rem,1.2rem + 1.3vw,2.125rem);line-height:1.2;letter-spacing:-.018em;margin:0 0 8px;color:var(--text);text-wrap:balance}
+.lp-h3{font-family:var(--sans);font-weight:750;font-size:clamp(1.25rem,1.15rem + .5vw,1.5rem);line-height:1.25;margin:32px 0 12px;color:var(--text)}
+.lp-intro{margin:0;font-size:1.0625rem;line-height:1.55;color:var(--text-dim);max-width:40em}
+.lp-eyebrow{margin:0 0 8px;font-size:.875rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--lp-orange)}
+.lp-more{margin:14px 0 0;font-size:.9375rem;line-height:1.5}
 
-/* Commencer simplement */
-.lp-paths{display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
-.lp-paths>li{display:flex}
-.lp-path{flex:1;display:flex;gap:12px;align-items:flex-start;padding:14px 16px;background:var(--bg-raised);border:1px solid var(--line);border-top:4px solid var(--lp-blue);border-radius:14px;text-decoration:none;color:var(--text);transition:border-color .15s ease,box-shadow .15s ease}
-.lp-path:hover{border-color:var(--teal);box-shadow:0 6px 18px rgba(15,36,64,.10)}
-.lp-path--sos{border-top-color:var(--lp-orange)}
-.lp-path-n{flex:0 0 32px;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;background:var(--bg-soft);color:var(--lp-night)}
-.lp-path span:last-child{display:flex;flex-direction:column;gap:3px;min-width:0}
-.lp-path strong{font-size:16px;line-height:1.3}
-.lp-path small{font-size:13.5px;line-height:1.45;color:var(--text-dim)}
-.lp-more{margin:12px 0 0;font-size:14px;color:var(--text-dim)}
-.lp-more a{color:var(--teal);font-weight:600}
-
-/* Situations */
+/* Cartes de guides */
 .lp-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 .lp-grid>li{display:flex}
-.lp-card{flex:1;display:flex;flex-direction:column;min-width:0;background:var(--bg-raised);border:1px solid var(--line);border-radius:14px;overflow:hidden;text-decoration:none;color:var(--text);transition:border-color .15s ease,box-shadow .15s ease}
-.lp-card:hover{border-color:var(--teal);box-shadow:0 6px 18px rgba(15,36,64,.10)}
+.lp-card{flex:1;display:flex;flex-direction:column;min-width:0;background:var(--bg-raised);border:1px solid var(--line);border-radius:14px;overflow:hidden;text-decoration:none;color:var(--text)}
+.lp-card:hover{border-color:var(--teal)}
+.lp-card:hover strong{text-decoration:underline;text-underline-offset:3px}
 .lp-card img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;background:var(--bg-soft)}
-.lp-card-t{padding:9px 11px 12px;display:flex;flex-direction:column;gap:3px;min-width:0}
-.lp-card strong{font-size:14.5px;line-height:1.25;overflow-wrap:anywhere}
-.lp-card small{font-size:12.5px;line-height:1.4;color:var(--text-dim)}
+.lp-card-t{padding:10px 12px 14px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.lp-card strong{font-size:1rem;line-height:1.25;overflow-wrap:anywhere}
+.lp-card small{font-size:.9375rem;line-height:1.4;color:var(--text-dim)}
 .lp-card--all{background:var(--lp-night);border-color:var(--lp-night);color:#fff;justify-content:flex-end;min-height:120px}
-.lp-card--all small{color:rgba(255,255,255,.78)}
+.lp-card--all small{color:rgba(255,255,255,.85)}
 .lp-card--all .lp-card-t{padding:14px}
 .lp-arrow{font-size:22px;line-height:1;margin-top:6px;color:#F3B37A}
 
-/* Famille */
+/* Profils du foyer */
 .lp-fam{display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
-.lp-fam-intro{margin:0 0 4px}
-.lp-row{display:flex;align-items:center;gap:12px;padding:10px;background:var(--bg-raised);border:1px solid var(--line);border-radius:14px;text-decoration:none;color:var(--text);height:100%;transition:border-color .15s ease}
+.lp-row{display:flex;align-items:center;gap:14px;padding:10px;background:var(--bg-raised);border:1px solid var(--line);border-radius:14px;text-decoration:none;color:var(--text);height:100%}
 .lp-row:hover{border-color:var(--teal)}
+.lp-row:hover strong{text-decoration:underline;text-underline-offset:3px}
 .lp-row img{flex:0 0 64px;width:64px;height:64px;border-radius:10px;object-fit:cover;background:var(--bg-soft)}
-.lp-row span{display:flex;flex-direction:column;gap:2px;min-width:0}
-.lp-row strong{font-size:15px;line-height:1.25}
-.lp-row small{font-size:13px;line-height:1.4;color:var(--text-dim)}
+.lp-row span{display:flex;flex-direction:column;gap:3px;min-width:0}
+.lp-row strong{font-size:1.0625rem;line-height:1.25}
+.lp-row small{font-size:.9375rem;line-height:1.45;color:var(--text-dim)}
 
-/* Kit 72 h */
-.lp-kit{background:var(--lp-night);color:#fff;margin-left:-18px;margin-right:-18px;padding:30px 20px 26px}
+/* Présentation de la checklist */
+.lp-kit{background:var(--lp-night);color:#fff;margin-left:-18px;margin-right:-18px;padding:32px 20px 28px}
 .lp-kit .lp-h{color:#fff}
-.lp-kit .lp-intro{color:rgba(255,255,255,.8)}
+.lp-kit .lp-intro{color:rgba(255,255,255,.88)}
 .lp-kit .lp-eyebrow{color:#F3B37A}
-.lp-feat{display:grid;grid-template-columns:minmax(0,1fr);gap:0;border-top:1px solid rgba(255,255,255,.14)}
-.lp-feat li{display:flex;gap:12px;align-items:flex-start;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.14)}
-.lp-feat svg{flex:0 0 36px;width:36px;height:36px;padding:7px;border-radius:10px;background:rgba(255,255,255,.08);fill:none;stroke:#F3B37A;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
-.lp-feat span{display:flex;flex-direction:column;gap:2px;min-width:0}
-.lp-feat strong{font-size:15px;line-height:1.3}
-.lp-feat small{font-size:13px;line-height:1.45;color:rgba(255,255,255,.76)}
+.lp-kit .lp-more{color:rgba(255,255,255,.88)}
+.lp-kit .lp-more a{color:#fff;font-weight:650;text-underline-offset:3px}
 .lp-kit-cta{margin:20px 0 0}
+.lp-kit-cta .lp-btn{display:inline-flex}
+.lp-feat{display:grid;grid-template-columns:minmax(0,1fr);gap:0;border-top:1px solid rgba(255,255,255,.16)}
+.lp-feat li{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.16)}
+.lp-feat svg{flex:0 0 36px;width:36px;height:36px;padding:7px;border-radius:10px;background:rgba(255,255,255,.08);fill:none;stroke:#F3B37A;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.lp-feat span{display:flex;flex-direction:column;gap:3px;min-width:0}
+.lp-feat strong{font-size:1.0625rem;line-height:1.3}
+.lp-feat small{font-size:.9375rem;line-height:1.5;color:rgba(255,255,255,.85)}
 
 /* Bons réflexes */
 .lp-links{display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
-.lp-link{display:flex;align-items:center;gap:12px;padding:10px;background:var(--bg-raised);border:1px solid var(--line);border-radius:14px;text-decoration:none;color:var(--text);height:100%;transition:border-color .15s ease}
+.lp-link{display:flex;align-items:center;gap:14px;padding:10px;background:var(--bg-raised);border:1px solid var(--line);border-radius:14px;text-decoration:none;color:var(--text);height:100%}
 .lp-link:hover{border-color:var(--teal)}
+.lp-link:hover strong{text-decoration:underline;text-underline-offset:3px}
 .lp-link img{flex:0 0 96px;width:96px;height:auto;aspect-ratio:16/9;border-radius:9px;object-fit:cover;background:var(--bg-soft)}
-.lp-link span{display:flex;flex-direction:column;gap:2px;min-width:0}
-.lp-link strong{font-size:15px;line-height:1.25}
-.lp-link small{font-size:13px;line-height:1.4;color:var(--text-dim)}
+.lp-link span{display:flex;flex-direction:column;gap:3px;min-width:0}
+.lp-link strong{font-size:1.0625rem;line-height:1.25}
+.lp-link small{font-size:.9375rem;line-height:1.45;color:var(--text-dim)}
 
-/* S'entraider + confiance */
+/* Hors ligne, confidentialité, sources */
 .lp-help-list,.lp-trust-list{display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
-.lp-help-list a,.lp-trust-list a{display:flex;flex-direction:column;gap:3px;height:100%;padding:14px 16px;border-radius:14px;text-decoration:none;color:var(--text);background:var(--bg-raised);border:1px solid var(--line);border-left:4px solid var(--teal);transition:border-color .15s ease}
+.lp-help-list a,.lp-trust-list a,.lp-plain{display:flex;flex-direction:column;gap:4px;height:100%;padding:16px 18px;border-radius:14px;text-decoration:none;color:var(--text);background:var(--bg-raised);border:1px solid var(--line)}
 .lp-help-list a:hover,.lp-trust-list a:hover{border-color:var(--teal)}
-.lp-help-list strong,.lp-trust-list strong{font-size:15px;line-height:1.3}
-.lp-help-list small,.lp-trust-list small{font-size:13px;line-height:1.45;color:var(--text-dim)}
-.lp-trust-list a{border-left-color:var(--lp-green)}
-.lp-trust .lp-h{margin-bottom:14px}
-.lp-limit{margin:14px 0 0;padding:14px 16px;border-radius:14px;background:var(--bg-soft);font-size:14px;line-height:1.55;color:var(--text)}
+.lp-help-list a:hover strong,.lp-trust-list a:hover strong{text-decoration:underline;text-underline-offset:3px}
+.lp-help-list strong,.lp-trust-list strong{font-size:1.0625rem;line-height:1.3}
+.lp-help-list small,.lp-trust-list small{font-size:.9375rem;line-height:1.5;color:var(--text-dim)}
+.lp-limit{margin:16px 0 0;padding:16px 18px;border-radius:14px;background:var(--bg-soft);font-size:1rem;line-height:1.55;color:var(--text)}
 .lp-limit a{color:var(--brick);font-weight:800}
 
 /* Appel final */
-.lp-final{padding:26px 20px;border-radius:16px;background:var(--bg-soft);text-align:center}
+.lp-final{padding:30px 20px;border-radius:16px;background:var(--bg-soft);text-align:center}
 .lp-final .lp-intro{margin:0 auto}
-.lp-final-cta{margin:16px 0 0}
-.lp-final-cta .lp-btn{display:inline-block}
+.lp-final-cta{margin:18px 0 0}
+.lp-final-cta .lp-btn{display:inline-flex}
 
 /* Ancre de l'appli */
-.lp-app-h{margin-top:38px;padding-top:22px;border-top:1px solid var(--line)}
-.lp-sub2{font-size:13.5px;color:var(--text-dim);margin:0 0 6px}
+.lp-app-h{margin-top:44px;padding-top:24px;border-top:1px solid var(--line)}
+.lp-sub2{font-size:1rem;line-height:1.5;color:var(--text-dim);margin:0 0 8px}
 
 /* Grand écran : le bloc d'accueil s'élargit au-delà de la colonne de l'appli (640 px) */
 @media (min-width:700px){
   .lp{--lpw:min(1120px,calc(100vw - 48px))}
-  .lp-hero,.lp-sec{width:var(--lpw);margin-left:calc((100% - var(--lpw)) / 2);margin-right:0}
-  .lp-hero{border-radius:20px;min-height:480px;padding:64px 48px 40px;margin-top:4px}
-  .lp-hero::before{background:linear-gradient(90deg,rgba(11,26,48,.94) 0%,rgba(15,36,64,.80) 45%,rgba(15,36,64,.30) 100%)}
-  .lp-hero-in{max-width:780px}
-  .lp-hero h1{font-size:42px}
-  .lp-sub{font-size:17px}
-  .lp-cta{flex-direction:row;flex-wrap:wrap}
-  .lp-btn{flex:0 1 auto}
-  .lp-sec{margin-top:48px}
-  .lp-h{font-size:26px}
-  .lp-intro{font-size:15.5px}
+  .lp-hero,.lp-sec,.lp-benefits{width:var(--lpw);margin-left:calc((100% - var(--lpw)) / 2)!important;margin-right:0!important}
+  .lp-hero{border-radius:20px;min-height:460px;padding:64px 48px 44px;margin-top:4px}
+  .lp-hero::before{background:linear-gradient(90deg,rgba(11,26,48,.95) 0%,rgba(15,36,64,.84) 50%,rgba(15,36,64,.35) 100%)}
+  .lp-hero-in{max-width:720px}
+  .lp-cta .lp-btn{display:inline-flex}
+  .lp-benefits{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:20px!important;padding:0!important;background:none;border:0}
+  .lp-benefits li,.lp-benefits li:first-child{padding:20px;border:1px solid var(--line);border-radius:14px;background:var(--bg-raised)}
+  .lp-sec{margin-top:56px}
   .lp-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
   .lp-fam{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-  .lp-kit{border-radius:20px;padding:40px 40px 34px}
+  .lp-kit{border-radius:20px;padding:40px}
   .lp-feat{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:32px;border-top:0}
-  .lp-feat li:nth-child(-n+2){border-top:1px solid rgba(255,255,255,.14)}
-  .lp-links,.lp-help-list,.lp-paths{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-  .lp-trust-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-  .lp-final{padding:40px 32px}
-  .lp-link{flex-direction:column;align-items:stretch;padding:0;overflow:hidden}
-  .lp-link img{flex:none;width:100%;border-radius:0}
-  .lp-link span{padding:4px 16px 16px}
+  .lp-feat li:nth-child(-n+2){border-top:1px solid rgba(255,255,255,.16)}
+  .lp-links{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .lp-help-list,.lp-trust-list{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+  .lp-final{padding:44px 32px}
 }
 @media (min-width:1000px){
-  .lp-hero{min-height:540px;padding:80px 64px 48px}
-  .lp-hero h1{font-size:52px;max-width:13em}
+  .lp-hero{min-height:500px;padding:80px 64px 52px}
   .lp-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
   .lp-fam{grid-template-columns:repeat(4,minmax(0,1fr))}
-  .lp-fam-intro{padding:6px 8px 0 0}
   .lp-row{flex-direction:column;align-items:stretch;padding:0;overflow:hidden}
   .lp-row img{flex:none;width:100%;height:auto;aspect-ratio:16/10;border-radius:0}
-  .lp-row span{padding:10px 14px 14px}
-  .lp-kit{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);grid-template-rows:auto 1fr;column-gap:48px;padding:48px}
-  .lp-kit .lp-head{grid-column:1;grid-row:1}
-  .lp-kit-cta{grid-column:1;grid-row:2;align-self:start;margin:10px 0 0}
-  .lp-feat{grid-column:2;grid-row:1 / span 2}
-  .lp-trust-list{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .lp-row span{padding:12px 16px 16px}
+  .lp-kit{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);column-gap:48px;padding:48px}
+  .lp-kit .lp-head{margin:0}
+  .lp-links{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .lp-link{flex-direction:column;align-items:stretch;padding:0;overflow:hidden}
+  .lp-link img{flex:none;width:100%;border-radius:0}
+  .lp-link span{padding:12px 16px 16px}
 }
-@media (prefers-reduced-motion:reduce){.lp-btn,.lp-card,.lp-row,.lp-link,.lp-help-list a,.lp-trust-list a,.lp-path{transition:none}}
 html.in-app .lp{display:none}
 /* ===== fin accueil v4 (.lp) ===== */
 .score-note{font-size:12.5px;color:var(--text-dim);margin-top:8px;}
@@ -527,6 +515,7 @@ html.ts-xlarge body{zoom:1.3;}
 @media (prefers-color-scheme:dark){.topbar .brand .brand-name{color:#fff}}
 .home-foot-note{max-width:720px;margin:20px auto 96px!important;padding:0 16px;font-size:12px!important;color:var(--text-dim)!important;text-align:center}
 html.in-app .home-foot-note{margin-top:16px!important}
+/* ===== v9 appli (source : _outils/lisibilite_v9_app.css) ===== */@font-face{font-family:'Inter Fallback';src:local('Arial'),local('Helvetica'),local('Liberation Sans');size-adjust:107%;ascent-override:90%;descent-override:22.5%;line-gap-override:0%}:root{--sans:'Inter','Inter Fallback',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;--serif:var(--sans);--ok:#256B42;--ok-s:#E6F2EA}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ok:#7CC79A;--ok-s:#132B1F}}:root[data-theme="dark"]{--ok:#7CC79A;--ok-s:#132B1F}:root[data-theme="red"]{--ok:#E08A73;--ok-s:#2A1010}body{font-size:17px;line-height:1.55;font-feature-settings:'cv11','ss01'}h1,h2,h3{font-weight:750;letter-spacing:-.015em}.wrap{padding-bottom:110px}.section-title{margin:32px 0 12px;flex-wrap:wrap;row-gap:4px}.section-title h2,.section-title h2[style]{font-size:24px!important;line-height:1.2}.section-title .sub{font-size:14px}.note,.note.tip,.score-note,.parcours .pc-sub,.install-banner,.backup-card,.welcome-privacy{font-size:15px!important;line-height:1.55}.note{color:var(--text);padding:14px 16px}.note a,.install-banner a,.welcome-card a,.guide-a-inner a{color:var(--teal);font-weight:600;text-decoration:underline}.install-banner b{font-size:16px}.score-top .pct{font-size:32px;font-weight:800}.quick-card .label{font-size:14px}.quick-card .value{font-size:18px}.parcours h3,.welcome-card h2{font-size:22px}.pc-head{font-size:16px}.pc-badge,.status-badge,.member-row .m-name .you{font-size:14px}.pc-items li{font-size:14px;min-height:40px;display:flex;align-items:center;padding:6px 12px}.hh-q{font-size:21px;font-weight:700}.hh-count{font-weight:750}.hh-sum{font-size:15px}footer.legal,.home-foot-note{font-size:14px!important}.emergency-btn{font-size:15px}.overlay-top h2{font-size:21px}.overlay-close{font-size:15px}.chip{font-size:15px;min-height:44px;padding:10px 16px}.chip .dot{width:9px;height:9px}.search-wrap input{font-size:16px;min-height:48px}.search-wrap .clear-search{min-width:44px;min-height:44px;font-size:18px}.search-hit-cat{font-size:14px}.no-results{font-size:15px}.guide-q{font-size:16px;min-height:52px}.guide-a-inner{font-size:16px;color:var(--text)}.card{border-radius:14px}.card-head{font-size:16px;padding:12px 16px}ul.checklist li{font-size:17px;line-height:1.45;padding:0 16px;gap:14px;align-items:center;min-height:56px}ul.checklist label{padding:14px 0;display:block}ul.checklist input[type=checkbox]{width:26px;height:26px;min-width:26px;min-height:26px;border:2px solid var(--text-dim);border-radius:7px;margin:0}ul.checklist input[type=checkbox]:checked::after{left:8px;top:3px;width:7px;height:13px;border-width:0 3px 3px 0}ul.checklist li.checked{background:var(--ok-s)}ul.checklist li.checked label{text-decoration:none;color:var(--text)}ul.checklist li.checked label::after{content:" · fait";font-size:14px;font-weight:600;color:var(--ok)}ul.checklist li:has(input:focus-visible){outline:3px solid var(--gold);outline-offset:-3px}.food-group-head{padding:4px 2px 10px;flex-wrap:wrap}.food-group-head .icon{font-size:20px}.food-group-head h3{font-size:18px}.food-group-head .fg-sub{font-size:14px}.inv-item{font-size:16px;padding:10px 12px 10px 16px;min-height:64px}.inv-item .name{font-weight:600}.inv-item .unit{font-size:14px}.stepper{gap:6px}.stepper button{width:44px;height:44px;border-radius:10px;font-size:22px;font-weight:600;line-height:1}.stepper .val{min-width:34px;font-size:17px;font-weight:700}.profile-row input,.profile-row select,.contact-row input,.nb-form input,.nb-form select{font-size:16px;min-height:44px}.nb-form textarea{font-size:14px}.nb-form label{font-size:14px}.del{min-width:44px;min-height:44px;font-size:18px}.add-row{font-size:16px;min-height:52px;color:var(--text)}.btn-primary,.btn-secondary{font-size:16px;min-height:48px}.nb-back{font-size:15px;min-height:44px}.nb-choice button .t{font-size:17px}.nb-choice button .s{font-size:15px}.member-row .m-name{font-size:16px}.member-row .m-res{font-size:14px}.code-text{font-size:13px}.axis .a-t{font-size:17px}.axis .a-s{font-size:15px}.num-btn b{font-size:24px;font-weight:800}.num-btn span{font-size:13px}.vx-box h3{font-size:17px}.vx-box p,.vx-box li,.vx-tpl b,.vx-tpl pre{font-size:15px}.vx-btn{font-size:15px;min-height:44px}.vx-ok{font-size:14px}.v9-empty{padding:18px 16px;font-size:16px;line-height:1.5;color:var(--text)}.v9-empty strong{display:block;margin-bottom:4px}nav.bottom button{font-size:12px;font-weight:600;gap:2px;padding:8px 1px 7px;min-width:0;letter-spacing:-.01em}nav.bottom button .icon{font-size:20px}nav.bottom button.active{box-shadow:inset 0 3px 0 var(--teal)}@media (max-width:359px){nav.bottom button{font-size:11px;letter-spacing:-.02em}}#openSettings{gap:6px;padding:9px 12px;font-size:15px;font-weight:600}@media (max-width:340px){#openSettings .v9-lbl{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}.v9-prog{background:var(--bg-raised);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:14px 0 0}.v9-prog[hidden]{display:none}.v9-prog-t{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline;margin:0 0 8px;font-size:16px}.v9-prog-t b{font-size:18px}.v9-prog-bar{height:10px;border-radius:6px;background:var(--bg-soft);overflow:hidden}.v9-prog-bar i{display:block;height:100%;background:var(--ok);border-radius:6px}.v9-prog-n{margin:10px 0 0;font-size:15px;color:var(--text)}.v9-prog-n strong{color:var(--text)}.v9-toast{position:fixed;left:50%;bottom:calc(78px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:30;background:var(--text);color:var(--bg);font-size:15px;font-weight:600;padding:10px 16px;border-radius:999px;box-shadow:0 4px 16px rgba(0,0,0,.18);opacity:0;pointer-events:none;transition:opacity .2s;white-space:nowrap}.v9-toast.on{opacity:1}.seo-about{font-size:17px!important;line-height:1.65!important}.seo-about h2{font-size:24px!important;line-height:1.25}.seo-about h3{font-size:19px!important}.seo-about .sa-cat h3{font-size:16px!important}@media (prefers-reduced-motion:reduce){.v9-toast{transition:none}}/* /v9 appli */
 </style>
 </head>
 <body>
@@ -535,7 +524,7 @@ html.in-app .home-foot-note{margin-top:16px!important}
 <header class="topbar">
   <div class="brand"><img src="logo.svg" alt="" width="38" height="38" class="brand-logo"><p class="brand-name">Tous prêts</p></div>
   <div style="display:flex;gap:8px;">
-    <button class="emergency-btn" id="openSettings" aria-label="Réglages" style="background:var(--bg-soft);color:var(--text);"><span aria-hidden="true">⚙️</span></button>
+    <button class="emergency-btn" id="openSettings" aria-label="Réglages" style="background:var(--bg-soft);color:var(--text);"><span aria-hidden="true">⚙️</span><span class="v9-lbl">Réglages</span></button>
     <button class="emergency-btn" id="openEmergency"><span aria-hidden="true">🆘</span> Urgence</button>
   </div>
 </header>
@@ -549,133 +538,120 @@ html.in-app .home-foot-note{margin-top:16px!important}
       <div class="lp-hero">
         <picture><source srcset="img/photos/vague-de-froid-que-faire.webp" type="image/webp"><img class="lp-hero-bg" src="img/photos/vague-de-froid-que-faire.jpg" alt="" width="960" height="540" fetchpriority="high" decoding="async"></picture>
         <div class="lp-hero-in">
-          <p class="lp-kicker">Kit d’urgence 72 h · checklist gratuite pour tous les foyers</p>
           <h1 id="lpT">Être prêt change tout.</h1>
+          <p class="lp-value">Checklist gratuite du kit d’urgence 72 h, calculée pour votre foyer, utilisable hors ligne.</p>
           <p class="lp-sub">Anticiper, comprendre et agir. Les bons réflexes pour protéger ceux qui comptent.</p>
-          <div class="lp-cta">
-            <a class="lp-btn lp-btn1" href="#app-start">Préparer mon foyer</a>
-            <a class="lp-btn lp-btn2" href="reagir-en-cas-de-crise.html">Découvrir les bons réflexes</a>
-          </div>
-          <ul class="lp-pledges" role="list" aria-label="Nos engagements">
-            <li>Gratuit</li><li>Sans compte</li><li>Sans publicité</li><li>Pensé pour mobile</li><li>Checklist utilisable hors ligne<span class="lp-pl-n"> (après une première visite)</span></li>
+          <p class="lp-cta"><a class="lp-btn lp-btn1" href="#app-start">Préparer mon foyer</a></p>
+          <ul class="lp-alt" role="list">
+            <li>Une urgence en cours ? <a href="reagir-en-cas-de-crise.html">Découvrir les bons réflexes</a></li>
+            <li>Déjà commencé ? <a href="diagnostic-suis-je-pret.html">Voir mon niveau de préparation</a></li>
           </ul>
-          <p class="lp-eval">Déjà commencé ? <a href="diagnostic-suis-je-pret.html">Voir mon niveau de préparation</a></p>
         </div>
       </div>
 
-      <div class="lp-sec lp-start" aria-labelledby="lpS0">
-        <div class="lp-head">
-          <h2 class="lp-h" id="lpS0">Commencer simplement</h2>
-          <p class="lp-intro">Trois portes d'entrée, selon votre besoin du moment.</p>
-        </div>
-        <ul class="lp-paths" role="list">
-          <li><a class="lp-path" href="#app-start"><span class="lp-path-n" aria-hidden="true">1</span><span><strong>Je prépare mon foyer</strong><small>La checklist du kit 72 h, calculée selon le nombre de personnes.</small></span></a></li>
-          <li><a class="lp-path lp-path--sos" href="reagir-en-cas-de-crise.html"><span class="lp-path-n" aria-hidden="true">2</span><span><strong>Je fais face à une urgence</strong><small>Les bons réflexes, situation par situation : avant, pendant, après.</small></span></a></li>
-          <li><a class="lp-path" href="comprendre-s-informer.html"><span class="lp-path-n" aria-hidden="true">3</span><span><strong>Je comprends les risques autour de moi</strong><small>Le guide officiel résumé, le glossaire, les alertes, nos sources.</small></span></a></li>
-        </ul>
-        <p class="lp-more">Besoin de la liste complète ? <a href="kit-de-survie-72h.html">Consulter la liste du kit 72 h</a></p>
-      </div>
-
-      <div class="lp-sec" aria-labelledby="lpS1">
-        <div class="lp-head">
-          <h2 class="lp-h" id="lpS1">Les situations qui comptent</h2>
-          <p class="lp-intro">Pour chaque risque, ce qu'il faut faire avant, pendant et après, d'après les consignes officielles.</p>
-        </div>
-        <ul class="lp-grid" role="list">
-          <li><a class="lp-card" href="inondation-que-faire.html"><picture><source srcset="img/photos/inondation-que-faire.webp" type="image/webp"><img src="img/photos/inondation-que-faire.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"></picture><span class="lp-card-t"><strong>Inondation</strong><small>Monter en hauteur, jamais en voiture</small></span></a></li>
-          <li><a class="lp-card" href="feu-de-foret-que-faire.html"><img src="img/cards/feu-de-foret-que-faire.svg" alt="" width="480" height="270" loading="lazy" decoding="async"><span class="lp-card-t"><strong>Feu de forêt, incendie</strong><small>S'abriter dans un bâtiment en dur</small></span></a></li>
-          <li><a class="lp-card" href="tempete-que-faire.html"><picture><source srcset="img/photos/tempete-que-faire.webp" type="image/webp"><img src="img/photos/tempete-que-faire.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"></picture><span class="lp-card-t"><strong>Tempête</strong><small>Rentrer, s'abriter, s'informer</small></span></a></li>
-          <li><a class="lp-card" href="seisme-que-faire.html"><picture><source srcset="img/photos/seisme-que-faire.webp" type="image/webp"><img src="img/photos/seisme-que-faire.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"></picture><span class="lp-card-t"><strong>Séisme</strong><small>S'abriter, puis sortir prudemment</small></span></a></li>
-          <li><a class="lp-card" href="canicule-que-faire.html"><picture><source srcset="img/photos/canicule-que-faire.webp" type="image/webp"><img src="img/photos/canicule-que-faire.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"></picture><span class="lp-card-t"><strong>Canicule</strong><small>Se rafraîchir, veiller sur les plus fragiles</small></span></a></li>
-          <li><a class="lp-card" href="coupure-electricite-que-faire.html"><picture><source srcset="img/photos/coupure-electricite-que-faire.webp" type="image/webp"><img src="img/photos/coupure-electricite-que-faire.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"></picture><span class="lp-card-t"><strong>Coupure d'électricité</strong><small>Tenir 72 heures sans courant</small></span></a></li>
-          <li><a class="lp-card" href="confinement-que-faire.html"><picture><source srcset="img/photos/confinement-que-faire.webp" type="image/webp"><img src="img/photos/confinement-que-faire.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"></picture><span class="lp-card-t"><strong>Confinement</strong><small>Se confiner, couper la ventilation, écouter la radio</small></span></a></li>
-          <li><a class="lp-card" href="accident-nucleaire-iode.html"><picture><source srcset="img/photos/accident-nucleaire-iode.webp" type="image/webp"><img src="img/photos/accident-nucleaire-iode.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"></picture><span class="lp-card-t"><strong>Accident nucléaire</strong><small>Se mettre à l'abri ; iode uniquement sur ordre du préfet</small></span></a></li>
-          <li><a class="lp-card" href="cyberattaque-que-faire.html"><picture><source srcset="img/photos/cyberattaque-que-faire.webp" type="image/webp"><img src="img/photos/cyberattaque-que-faire.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"></picture><span class="lp-card-t"><strong>Cyberattaque</strong><small>Les bons réflexes et qui contacter</small></span></a></li>
-          <li><a class="lp-card" href="cyclone-que-faire.html"><img src="img/cards/cyclone-que-faire.svg" alt="" width="480" height="270" loading="lazy" decoding="async"><span class="lp-card-t"><strong>Événement extrême : cyclone</strong><small>Niveaux d'alerte en outre-mer et protection</small></span></a></li>
-          <li><a class="lp-card" href="fr-alert-que-faire.html"><picture><source srcset="img/photos/fr-alert-que-faire.webp" type="image/webp"><img src="img/photos/fr-alert-que-faire.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"></picture><span class="lp-card-t"><strong>Alerte FR-Alert</strong><small>Comprendre le message reçu sur le téléphone</small></span></a></li>
-          <li><a class="lp-card lp-card--all" href="tous-les-guides.html"><span class="lp-card-t"><strong>Tous les guides</strong><small>Risques, équipement, outre-mer, famille</small><span class="lp-arrow" aria-hidden="true">→</span></span></a></li>
-        </ul>
-      </div>
-
-      <div class="lp-sec" aria-labelledby="lpS2">
-        <ul class="lp-fam" role="list">
-          <li class="lp-fam-intro">
-            <h2 class="lp-h" id="lpS2">Protéger sa famille</h2>
-            <p class="lp-intro">Chacun a des besoins propres. Quelques précautions simples permettent de n'oublier personne.</p>
-          </li>
-          <li><a class="lp-row" href="kit-urgence-bebe.html"><picture><source srcset="img/photos/kit-urgence-bebe.webp" type="image/webp"><img src="img/photos/kit-urgence-bebe.jpg" alt="" width="160" height="160" loading="lazy" decoding="async"></picture><span><strong>Bébé</strong><small>Couches, lait infantile, eau pour les biberons</small></span></a></li>
-          <li><a class="lp-row" href="kit-urgence-enfants-ecole.html"><picture><source srcset="img/photos/kit-urgence-enfants-ecole.webp" type="image/webp"><img src="img/photos/kit-urgence-enfants-ecole.jpg" alt="" width="160" height="160" loading="lazy" decoding="async"></picture><span><strong>Enfants</strong><small>Comprendre le plan de l'école (PPMS) et leur en parler</small></span></a></li>
-          <li><a class="lp-row" href="kit-urgence-personne-agee.html"><img src="img/cards/kit-urgence-personne-agee.svg" alt="" width="160" height="160" loading="lazy" decoding="async"><span><strong>Personnes âgées</strong><small>Traitements, ordonnances, registre communal du CCAS</small></span></a></li>
-          <li><a class="lp-row" href="kit-urgence-handicap.html"><img src="img/cards/kit-urgence-handicap.svg" alt="" width="160" height="160" loading="lazy" decoding="async"><span><strong>Situation de handicap</strong><small>Matériel médical, aidants, numéro d'urgence 114</small></span></a></li>
-          <li><a class="lp-row" href="kit-urgence-animaux.html"><picture><source srcset="img/photos/kit-urgence-animaux.webp" type="image/webp"><img src="img/photos/kit-urgence-animaux.jpg" alt="" width="160" height="160" loading="lazy" decoding="async"></picture><span><strong>Animaux</strong><small>Nourriture, carnet de santé, caisse de transport</small></span></a></li>
-          <li><a class="lp-row" href="entraide-voisins-crise.html"><img src="img/cards/entraide-voisins-crise.svg" alt="" width="160" height="160" loading="lazy" decoding="async"><span><strong>Personnes isolées</strong><small>Prendre des nouvelles, s'organiser entre voisins</small></span></a></li>
-          <li><a class="lp-row" href="kit-urgence-voiture.html"><picture><source srcset="img/photos/kit-urgence-voiture.webp" type="image/webp"><img src="img/photos/kit-urgence-voiture.jpg" alt="" width="160" height="160" loading="lazy" decoding="async"></picture><span><strong>Déplacements</strong><small>Le coffre de la voiture, la neige, la loi Montagne</small></span></a></li>
-        </ul>
-      </div>
+      <ul class="lp-benefits" role="list" aria-label="Les trois points à retenir">
+        <li><span class="lp-b-n" aria-hidden="true">1</span><span><strong>Gratuit, sans compte, sans publicité</strong><small>Pas d’inscription : ouvrez la checklist et cochez ce que vous avez déjà.</small></span></li>
+        <li><span class="lp-b-n" aria-hidden="true">2</span><span><strong>Calculée pour votre foyer</strong><small>Indiquez le nombre de personnes : l’eau (6 litres par personne pour 72 heures) et la nourriture se recalculent.</small></span></li>
+        <li><span class="lp-b-n" aria-hidden="true">3</span><span><strong>Hors ligne et privée</strong><small>Utilisable sans réseau après une première visite. Rien n’est envoyé en ligne.</small></span></li>
+      </ul>
 
       <div class="lp-sec lp-kit" aria-labelledby="lpS3">
         <div class="lp-head">
-          <p class="lp-eyebrow">L'application, sur cette page</p>
-          <h2 class="lp-h" id="lpS3">Votre checklist kit 72 h</h2>
-          <p class="lp-intro">Une checklist qui s'adapte à votre foyer et que vous complétez à votre rythme.</p>
+          <p class="lp-eyebrow">L’application, sur cette page</p>
+          <h2 class="lp-h" id="lpS3">Votre checklist kit 72 h</h2>
+          <p class="lp-intro">Une checklist qui s’adapte à votre foyer et que vous complétez à votre rythme.</p>
+          <p class="lp-kit-cta"><a class="lp-btn lp-btn1" href="#app-start">Ouvrir ma checklist 72 heures</a></p>
+          <p class="lp-more">Besoin de la liste complète ? <a href="kit-de-survie-72h.html">Consulter la liste du kit 72 h</a></p>
         </div>
         <ul class="lp-feat" role="list">
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 19c.6-3.3 3-5 6-5s5.4 1.7 6 5"/><circle cx="17" cy="9" r="2.4"/><path d="M16 14.2c2.6.1 4.4 1.6 5 4.8"/></svg><span><strong>Quantités calculées selon le foyer</strong><small>Indiquez le nombre de personnes : eau et nourriture se recalculent, pour 72 heures ou plus.</small></span></li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5c3 3.9 5.5 7 5.5 10a5.5 5.5 0 0 1-11 0c0-3 2.5-6.1 5.5-10z"/></svg><span><strong>Eau</strong><small>Repère du guide officiel : 6 litres par personne pour 72 heures.</small></span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5c3 3.9 5.5 7 5.5 10a5.5 5.5 0 0 1-11 0c0-3 2.5-6.1 5.5-10z"/></svg><span><strong>Eau</strong><small>Repère du guide officiel : 6 litres par personne pour 72 heures.</small></span></li>
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="7" width="14" height="13" rx="2"/><path d="M8 7V5h8v2M5 12h14"/></svg><span><strong>Alimentation</strong><small>Des aliments qui se mangent sans cuisson, par catégorie.</small></span></li>
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="8" width="16" height="11" rx="2"/><path d="M9 8V6a3 3 0 0 1 6 0v2M4 13h16"/></svg><span><strong>Équipement</strong><small>Lampe, radio, piles, batterie : cochez ce que vous avez déjà.</small></span></li>
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 8v8M8 12h8"/></svg><span><strong>Santé et médicaments</strong><small>Trousse de secours, traitements, ordonnances, hygiène.</small></span></li>
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 4h3l1.5 4-2 1.3a10 10 0 0 0 5.7 5.7L16 13l4 1.5v3a2 2 0 0 1-2.2 2A15.5 15.5 0 0 1 4.5 6.2 2 2 0 0 1 6.5 4z"/></svg><span><strong>Contacts importants</strong><small>Vos numéros utiles, enregistrés sur votre appareil.</small></span></li>
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17a8 8 0 1 1 16 0"/><path d="M12 17l4-5"/></svg><span><strong>Niveau de préparation</strong><small>Un pourcentage qui tient compte du stock, du foyer et des contacts.</small></span></li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg><span><strong>Parcours en 4 semaines</strong><small>Les fondamentaux, la santé et la sécurité, l'autonomie, la famille.</small></span></li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 19h14"/></svg><span><strong>Sauvegarde</strong><small>Exportez vos données dans un fichier et restaurez-les si besoin.</small></span></li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span><strong>Hors ligne et sans compte</strong><small>Rien n'est envoyé en ligne : tout reste sur votre appareil.</small></span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg><span><strong>Parcours en 4 semaines</strong><small>Les fondamentaux, la santé et la sécurité, l’autonomie, la famille.</small></span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="9" r="3"/><circle cx="16" cy="9" r="3"/><path d="M3 19c.5-3 2.6-4.5 5-4.5s4.5 1.5 5 4.5M11 19c.5-3 2.6-4.5 5-4.5s4.5 1.5 5 4.5"/></svg><span><strong>Voisins</strong><small>Un groupe de voisinage sans compte : les informations s’échangent par un code ou un QR code que vous partagez vous-même.</small></span></li>
         </ul>
-        <p class="lp-kit-cta"><a class="lp-btn lp-btn1" href="#app-start">Ouvrir ma checklist 72 heures</a></p>
       </div>
 
-      <div class="lp-sec" aria-labelledby="lpS4">
+      <div class="lp-sec" aria-labelledby="lpS1">
         <div class="lp-head">
-          <h2 class="lp-h" id="lpS4">Les bons réflexes</h2>
-          <p class="lp-intro">Savoir reconnaître une alerte et réagir calmement, c'est déjà se protéger.</p>
+          <h2 class="lp-h" id="lpS1">Les guides principaux</h2>
+          <p class="lp-intro">Pour chaque situation, ce qu’il faut faire avant, pendant et après, d’après les consignes officielles.</p>
         </div>
+        <ul class="lp-grid" role="list">
+          <li><a class="lp-card" href="inondation-que-faire.html"><picture><source srcset="img/photos/inondation-que-faire.webp" type="image/webp"><img src="img/photos/inondation-que-faire.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"></picture><span class="lp-card-t"><strong>Inondation</strong><small>Monter en hauteur, jamais en voiture</small></span></a></li>
+          <li><a class="lp-card" href="feu-de-foret-que-faire.html"><img src="img/cards/feu-de-foret-que-faire.svg" alt="" width="480" height="270" loading="lazy" decoding="async"><span class="lp-card-t"><strong>Feu de forêt, incendie</strong><small>S’abriter dans un bâtiment en dur</small></span></a></li>
+          <li><a class="lp-card" href="tempete-que-faire.html"><picture><source srcset="img/photos/tempete-que-faire.webp" type="image/webp"><img src="img/photos/tempete-que-faire.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"></picture><span class="lp-card-t"><strong>Tempête</strong><small>Rentrer, s’abriter, s’informer</small></span></a></li>
+          <li><a class="lp-card" href="seisme-que-faire.html"><picture><source srcset="img/photos/seisme-que-faire.webp" type="image/webp"><img src="img/photos/seisme-que-faire.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"></picture><span class="lp-card-t"><strong>Séisme</strong><small>S’abriter, puis sortir prudemment</small></span></a></li>
+          <li><a class="lp-card" href="canicule-que-faire.html"><picture><source srcset="img/photos/canicule-que-faire.webp" type="image/webp"><img src="img/photos/canicule-que-faire.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"></picture><span class="lp-card-t"><strong>Canicule</strong><small>Se rafraîchir, veiller sur les plus fragiles</small></span></a></li>
+          <li><a class="lp-card" href="coupure-electricite-que-faire.html"><picture><source srcset="img/photos/coupure-electricite-que-faire.webp" type="image/webp"><img src="img/photos/coupure-electricite-que-faire.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"></picture><span class="lp-card-t"><strong>Coupure d’électricité</strong><small>Tenir 72 heures sans courant</small></span></a></li>
+          <li><a class="lp-card" href="confinement-que-faire.html"><picture><source srcset="img/photos/confinement-que-faire.webp" type="image/webp"><img src="img/photos/confinement-que-faire.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"></picture><span class="lp-card-t"><strong>Confinement</strong><small>Se confiner, couper la ventilation, écouter la radio</small></span></a></li>
+          <li><a class="lp-card" href="accident-nucleaire-iode.html"><picture><source srcset="img/photos/accident-nucleaire-iode.webp" type="image/webp"><img src="img/photos/accident-nucleaire-iode.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"></picture><span class="lp-card-t"><strong>Accident nucléaire</strong><small>Se mettre à l’abri ; iode uniquement sur ordre du préfet</small></span></a></li>
+          <li><a class="lp-card" href="cyberattaque-que-faire.html"><picture><source srcset="img/photos/cyberattaque-que-faire.webp" type="image/webp"><img src="img/photos/cyberattaque-que-faire.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"></picture><span class="lp-card-t"><strong>Cyberattaque</strong><small>Les bons réflexes et qui contacter</small></span></a></li>
+          <li><a class="lp-card" href="cyclone-que-faire.html"><img src="img/cards/cyclone-que-faire.svg" alt="" width="480" height="270" loading="lazy" decoding="async"><span class="lp-card-t"><strong>Événement extrême : cyclone</strong><small>Niveaux d’alerte en outre-mer et protection</small></span></a></li>
+          <li><a class="lp-card" href="fr-alert-que-faire.html"><picture><source srcset="img/photos/fr-alert-que-faire.webp" type="image/webp"><img src="img/photos/fr-alert-que-faire.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"></picture><span class="lp-card-t"><strong>Alerte FR-Alert</strong><small>Comprendre le message reçu sur le téléphone</small></span></a></li>
+          <li><a class="lp-card lp-card--all" href="tous-les-guides.html"><span class="lp-card-t"><strong>Tous les guides</strong><small>Risques, équipement, outre-mer, famille</small><span class="lp-arrow" aria-hidden="true">→</span></span></a></li>
+        </ul>
+        <h3 class="lp-h3">Les bons réflexes</h3>
         <ul class="lp-links" role="list">
           <li><a class="lp-link" href="reagir-en-cas-de-crise.html"><img src="img/cards/reagir-en-cas-de-crise.svg" alt="" width="480" height="270" loading="lazy" decoding="async"><span><strong>Réagir en cas de crise</strong><small>Les réflexes officiels pour chaque situation, avant, pendant et après.</small></span></a></li>
-          <li><a class="lp-link" href="signal-alerte-sirene.html"><img src="img/cards/signal-alerte-sirene.svg" alt="" width="480" height="270" loading="lazy" decoding="async"><span><strong>Reconnaître la sirène d'alerte</strong><small>Le son, sa durée, l'essai du premier mercredi du mois, la fin d'alerte.</small></span></a></li>
-          <li><a class="lp-link" href="questions-reponses-kit-urgence.html"><picture><source srcset="img/photos/questions-reponses-kit-urgence.webp" type="image/webp"><img src="img/photos/questions-reponses-kit-urgence.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"></picture><span><strong>Vos questions sur le kit</strong><small>Plus de réseau, réserve d'eau, rangement : des réponses claires.</small></span></a></li>
+          <li><a class="lp-link" href="signal-alerte-sirene.html"><img src="img/cards/signal-alerte-sirene.svg" alt="" width="480" height="270" loading="lazy" decoding="async"><span><strong>Reconnaître la sirène d’alerte</strong><small>Le son, sa durée, l’essai du premier mercredi du mois, la fin d’alerte.</small></span></a></li>
+          <li><a class="lp-link" href="questions-reponses-kit-urgence.html"><picture><source srcset="img/photos/questions-reponses-kit-urgence.webp" type="image/webp"><img src="img/photos/questions-reponses-kit-urgence.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"></picture><span><strong>Vos questions sur le kit</strong><small>Plus de réseau, réserve d’eau, rangement : des réponses claires.</small></span></a></li>
+          <li><a class="lp-link" href="comprendre-s-informer.html"><img src="img/cards/comprendre-s-informer.svg" alt="" width="480" height="270" loading="lazy" decoding="async"><span><strong>Comprendre les risques autour de moi</strong><small>Le guide officiel résumé, le glossaire, les alertes, nos sources.</small></span></a></li>
         </ul>
       </div>
 
-      <div class="lp-sec lp-help" aria-labelledby="lpS5">
+      <div class="lp-sec" aria-labelledby="lpS2">
         <div class="lp-head">
-          <h2 class="lp-h" id="lpS5">S'entraider</h2>
-          <p class="lp-intro">En cas de crise, les premiers secours viennent souvent des proches et des voisins.</p>
+          <h2 class="lp-h" id="lpS2">Préparer selon votre foyer</h2>
+          <p class="lp-intro">Chacun a des besoins propres. Quelques précautions simples permettent de n’oublier personne.</p>
+        </div>
+        <ul class="lp-fam" role="list">
+          <li><a class="lp-row" href="kit-urgence-bebe.html"><picture><source srcset="img/photos/kit-urgence-bebe.webp" type="image/webp"><img src="img/photos/kit-urgence-bebe.jpg" alt="" width="160" height="160" loading="lazy" decoding="async"></picture><span><strong>Bébé</strong><small>Couches, lait infantile, eau pour les biberons</small></span></a></li>
+          <li><a class="lp-row" href="kit-urgence-enfants-ecole.html"><picture><source srcset="img/photos/kit-urgence-enfants-ecole.webp" type="image/webp"><img src="img/photos/kit-urgence-enfants-ecole.jpg" alt="" width="160" height="160" loading="lazy" decoding="async"></picture><span><strong>Enfants</strong><small>Comprendre le plan de l’école (PPMS) et leur en parler</small></span></a></li>
+          <li><a class="lp-row" href="kit-urgence-personne-agee.html"><img src="img/cards/kit-urgence-personne-agee.svg" alt="" width="160" height="160" loading="lazy" decoding="async"><span><strong>Personnes âgées</strong><small>Traitements, ordonnances, registre communal du CCAS</small></span></a></li>
+          <li><a class="lp-row" href="kit-urgence-handicap.html"><img src="img/cards/kit-urgence-handicap.svg" alt="" width="160" height="160" loading="lazy" decoding="async"><span><strong>Situation de handicap</strong><small>Matériel médical, aidants, numéro d’urgence 114</small></span></a></li>
+          <li><a class="lp-row" href="kit-urgence-animaux.html"><picture><source srcset="img/photos/kit-urgence-animaux.webp" type="image/webp"><img src="img/photos/kit-urgence-animaux.jpg" alt="" width="160" height="160" loading="lazy" decoding="async"></picture><span><strong>Animaux</strong><small>Nourriture, carnet de santé, caisse de transport</small></span></a></li>
+          <li><a class="lp-row" href="kit-urgence-voiture.html"><picture><source srcset="img/photos/kit-urgence-voiture.webp" type="image/webp"><img src="img/photos/kit-urgence-voiture.jpg" alt="" width="160" height="160" loading="lazy" decoding="async"></picture><span><strong>Déplacements</strong><small>Le coffre de la voiture, la neige, la loi Montagne</small></span></a></li>
+          <li><a class="lp-row" href="entraide-voisins-crise.html"><img src="img/cards/entraide-voisins-crise.svg" alt="" width="160" height="160" loading="lazy" decoding="async"><span><strong>Personnes isolées, voisins</strong><small>Prendre des nouvelles, créer un réseau de voisinage avant une crise</small></span></a></li>
+          <li><a class="lp-row" href="plan-familial-mise-en-surete.html"><img src="img/cards/plan-familial-mise-en-surete.svg" alt="" width="160" height="160" loading="lazy" decoding="async"><span><strong>Plan familial de mise en sûreté</strong><small>Qui fait quoi, le point de rendez-vous, les contacts utiles</small></span></a></li>
+        </ul>
+      </div>
+
+      <div class="lp-sec lp-privacy" aria-labelledby="lpS4">
+        <div class="lp-head">
+          <h2 class="lp-h" id="lpS4">Hors ligne et confidentiel</h2>
+          <p class="lp-intro">Une crise coupe parfois le réseau. La checklist reste disponible, et vos informations restent chez vous.</p>
         </div>
         <ul class="lp-help-list" role="list">
-          <li><a href="entraide-voisins-crise.html"><strong>Entraide entre voisins</strong><small>Créer un réseau de voisinage avant une crise, avec des outils concrets.</small></a></li>
-          <li><a href="plan-familial-mise-en-surete.html"><strong>Plan familial de mise en sûreté</strong><small>Qui fait quoi, le point de rendez-vous, les contacts utiles.</small></a></li>
-          <li><a href="#app-start"><strong>L'onglet Voisins de l'appli</strong><small>Un groupe de voisinage sans compte : les informations s'échangent par un code ou un QR code que vous partagez vous-même.</small></a></li>
+          <li><div class="lp-plain"><strong>Fonctionne sans réseau</strong><small>Après une première visite, la checklist s’ouvre même sans connexion.</small></div></li>
+          <li><a href="confidentialite.html"><strong>Vos données restent sur votre appareil</strong><small>Pas de compte, pas de cookie, pas de publicité : ce que vous saisissez reste sur votre appareil.</small></a></li>
+          <li><div class="lp-plain"><strong>Sauvegarde</strong><small>Exportez vos données dans un fichier et restaurez-les si besoin.</small></div></li>
         </ul>
       </div>
 
       <div class="lp-sec lp-trust" aria-labelledby="lpS6">
-        <h2 class="lp-h" id="lpS6">Nos engagements</h2>
+        <div class="lp-head">
+          <h2 class="lp-h" id="lpS6">Sources et engagements</h2>
+          <p class="lp-intro">Chaque guide s’appuie sur des sources publiques, à commencer par le guide « Tous responsables ».</p>
+        </div>
         <ul class="lp-trust-list" role="list">
-          <li><a href="pourquoi.html"><strong>Indépendance</strong><small>Une initiative citoyenne, sans lien avec l'État ni avec une marque : aucun produit mis en avant.</small></a></li>
-          <li><a href="confidentialite.html"><strong>Gratuité, sans publicité</strong><small>Pas de compte, pas de cookie, pas de publicité : ce que vous saisissez reste sur votre appareil.</small></a></li>
-          <li><a href="sources.html"><strong>Sources officielles citées</strong><small>Chaque guide s'appuie sur des sources publiques, à commencer par le guide « Tous responsables ».</small></a></li>
+          <li><a href="sources.html"><strong>Sources officielles citées</strong><small>Les textes et sites publics utilisés, guide par guide.</small></a></li>
           <li><a href="charte-editoriale.html"><strong>Charte éditoriale</strong><small>Comment les guides sont rédigés, datés, vérifiés et corrigés.</small></a></li>
+          <li><a href="pourquoi.html"><strong>Indépendance</strong><small>Une initiative citoyenne, sans lien avec l’État ni avec une marque : aucun produit mis en avant.</small></a></li>
         </ul>
-        <p class="lp-limit"><strong>Nos limites.</strong> Tous prêts ne remplace pas les consignes des autorités, qui priment toujours. En cas d'urgence, appelez le <a href="tel:112">112</a>.</p>
+        <p class="lp-limit"><strong>Nos limites.</strong> Tous prêts ne remplace pas les consignes des autorités, qui priment toujours. En cas d’urgence, appelez le <a href="tel:112">112</a>.</p>
       </div>
 
       <div class="lp-sec lp-final" aria-labelledby="lpS7">
-        <h2 class="lp-h" id="lpS7">La meilleure préparation commence aujourd'hui.</h2>
-        <p class="lp-intro">Commencez par cocher ce que vous avez déjà chez vous : chaque élément compte.</p>
+        <h2 class="lp-h" id="lpS7">La meilleure préparation commence aujourd’hui.</h2>
+        <p class="lp-intro">Commencez par cocher ce que vous avez déjà chez vous : chaque élément compte.</p>
         <p class="lp-final-cta"><a class="lp-btn lp-btn1" href="#app-start">Je prépare mon foyer</a></p>
       </div>
 
-      <h2 class="lp-h lp-app-h" id="app-start">Ma checklist 72 h</h2>
+      <h2 class="lp-h lp-app-h" id="app-start">Ma checklist 72 h</h2>
       <p class="lp-sub2">Cochez ce que vous avez déjà : les quantités se calculent selon votre foyer. Tout reste sur votre appareil.</p>
     </section>
     <div class="install-banner" id="installBanner">
@@ -904,6 +880,7 @@ html.in-app .home-foot-note{margin-top:16px!important}
     <div class="chip-row" id="scenarioChips"></div>
     <p class="note" id="scenarioIntro"></p>
     <p class="note"><strong>En cas de danger immédiat, appelez le 112</strong> (ou le 15, le 17, le 18 ; 114 par SMS).</p>
+    <div id="v9ScenProg" class="v9-prog" hidden></div>
     <div id="scenarioContent" style="margin-top:14px;"></div>
   </section>
 
@@ -912,7 +889,7 @@ html.in-app .home-foot-note{margin-top:16px!important}
     <div class="section-title"><h2>Guides rapides</h2></div>
     <div class="search-wrap">
       <input type="text" id="guideSearch" aria-label="Rechercher dans les guides" placeholder="Rechercher dans tous les guides (ex. brûlure, générateur, chlore...)">
-      <button class="clear-search" id="clearGuideSearch">✕</button>
+      <button class="clear-search" id="clearGuideSearch" aria-label="Effacer la recherche">✕</button>
     </div>
     <div class="chip-row" id="guideChips"></div>
     <div id="guideContent"></div>
@@ -1915,7 +1892,7 @@ function renderContacts(targetId, editable=true){
   const block = document.getElementById(targetId);
   block.innerHTML = '';
   if(contacts.length===0){
-    block.innerHTML = '<div style="padding:16px;color:var(--text-dim);font-size:13.5px;">Aucun contact enregistré.</div>';
+    block.innerHTML = '<div class="v9-empty"><strong>Aucun contact enregistré.</strong>Ajoutez au moins un proche à prévenir en cas de crise avec le bouton ci-dessous. Le numéro reste sur cet appareil.</div>';
   }
   contacts.forEach((c, idx)=>{
     const row = document.createElement('div');
@@ -1924,7 +1901,7 @@ function renderContacts(targetId, editable=true){
       row.innerHTML = `
         <input type="text" placeholder="Nom" value="${escH(c.name)}" data-field="name" data-idx="${idx}">
         <input type="tel" placeholder="Téléphone" value="${escH(c.phone)}" data-field="phone" data-idx="${idx}">
-        <button class="del" data-idx="${idx}">✕</button>`;
+        <button class="del" data-idx="${idx}" aria-label="Supprimer ce contact">✕</button>`;
     } else {
       const tel = String(c.phone||'').replace(/[^0-9+]/g,'').replace(/(?!^)\+/g,'').slice(0,20);
       row.innerHTML = `<div style="font-weight:600;">${escH(c.name||'—')}</div><div>${tel.replace(/\D/g,'').length>=3 ? `<a href="tel:${tel}">${escH(c.phone)}</a>` : escH(c.phone||'—')}</div><div></div>`;
@@ -2725,5 +2702,29 @@ html,body{overflow-wrap:break-word;}
 })();
 </script>
 <script>document.addEventListener("click",function(e){var c=e.target.closest&&e.target.closest("#scenarioChips .chip");if(c&&window.innerWidth<900){setTimeout(function(){var t=document.getElementById("scenarioIntro");if(t)t.scrollIntoView({behavior:"smooth",block:"start"});},60);}});</script>
+<script id="v9-js">/* v9 : progression lisible et confirmation d'enregistrement. Lecture seule. */
+(function(){
+ function $(i){return document.getElementById(i)}
+ function font(){try{var f=new FontFace('Inter',"url(fonts/inter-latin-wght-normal.woff2) format('woff2')",{weight:'100 900',display:'swap'});f.load().then(function(x){document.fonts.add(x)},function(){})}catch(e){}}
+ if(document.readyState==='complete')font();else addEventListener('load',font);
+ var toast,tt;
+ function ok(){try{return !!window.localStorage}catch(e){return false}}
+ function show(){if(!ok())return;if(!toast){toast=document.createElement('div');toast.className='v9-toast';toast.setAttribute('role','status');document.body.appendChild(toast)}
+  toast.textContent='Enregistré sur cet appareil';toast.classList.add('on');clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove('on')},1600)}
+ var main=$('contenu');if(!main)return;
+ main.addEventListener('change',function(e){var t=e.target;if(t&&t.matches&&t.matches('input,select,textarea')&&!t.closest('#landing'))show()});
+ main.addEventListener('click',function(e){var b=e.target&&e.target.closest&&e.target.closest('.stepper button,.hh-btn,.del,.add-row');if(b)setTimeout(show,30)});
+ var box=$('v9ScenProg'),sc=$('scenarioContent');
+ function prog(){if(!box||!sc)return;var c=sc.querySelectorAll('ul.checklist input[type=checkbox]');if(!c.length){box.hidden=true;return}
+  var d=0,next=null;for(var i=0;i<c.length;i++){if(c[i].checked)d++;else if(!next)next=c[i]}
+  var r=c.length-d,p=Math.round(d*100/c.length),h='<p class="v9-prog-t"><span><b>'+d+'</b> fait'+(d>1?'s':'')+' sur '+c.length+'</span><span><b>'+r+'</b> à faire</span></p>'
+  +'<div class="v9-prog-bar" role="img" aria-label="'+d+' sur '+c.length+' cochés"><i style="width:'+p+'%"></i></div>';
+  if(next){var l=sc.querySelector('label[for="'+next.id+'"]'),ph=next.closest('.card'),hd=ph&&ph.querySelector('.card-head');
+   h+='<p class="v9-prog-n"><strong>Prochaine étape :</strong> '+(l?l.textContent.replace(/</g,'&lt;'):'')+(hd?' <span>('+hd.textContent.replace(/</g,'&lt;')+')</span>':'')+'</p>'}
+  else h+='<p class="v9-prog-n"><strong>Tout est coché pour ce scénario.</strong> Pensez à vérifier les dates deux fois par an.</p>';
+  box.innerHTML=h;box.hidden=false}
+ if(sc){new MutationObserver(prog).observe(sc,{childList:true});sc.addEventListener('change',prog);prog()}
+})();
+</script>
 </body>
 </html>
