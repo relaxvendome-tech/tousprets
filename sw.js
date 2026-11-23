@@ -6,7 +6,7 @@
   IMPORTANT : incrémente CACHE_VERSION à chaque mise à jour.
 */
 
-const CACHE_VERSION = 'tous-prets-v66';
+const CACHE_VERSION = 'tous-prets-v67';
 const PRECACHE_URLS = [
   './',
   './index.html',
@@ -92,7 +92,16 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Cache d'abord pour les statiques
+  // CSS / JS / JSON : réseau d'abord (évite une page neuve avec un style périmé), repli cache hors ligne
+  if (/\.(css|js|json)$/.test(url.pathname)) {
+    event.respondWith(
+      fetch(req).then((res) => (res.ok ? putInCache(req, res) : res))
+        .catch(() => caches.match(req, { ignoreSearch: true }).then((c) => c || Response.error()))
+    );
+    return;
+  }
+
+  // Cache d'abord pour les autres statiques (images, polices)
   event.respondWith(
     caches.match(req, { ignoreSearch: true }).then((cached) => cached || fetch(req).then((res) => putInCache(req, res)))
   );
