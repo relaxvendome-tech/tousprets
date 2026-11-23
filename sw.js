@@ -6,12 +6,13 @@
   IMPORTANT : incrémente CACHE_VERSION à chaque mise à jour.
 */
 
-const CACHE_VERSION = 'tous-prets-v69';
+const CACHE_VERSION = 'tous-prets-v70';
 // Indispensables au démarrage hors ligne : leur échec fait échouer l'installation (l'ancien SW reste actif).
 const CRITICAL_URLS = [
   './',
   './index.html',
   './manifest.json',
+  './logo.svg',
   './style.css',
   './fonts/inter-latin-wght-normal.woff2',
   './icon-192.png'

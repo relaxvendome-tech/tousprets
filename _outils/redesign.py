@@ -28,7 +28,7 @@ CAT = {
  "kit-urgence-72h-famille-appartement-voiture": ("foyer", "users", "#8A6420", "#B88A36", "Famille, appartement, voiture"),
  "kit-urgence-bebe": ("foyer", "baby", "#8A4C6B", "#B56E91", "Avec un bébé"),
  "kit-urgence-animaux": ("foyer", "paw-print", "#6B4A2E", "#966A45", "Un chien, un chat"),
- "entraide-voisins-crise": ("foyer", "heart-handshake", "#2E6B5E", "#469383", "Entraide entre voisins. Le guide recommande aussi de se former aux premiers secours, ce qui permet d'aider concrètement les personnes blessées en attendant les secours."),
+ "entraide-voisins-crise": ("foyer", "heart-handshake", "#2E6B5E", "#469383", "Entraide entre voisins"),
  # Selon les risques
  "coupure-electricite-que-faire": ("risques", "zap-off", "#3A3F4A", "#5D6576", "Coupure d'électricité"),
  "inondation-que-faire": ("risques", "waves", "#1F5C8A", "#3C86B8", "Inondation"),
@@ -345,7 +345,7 @@ if __name__ == "__main__":
     # v5 : pages légales (legal_v5), précédent/suivant (prevnext_v5), accueil (apply_landing)
     # v6 : v6_structure (outils des pages test, guides, questions, glossaire, checklist, privacy)
     for _cmd in (["legal_v5.py"], ["nav_v4.py"], ["template_v4.py"], ["essentiels.py"], ["merge_now.py"], ["template_v4.py"],
-                 ["prevnext_v5.py"], ["v6_structure.py"], ["apply_landing.py", "@index"], ["webp.py", "--lazy"], ["typo_fr.py"]):
+                 ["prevnext_v5.py"], ["v6_structure.py"], ["apply_landing.py", "@index"], ["webp.py", "--lazy"], ["typo_fr.py"], ["brand_v7.py"]):
         _f = os.path.join(_o, _cmd[0])
         if os.path.exists(_f):
             _args = [os.path.join(SITE, "index.html")] if _cmd[1:] == ["@index"] else [SITE] + _cmd[1:]

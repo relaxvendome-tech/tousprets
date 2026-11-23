@@ -660,3 +660,11 @@ input.ck:checked+label{color:var(--muted);text-decoration:line-through;text-deco
  .gcards--short .gcard-b strong{font-size:1rem}
  .gcards--short .gcard-b span{font-size:.86rem}
 }
+/* ===== Identité v7 : logo et nom ===== */
+.site-head .brand{gap:.65rem;align-items:center}
+.site-head .brand img{width:44px;height:44px;border-radius:11px;box-shadow:0 1px 2px rgba(15,36,64,.18)}
+.site-head .brand-n{font-family:var(--sans,Inter,system-ui,sans-serif);font-weight:800;font-size:1.7rem;letter-spacing:-.025em;line-height:1;color:#0F2440}
+@media (prefers-color-scheme:dark){.site-head .brand-n{color:#fff}}
+@media (max-width:480px){.site-head .brand img{width:38px;height:38px}.site-head .brand-n{font-size:1.4rem}}
+@media (max-width:360px){.site-head .brand-n{font-size:1.25rem}}
+.foot-tag{margin:1rem 0 0;font-size:.85rem;opacity:.8}
