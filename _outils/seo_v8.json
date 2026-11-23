@@ -1,0 +1,2130 @@
+{
+ "_doc": "Données SEO v8 (lues par seo_v8.py). title 30-62 car., description 120-160 car. ; dates : date_publiee = premier commit git du fichier, date_modifiee = dernier commit où le texte éditorial (hors navigation, maillage, fil d'Ariane) a changé.",
+ "ancres": {
+  "kit-de-survie-72h": "La liste complète du kit de survie 72 h",
+  "checklist-kit-urgence-72h": "La checklist du kit d'urgence à imprimer",
+  "que-mettre-dans-un-kit-d-urgence": "Que mettre dans un kit d'urgence",
+  "combien-eau-stocker-par-personne": "Combien d'eau stocker par personne",
+  "aliments-sans-cuisson-kit-urgence": "Les aliments sans cuisson à stocker",
+  "sac-de-secours": "Le sac de secours pour évacuer vite",
+  "kit-de-survie-72h-pas-cher": "Composer un kit 72 h à petit budget",
+  "kit-7-jours-strategie-europeenne-72h": "Tenir 7 jours sans surstocker",
+  "kit-de-survie-gouvernement-pdf": "Le guide officiel en PDF et la liste à imprimer",
+  "kit-urgence-72h-gouvernement": "Ce que recommande le guide de l'État pour le kit 72 h",
+  "guide-tous-responsables-resume": "Le résumé du guide « Tous responsables »",
+  "fr-alert-que-faire": "Que faire quand FR-Alert sonne",
+  "signal-alerte-sirene": "Reconnaître la sirène d'alerte",
+  "questions-reponses-kit-urgence": "Les questions pratiques sur le kit d'urgence",
+  "glossaire-preparation-crise": "Le glossaire de la préparation aux crises",
+  "kit-urgence-72h-famille-appartement-voiture": "Adapter le kit à la famille, à l'appartement, à la voiture",
+  "kit-urgence-bebe": "Le kit d'urgence pour un bébé",
+  "kit-urgence-enfants-ecole": "Les enfants et l'école en cas de crise",
+  "kit-urgence-personne-agee": "Préparer une personne âgée",
+  "kit-urgence-handicap": "Se préparer en situation de handicap",
+  "kit-urgence-animaux": "Le kit d'urgence pour chien et chat",
+  "kit-urgence-voiture": "Le kit d'urgence de la voiture",
+  "plan-familial-mise-en-surete": "Le plan familial de mise en sûreté",
+  "entraide-voisins-crise": "S'organiser entre voisins",
+  "diagnostic-suis-je-pret": "Le test « Suis-je prêt ? »",
+  "arnaque-kit-urgence-gratuit": "Repérer l'arnaque au faux kit gratuit",
+  "coupure-electricite-que-faire": "Que faire en cas de coupure d'électricité",
+  "inondation-que-faire": "Que faire en cas d'inondation",
+  "tempete-que-faire": "Que faire en cas de tempête",
+  "canicule-que-faire": "Se protéger pendant une canicule",
+  "vague-de-froid-que-faire": "Se protéger d'une vague de froid",
+  "confinement-que-faire": "Se mettre à l'abri lors d'un confinement",
+  "attaque-terroriste-que-faire": "Les réflexes en cas d'attaque terroriste",
+  "cyberattaque-que-faire": "Que faire en cas de cyberattaque",
+  "tensions-internationales-se-preparer": "Se préparer calmement aux tensions internationales",
+  "preparation-catastrophe-naturelle": "Se préparer à une catastrophe naturelle",
+  "feu-de-foret-que-faire": "Les réflexes face à un feu de forêt",
+  "seisme-que-faire": "Que faire pendant et après un séisme",
+  "accident-nucleaire-iode": "Accident nucléaire : iode et mise à l'abri",
+  "cyclone-que-faire": "Cyclone : les alertes et les bons réflexes",
+  "radio-a-piles-kit-urgence": "Choisir une radio à piles",
+  "lampe-frontale-lanterne-kit-urgence": "S'éclairer sans bougie : lampe frontale ou lanterne",
+  "piles-kit-urgence": "Choisir et stocker ses piles",
+  "batterie-externe-station-electrique": "Batterie externe ou station électrique : mAh et Wh",
+  "recharger-telephone-coupure-courant": "Recharger son téléphone sans courant",
+  "couverture-de-survie": "Ce que fait vraiment une couverture de survie",
+  "detecteur-de-fumee": "Installer et tester un détecteur de fumée",
+  "trousse-de-secours-kit-urgence": "Le contenu de la trousse de secours",
+  "purifier-eau-pastilles-filtre": "Purifier l'eau : ébullition, pastilles, filtres",
+  "groupe-electrogene-securite": "Utiliser un groupe électrogène sans danger",
+  "frigo-congelateur-coupure-electricite": "Combien de temps tient le congélateur sans courant",
+  "preparation-outre-mer": "Se préparer en outre-mer, territoire par territoire",
+  "kit-urgence-guadeloupe": "Le kit d'urgence en Guadeloupe",
+  "kit-urgence-martinique": "Le kit d'urgence en Martinique",
+  "kit-urgence-guyane": "Le kit d'urgence en Guyane",
+  "kit-urgence-la-reunion": "Le kit d'urgence à La Réunion",
+  "kit-urgence-mayotte": "Le kit d'urgence à Mayotte",
+  "kit-urgence-saint-martin-saint-barthelemy": "Le kit d'urgence à Saint-Martin et Saint-Barthélemy"
+ },
+ "pages": {
+  "accessibilite.html": {
+   "title": "Déclaration d'accessibilité | Tous prêts",
+   "description": "Déclaration d’accessibilité de Tous prêts : partiellement conforme au RGAA 4.1 (auto-évaluation, non auditée), tests réalisés, limites connues, contact.",
+   "source_title": "Gemini",
+   "source_description": "actuel conservé",
+   "intention": "navigation",
+   "requete": "déclaration d'accessibilité tous prêts",
+   "secondaires": [
+    "accessibilité mode sombre gros caractères tous prêts",
+    "conformité accessibilité tous prêts"
+   ],
+   "cannibalisation": [],
+   "date_publiee": "2026-11-19",
+   "date_modifiee": "2026-11-23"
+  },
+  "accident-nucleaire-iode.html": {
+   "title": "Accident nucléaire : comprimés d'iode et confinement",
+   "description": "Comprimés d'iode stable : prise uniquement sur ordre du préfet, rayon de distribution autour des centrales nucléaires et consignes de mise à l'abri.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "informationnelle",
+   "requete": "accident nucléaire comprimés d'iode mise à l'abri",
+   "secondaires": [
+    "quand prendre comprimés d'iode accident nucléaire",
+    "confinement accident nucléaire consignes",
+    "rayon distribution iode centrale nucléaire"
+   ],
+   "cannibalisation": [
+    "confinement-que-faire.html",
+    "reagir-en-cas-de-crise.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "alt_hero": "Centrale nucléaire avec ses tours de refroidissement, derrière des lignes à haute tension",
+   "complementaires": [
+    "confinement-que-faire",
+    "combien-eau-stocker-par-personne",
+    "radio-a-piles-kit-urgence",
+    "signal-alerte-sirene",
+    "fr-alert-que-faire"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "aliments-sans-cuisson-kit-urgence.html": {
+   "title": "Aliments sans cuisson pour le kit d'urgence : la liste",
+   "description": "Que manger pendant 3 jours sans électricité ni gaz ? Liste d'aliments sans cuisson ni frigo pour le kit 72h, conseils de stockage et pièges à éviter.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "pratique",
+   "requete": "aliments sans cuisson kit d'urgence",
+   "secondaires": [
+    "nourriture sans cuisson 72h kit urgence",
+    "quoi manger sans gaz ni électricité urgence",
+    "conserves aliments durables kit urgence"
+   ],
+   "cannibalisation": [
+    "kit-de-survie-72h.html",
+    "que-mettre-dans-un-kit-d-urgence.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "complementaires": [
+    "combien-eau-stocker-par-personne",
+    "frigo-congelateur-coupure-electricite",
+    "kit-de-survie-72h-pas-cher",
+    "kit-urgence-bebe",
+    "kit-7-jours-strategie-europeenne-72h"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "fa52250"
+  },
+  "anticiper-s-entraider.html": {
+   "title": "Anticiper et s'entraider : en famille et entre voisins",
+   "description": "Faire le test « Suis-je prêt ? », préparer son plan familial, s'organiser avec ses voisins et déjouer les arnaques : se préparer ensemble, simplement.",
+   "source_title": "corrigé",
+   "source_description": "actuel conservé",
+   "intention": "navigation",
+   "requete": "anticiper et s'entraider en cas de crise",
+   "secondaires": [
+    "plan familial voisins test préparation crise",
+    "déjouer arnaques kit urgence entraide",
+    "s'organiser en famille et entre voisins"
+   ],
+   "cannibalisation": [
+    "entraide-voisins-crise.html",
+    "plan-familial-mise-en-surete.html",
+    "arnaque-kit-urgence-gratuit.html",
+    "diagnostic-suis-je-pret.html",
+    "tous-les-guides.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "schema": "CollectionPage",
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "9a77f7c"
+  },
+  "arnaque-kit-urgence-gratuit.html": {
+   "title": "Arnaque au faux kit d'urgence gratuit : vérifier et signaler",
+   "description": "Faux « kit gratuit du gouvernement » par SMS ou site trompeur : comment vérifier et où signaler (33700, internet-signalement.gouv.fr). L'État ne vend aucun kit.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "informationnelle",
+   "requete": "arnaque faux kit d'urgence gratuit",
+   "secondaires": [
+    "faux kit gratuit gouvernement sms site",
+    "signaler sms arnaque 33700 kit urgence",
+    "l'état distribue-t-il un kit d'urgence gratuit"
+   ],
+   "cannibalisation": [
+    "anticiper-s-entraider.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "complementaires": [
+    "kit-urgence-72h-gouvernement",
+    "kit-de-survie-gouvernement-pdf",
+    "fr-alert-que-faire",
+    "cyberattaque-que-faire",
+    "kit-de-survie-72h-pas-cher"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "attaque-terroriste-que-faire.html": {
+   "title": "Attaque terroriste, que faire ? S'échapper, se cacher, alerter",
+   "description": "Attaque terroriste : la consigne officielle s'échapper, se cacher, alerter. Les bons gestes expliqués simplement pour se protéger et protéger les autres.",
+   "source_title": "corrigé",
+   "source_description": "actuel conservé",
+   "intention": "pratique",
+   "requete": "que faire en cas d'attaque terroriste",
+   "secondaires": [
+    "s'échapper se cacher alerter consignes",
+    "réflexes attentat consignes sécurité",
+    "arrivée forces de l'ordre attaque réflexes"
+   ],
+   "cannibalisation": [
+    "reagir-en-cas-de-crise.html"
+   ],
+   "date_publiee": "2026-11-19",
+   "date_modifiee": "2026-11-23",
+   "alt_hero": "Voiture de police, gyrophares allumés, derrière un ruban de sécurité",
+   "complementaires": [
+    "fr-alert-que-faire",
+    "trousse-de-secours-kit-urgence",
+    "plan-familial-mise-en-surete",
+    "combien-eau-stocker-par-personne",
+    "signal-alerte-sirene"
+   ],
+   "date_verifiee": "2026-11-19",
+   "_commit_texte": "e242d22"
+  },
+  "batterie-externe-station-electrique.html": {
+   "title": "Batterie externe et station électrique : mAh, Wh, sécurité",
+   "description": "Comprendre les mAh et les Wh d'une batterie externe, choisir la capacité utile et éviter les risques de surchauffe ou de gonflement.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "informationnelle",
+   "requete": "batterie externe mah wh kit urgence",
+   "secondaires": [
+    "différence mah et wh batterie externe",
+    "quelle capacité batterie externe 72h",
+    "sécurité batterie lithium surchauffe gonflement"
+   ],
+   "cannibalisation": [
+    "s-equiper-kit-urgence.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "complementaires": [
+    "recharger-telephone-coupure-courant",
+    "groupe-electrogene-securite",
+    "coupure-electricite-que-faire",
+    "piles-kit-urgence",
+    "kit-urgence-handicap"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "canicule-que-faire.html": {
+   "title": "Canicule : que faire pour se protéger (gestes officiels)",
+   "description": "Réflexes anti-canicule : hydratation, logement frais, personnes vulnérables. Différence pic de chaleur / canicule + préparation du kit d’urgence.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "pratique",
+   "requete": "que faire en cas de canicule",
+   "secondaires": [
+    "gestes protection canicule",
+    "différence pic de chaleur canicule",
+    "hydratation logement frais canicule",
+    "protéger personnes vulnérables canicule"
+   ],
+   "cannibalisation": [
+    "reagir-en-cas-de-crise.html",
+    "kit-urgence-personne-agee.html"
+   ],
+   "date_publiee": "2026-11-19",
+   "date_modifiee": "2026-11-23",
+   "alt_hero": "Ventilateur de table blanc posé sur un meuble",
+   "complementaires": [
+    "combien-eau-stocker-par-personne",
+    "kit-urgence-personne-agee",
+    "trousse-de-secours-kit-urgence",
+    "coupure-electricite-que-faire",
+    "kit-urgence-animaux"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "charte-editoriale.html": {
+   "title": "Charte éditoriale de Tous prêts : sources, vérification",
+   "description": "Comment Tous prêts rédige et vérifie ses guides : sources officielles, dates de mise à jour, consignes officielles distinguées de nos conseils, corrections.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "navigation",
+   "requete": "charte éditoriale tous prêts",
+   "secondaires": [
+    "vérification sources tous prêts",
+    "comment sont rédigés les guides tous prêts",
+    "signaler une erreur tous prêts"
+   ],
+   "cannibalisation": [
+    "sources.html",
+    "pourquoi.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "checklist-kit-urgence-72h.html": {
+   "title": "Checklist kit d'urgence 72h à imprimer, gratuite",
+   "description": "Checklist gratuite du kit d'urgence 72h à imprimer, tirée du guide public « Tous responsables ». Ou cochez-la en ligne, quantités adaptées à votre foyer.",
+   "source_title": "corrigé",
+   "source_description": "corrigé",
+   "intention": "outil",
+   "requete": "checklist kit d'urgence 72h à imprimer",
+   "secondaires": [
+    "liste kit 72h à imprimer gratuite",
+    "checklist préparation urgence 72h",
+    "imprimer liste kit survie 72h",
+    "entretien kit urgence 72h",
+    "checklist kit urgence gratuite",
+    "liste kit urgence à imprimer"
+   ],
+   "cannibalisation": [
+    "index.html",
+    "kit-de-survie-72h.html",
+    "kit-de-survie-gouvernement-pdf.html"
+   ],
+   "date_publiee": "2026-11-19",
+   "date_modifiee": "2026-11-23",
+   "alt_hero": "Carnet à spirale ouvert sur une liste de choses à faire, avec un surligneur",
+   "complementaires": [
+    "kit-de-survie-72h",
+    "combien-eau-stocker-par-personne",
+    "aliments-sans-cuisson-kit-urgence",
+    "diagnostic-suis-je-pret",
+    "kit-urgence-72h-famille-appartement-voiture"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "combien-eau-stocker-par-personne.html": {
+   "title": "Combien de litres d'eau stocker par personne ? (72 h)",
+   "description": "Le guide officiel demande 6 litres d'eau par personne pour 72 heures, soit 2 litres par jour. Tableau par taille de foyer, stockage et renouvellement.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "informationnelle",
+   "requete": "combien d'eau stocker par personne",
+   "secondaires": [
+    "combien de litres d'eau par personne 72h",
+    "calcul eau potable foyer 3 jours",
+    "stocker renouveler eau kit urgence"
+   ],
+   "cannibalisation": [
+    "purifier-eau-pastilles-filtre.html",
+    "kit-de-survie-72h.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "alt_hero": "Bouteille d'eau en plastique posée sur une table",
+   "complementaires": [
+    "purifier-eau-pastilles-filtre",
+    "aliments-sans-cuisson-kit-urgence",
+    "kit-de-survie-72h",
+    "coupure-electricite-que-faire",
+    "kit-7-jours-strategie-europeenne-72h"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "fa52250"
+  },
+  "comprendre-s-informer.html": {
+   "title": "Comprendre la préparation aux crises : guide, glossaire",
+   "description": "Accédez au résumé du guide Tous responsables, au glossaire des termes de crise, aux sources référencées, à la méthode et à la charte éditoriale.",
+   "source_title": "actuel conservé",
+   "source_description": "Gemini",
+   "intention": "navigation",
+   "requete": "comprendre la préparation aux crises guide glossaire",
+   "secondaires": [
+    "résumé guide tous responsables glossaire sources",
+    "charte éditoriale méthode préparation urgence",
+    "s'informer sur les crises et le kit 72h"
+   ],
+   "cannibalisation": [
+    "guide-tous-responsables-resume.html",
+    "glossaire-preparation-crise.html",
+    "sources.html",
+    "charte-editoriale.html",
+    "tous-les-guides.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "schema": "CollectionPage",
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "confidentialite.html": {
+   "title": "Confidentialité – Tous prêts (zéro donnée collectée)",
+   "description": "Tous prêts ne collecte aucune donnée personnelle. Ce que vous saisissez reste sur votre appareil. Pas de compte, pas de cookie, pas de publicité.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "navigation",
+   "requete": "politique de confidentialité tous prêts",
+   "secondaires": [
+    "données personnelles tous prêts",
+    "stockage local hors ligne tous prêts",
+    "cookies tous prêts"
+   ],
+   "cannibalisation": [
+    "mentions-legales.html"
+   ],
+   "date_publiee": "2026-11-19",
+   "date_modifiee": "2026-11-23"
+  },
+  "confinement-que-faire.html": {
+   "title": "Confinement et mise à l’abri : que faire en cas d’alerte ?",
+   "description": "Alerte, sirène ou accident industriel : comment se confiner chez soi ? Les réflexes officiels, quoi préparer et combien de temps tenir. Guide simple.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "pratique",
+   "requete": "que faire en cas de confinement alerte",
+   "secondaires": [
+    "mise à l'abri accident industriel alerte",
+    "réflexes confinement chez soi urgence",
+    "tenir chez soi lors d'une mise à l'abri"
+   ],
+   "cannibalisation": [
+    "accident-nucleaire-iode.html",
+    "signal-alerte-sirene.html",
+    "reagir-en-cas-de-crise.html"
+   ],
+   "date_publiee": "2026-11-19",
+   "date_modifiee": "2026-11-23",
+   "alt_hero": "Gouttes de pluie sur une vitre fermée",
+   "complementaires": [
+    "combien-eau-stocker-par-personne",
+    "radio-a-piles-kit-urgence",
+    "aliments-sans-cuisson-kit-urgence",
+    "signal-alerte-sirene",
+    "fr-alert-que-faire"
+   ],
+   "date_verifiee": "2026-11-19",
+   "_commit_texte": "e242d22"
+  },
+  "coupure-electricite-que-faire.html": {
+   "title": "Coupure d’électricité : que faire heure par heure + kit 72h",
+   "description": "Que faire dès les premières minutes d’une coupure de courant. Conservation des aliments, chauffage, sécurité. + checklist du kit d’urgence 72h.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "pratique",
+   "requete": "que faire en cas de coupure d'électricité",
+   "secondaires": [
+    "coupure de courant réflexes heure par heure",
+    "conservation aliments coupure électricité",
+    "chauffage coupure courant",
+    "kit 72h coupure électricité"
+   ],
+   "cannibalisation": [
+    "frigo-congelateur-coupure-electricite.html",
+    "groupe-electrogene-securite.html",
+    "reagir-en-cas-de-crise.html"
+   ],
+   "date_publiee": "2026-11-19",
+   "date_modifiee": "2026-11-23",
+   "alt_hero": "Bougies allumées dans l'obscurité",
+   "complementaires": [
+    "frigo-congelateur-coupure-electricite",
+    "recharger-telephone-coupure-courant",
+    "combien-eau-stocker-par-personne",
+    "lampe-frontale-lanterne-kit-urgence",
+    "radio-a-piles-kit-urgence",
+    "vague-de-froid-que-faire"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "couverture-de-survie.html": {
+   "title": "Couverture de survie : usage réel et limites",
+   "description": "À quoi sert vraiment une couverture de survie ? Prévention de l'hypothermie, protection contre le vent, mythes à déconstruire.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "informationnelle",
+   "requete": "couverture de survie à quoi ça sert",
+   "secondaires": [
+    "comment utiliser une couverture de survie",
+    "mythes couverture de survie hypothermie",
+    "limites couverture de survie"
+   ],
+   "cannibalisation": [
+    "s-equiper-kit-urgence.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "complementaires": [
+    "vague-de-froid-que-faire",
+    "trousse-de-secours-kit-urgence",
+    "kit-urgence-voiture",
+    "sac-de-secours",
+    "kit-de-survie-72h"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "cyberattaque-que-faire.html": {
+   "title": "Cyberattaque : que faire ? Les bons réflexes au quotidien",
+   "description": "Piratage, rançongiciel, panne d'internet : les bons réflexes en cas de cyberattaque, qui contacter (17Cyber, Cybermalveillance) et comment s'y préparer.",
+   "source_title": "actuel conservé",
+   "source_description": "corrigé",
+   "intention": "pratique",
+   "requete": "que faire en cas de cyberattaque",
+   "secondaires": [
+    "piratage panne internet réflexes cyberattaque",
+    "contacter 17cyber cybermalveillance",
+    "se préparer panne numérique cyberattaque"
+   ],
+   "cannibalisation": [
+    "reagir-en-cas-de-crise.html"
+   ],
+   "date_publiee": "2026-11-19",
+   "date_modifiee": "2026-11-23",
+   "alt_hero": "Écran d'ordinateur affichant des lignes de code",
+   "complementaires": [
+    "recharger-telephone-coupure-courant",
+    "radio-a-piles-kit-urgence",
+    "combien-eau-stocker-par-personne",
+    "arnaque-kit-urgence-gratuit",
+    "tensions-internationales-se-preparer",
+    "coupure-electricite-que-faire"
+   ],
+   "date_verifiee": "2026-11-19",
+   "_commit_texte": "e242d22"
+  },
+  "cyclone-que-faire.html": {
+   "title": "Cyclone outre-mer : alertes Météo-France et protection",
+   "description": "Les niveaux d'alerte cyclonique de Météo-France en outre-mer, préparer sa maison avant l'arrivée du cyclone et les bons réflexes après son passage.",
+   "source_title": "actuel conservé",
+   "source_description": "corrigé",
+   "intention": "pratique",
+   "requete": "que faire en cas de cyclone outre-mer",
+   "secondaires": [
+    "niveaux alerte cyclonique météo france",
+    "préparer maison cyclone alerte rouge",
+    "après le passage d'un cyclone réflexes"
+   ],
+   "cannibalisation": [
+    "preparation-outre-mer.html",
+    "tempete-que-faire.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "complementaires": [
+    "combien-eau-stocker-par-personne",
+    "radio-a-piles-kit-urgence",
+    "preparation-outre-mer",
+    "purifier-eau-pastilles-filtre",
+    "kit-urgence-saint-martin-saint-barthelemy",
+    "kit-urgence-la-reunion",
+    "kit-urgence-guyane",
+    "lampe-frontale-lanterne-kit-urgence"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "detecteur-de-fumee.html": {
+   "title": "Détecteur de fumée : obligation et entretien",
+   "description": "Le détecteur avertisseur autonome de fumée (DAAF) est obligatoire dans chaque logement depuis 2015. Où l'installer, comment le tester.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "pratique",
+   "requete": "détecteur de fumée obligation entretien",
+   "secondaires": [
+    "daaf obligatoire logement où installer",
+    "tester entretenir détecteur de fumée",
+    "réglementation détecteur fumée france"
+   ],
+   "cannibalisation": [
+    "s-equiper-kit-urgence.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "complementaires": [
+    "feu-de-foret-que-faire",
+    "groupe-electrogene-securite",
+    "lampe-frontale-lanterne-kit-urgence",
+    "plan-familial-mise-en-surete",
+    "piles-kit-urgence"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "diagnostic-suis-je-pret.html": {
+   "title": "Suis-je prêt ? Le test de préparation aux crises (2 min)",
+   "description": "10 questions pour savoir si votre foyer est prêt à tenir 72 heures : eau, nourriture, santé, papiers, alerte. Votre niveau et 3 actions prioritaires, gratuit.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "outil",
+   "requete": "test suis-je prêt urgence 72h",
+   "secondaires": [
+    "quiz préparation crise 72h",
+    "évaluer sa préparation aux crises",
+    "diagnostic kit urgence 72h foyer"
+   ],
+   "cannibalisation": [
+    "anticiper-s-entraider.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "complementaires": [
+    "combien-eau-stocker-par-personne",
+    "aliments-sans-cuisson-kit-urgence",
+    "trousse-de-secours-kit-urgence",
+    "fr-alert-que-faire",
+    "kit-de-survie-72h",
+    "plan-familial-mise-en-surete",
+    "checklist-kit-urgence-72h",
+    "entraide-voisins-crise"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "entraide-voisins-crise.html": {
+   "title": "Entraide entre voisins en crise : s’organiser avant",
+   "description": "Comment créer un réseau d’entraide de voisinage avant une crise. Ce que recommande le guide « Tous responsables » + outils concrets pour s’organiser.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "pratique",
+   "requete": "entraide entre voisins en cas de crise",
+   "secondaires": [
+    "organiser solidarité voisinage crise",
+    "entraide voisins guide tous responsables",
+    "aider voisins vulnérables crise"
+   ],
+   "cannibalisation": [
+    "anticiper-s-entraider.html"
+   ],
+   "date_publiee": "2026-11-19",
+   "date_modifiee": "2026-11-23",
+   "complementaires": [
+    "kit-urgence-personne-agee",
+    "kit-urgence-handicap",
+    "plan-familial-mise-en-surete",
+    "kit-7-jours-strategie-europeenne-72h",
+    "diagnostic-suis-je-pret"
+   ],
+   "date_verifiee": "2026-11-19",
+   "_commit_texte": "9a77f7c"
+  },
+  "feu-de-foret-que-faire.html": {
+   "title": "Feu de forêt : débroussaillement et réflexes de protection",
+   "description": "Obligation légale de débroussaillement, réflexes si un feu de forêt approche et mise à l'abri dans un bâtiment en dur selon les consignes officielles.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "pratique",
+   "requete": "que faire en cas de feu de forêt",
+   "secondaires": [
+    "obligation légale débroussaillement feu forêt",
+    "réflexes feu de forêt approche",
+    "s'abriter bâtiment en dur feu de forêt"
+   ],
+   "cannibalisation": [
+    "reagir-en-cas-de-crise.html",
+    "preparation-catastrophe-naturelle.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "complementaires": [
+    "combien-eau-stocker-par-personne",
+    "sac-de-secours",
+    "radio-a-piles-kit-urgence",
+    "canicule-que-faire",
+    "detecteur-de-fumee"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "fr-alert-que-faire.html": {
+   "title": "FR-Alert : que faire quand l'alerte sonne sur le téléphone ?",
+   "description": "Message FR-Alert reçu ? Ce que signifie l'alerte, pourquoi elle sonne même en silencieux, les bons réflexes et pourquoi ne pas la désactiver.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "informationnelle",
+   "requete": "fr-alert que faire quand l'alerte sonne",
+   "secondaires": [
+    "fr-alert sonne en silencieux pourquoi",
+    "comment fonctionne fr-alert téléphone",
+    "faut-il désactiver fr-alert",
+    "réflexes réception alerte fr-alert"
+   ],
+   "cannibalisation": [
+    "signal-alerte-sirene.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "alt_hero": "Mains tenant un smartphone au-dessus de documents et de graphiques",
+   "complementaires": [
+    "signal-alerte-sirene",
+    "radio-a-piles-kit-urgence",
+    "confinement-que-faire",
+    "combien-eau-stocker-par-personne",
+    "plan-familial-mise-en-surete"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "frigo-congelateur-coupure-electricite.html": {
+   "title": "Congélateur sans électricité : combien de temps ? (frigo 4 h)",
+   "description": "Frigo fermé : environ 4 h. Congélateur plein : environ 48 h, à moitié plein : 24 h. Les bons gestes pendant la coupure et quoi jeter ensuite.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "informationnelle",
+   "requete": "combien de temps tient un congélateur sans électricité",
+   "secondaires": [
+    "combien de temps garde le froid frigo coupure",
+    "aliments à garder ou jeter après coupure courant",
+    "frigo fermé combien de temps coupure électricité"
+   ],
+   "cannibalisation": [
+    "coupure-electricite-que-faire.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "complementaires": [
+    "coupure-electricite-que-faire",
+    "aliments-sans-cuisson-kit-urgence",
+    "groupe-electrogene-securite",
+    "combien-eau-stocker-par-personne",
+    "recharger-telephone-coupure-courant"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "fa52250"
+  },
+  "glossaire-preparation-crise.html": {
+   "title": "Glossaire de la préparation aux crises : 30 termes clés",
+   "description": "30 termes de la préparation aux crises expliqués simplement : 112, FR-Alert, DICRIM, PPMS, délestage, iode stable, monoxyde de carbone, vigilance météo…",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "informationnelle",
+   "requete": "glossaire préparation aux crises définitions",
+   "secondaires": [
+    "définition dicrim ppms fr-alert",
+    "vocabulaire gestion de crise délestage iode",
+    "termes clés préparation urgence"
+   ],
+   "cannibalisation": [
+    "comprendre-s-informer.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "complementaires": [
+    "fr-alert-que-faire",
+    "signal-alerte-sirene",
+    "plan-familial-mise-en-surete",
+    "accident-nucleaire-iode",
+    "kit-urgence-enfants-ecole"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "groupe-electrogene-securite.html": {
+   "title": "Groupe électrogène : sécurité et risque monoxyde de carbone",
+   "description": "Prévenir l'intoxication au monoxyde de carbone avec un groupe électrogène : usage extérieur uniquement, signes d'alerte et réflexes sûrs.",
+   "source_title": "actuel conservé",
+   "source_description": "Gemini",
+   "intention": "pratique",
+   "requete": "groupe électrogène sécurité monoxyde de carbone",
+   "secondaires": [
+    "danger groupe électrogène intérieur",
+    "symptômes intoxication monoxyde de carbone",
+    "utiliser groupe électrogène sans risque"
+   ],
+   "cannibalisation": [
+    "coupure-electricite-que-faire.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "complementaires": [
+    "coupure-electricite-que-faire",
+    "batterie-externe-station-electrique",
+    "frigo-congelateur-coupure-electricite",
+    "detecteur-de-fumee",
+    "vague-de-froid-que-faire"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "guide-tous-responsables-resume.html": {
+   "title": "Guide « Tous responsables » : le résumé clair et pratique",
+   "description": "Résumé du guide « Tous responsables » publié par le Gouvernement : se préparer, connaître les risques, réagir à l’alerte, s’entraider. L’essentiel en 5 minutes.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "informationnelle",
+   "requete": "guide tous responsables résumé",
+   "secondaires": [
+    "résumé guide tous responsables préparation crise",
+    "grands axes guide tous responsables",
+    "essentiel guide tous responsables 72h"
+   ],
+   "cannibalisation": [
+    "kit-urgence-72h-gouvernement.html",
+    "kit-de-survie-gouvernement-pdf.html",
+    "comprendre-s-informer.html"
+   ],
+   "date_publiee": "2026-11-19",
+   "date_modifiee": "2026-11-23",
+   "alt_hero": "Livre ouvert posé sur une table",
+   "complementaires": [
+    "kit-de-survie-72h",
+    "plan-familial-mise-en-surete",
+    "entraide-voisins-crise",
+    "signal-alerte-sirene",
+    "combien-eau-stocker-par-personne",
+    "kit-urgence-72h-gouvernement",
+    "fr-alert-que-faire",
+    "glossaire-preparation-crise"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "index.html": {
+   "title": "Checklist kit d'urgence 72h gratuite, hors ligne | Tous prêts",
+   "description": "Checklist interactive et gratuite du kit d'urgence 72h : quantités d'eau et de vivres calculées selon votre foyer, hors ligne, aucune donnée envoyée.",
+   "source_title": "corrigé",
+   "source_description": "corrigé",
+   "intention": "outil",
+   "requete": "checklist kit d'urgence 72h interactive",
+   "secondaires": [
+    "kit d'urgence 72h checklist gratuite",
+    "calculer kit 72h selon foyer",
+    "checklist kit urgence hors ligne",
+    "kit urgence 72h tous responsables",
+    "checklist kit urgence gratuite",
+    "calculer quantités kit 72h"
+   ],
+   "cannibalisation": [
+    "checklist-kit-urgence-72h.html",
+    "kit-de-survie-72h.html"
+   ],
+   "date_publiee": "2026-11-19",
+   "date_modifiee": "2026-11-23"
+  },
+  "inondation-que-faire.html": {
+   "title": "Inondation : les bons réflexes (avant, pendant, après)",
+   "description": "Que faire en cas d’inondation : se mettre en sécurité, ne jamais prendre la voiture, protéger les papiers. Consignes officielles + kit d’urgence 72h.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "pratique",
+   "requete": "que faire en cas d'inondation",
+   "secondaires": [
+    "bons réflexes inondation avant pendant après",
+    "ne pas prendre la voiture inondation",
+    "protéger papiers inondation",
+    "consignes inondation kit 72h"
+   ],
+   "cannibalisation": [
+    "reagir-en-cas-de-crise.html",
+    "preparation-catastrophe-naturelle.html"
+   ],
+   "date_publiee": "2026-11-19",
+   "date_modifiee": "2026-11-23",
+   "alt_hero": "Rue inondée devant une maison, panneau stop à moitié dans l'eau",
+   "complementaires": [
+    "combien-eau-stocker-par-personne",
+    "radio-a-piles-kit-urgence",
+    "purifier-eau-pastilles-filtre",
+    "sac-de-secours",
+    "kit-urgence-guyane",
+    "plan-familial-mise-en-surete"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "kit-7-jours-strategie-europeenne-72h.html": {
+   "title": "Kit 7 jours : aller au-delà des 72 h de l'UE",
+   "description": "La stratégie UE de mars 2025 recommande 72 h d'autonomie. Comment viser 7 jours sans stockage excessif : rotation, partage, entraide.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "informationnelle",
+   "requete": "kit 7 jours autonomie 72h stratégie européenne",
+   "secondaires": [
+    "stratégie européenne préparation 72h 7 jours",
+    "aller au-delà de 72h sans surstocker",
+    "autonomie 7 jours rotation entraide"
+   ],
+   "cannibalisation": [
+    "kit-de-survie-72h.html",
+    "kit-urgence-72h-gouvernement.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "complementaires": [
+    "combien-eau-stocker-par-personne",
+    "aliments-sans-cuisson-kit-urgence",
+    "entraide-voisins-crise",
+    "kit-de-survie-72h",
+    "tensions-internationales-se-preparer",
+    "piles-kit-urgence"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "c03bb90"
+  },
+  "kit-de-survie-72h-pas-cher.html": {
+   "title": "Kit de survie 72h pas cher : le faire soi-même",
+   "description": "Comment constituer un vrai kit d’urgence 72h à moindre coût avec ce que vous avez déjà. Liste officielle + ce qu’il faut vraiment acheter. Sans gaspillage.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "pratique",
+   "requete": "kit de survie 72h pas cher",
+   "secondaires": [
+    "faire son kit urgence 72h soi-même",
+    "kit 72h petit budget sans gaspillage",
+    "étaler achats kit urgence 72h"
+   ],
+   "cannibalisation": [
+    "kit-de-survie-72h.html",
+    "que-mettre-dans-un-kit-d-urgence.html"
+   ],
+   "date_publiee": "2026-11-19",
+   "date_modifiee": "2026-11-23",
+   "complementaires": [
+    "kit-de-survie-72h",
+    "piles-kit-urgence",
+    "combien-eau-stocker-par-personne",
+    "aliments-sans-cuisson-kit-urgence",
+    "arnaque-kit-urgence-gratuit"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "kit-de-survie-72h.html": {
+   "title": "Kit de survie 72h : liste complète (guide Tous responsables)",
+   "description": "Liste complète du kit d’urgence 72h du gouvernement : eau, nourriture, radio, trousse… Version claire + checklist interactive gratuite adaptée à votre foyer.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "informationnelle",
+   "requete": "kit de survie 72h liste complète",
+   "secondaires": [
+    "liste kit d'urgence 72h",
+    "que mettre dans un kit de survie 72h",
+    "kit 72h eau nourriture radio",
+    "quand vérifier son kit 72h"
+   ],
+   "cannibalisation": [
+    "que-mettre-dans-un-kit-d-urgence.html",
+    "kit-urgence-72h-gouvernement.html",
+    "checklist-kit-urgence-72h.html"
+   ],
+   "date_publiee": "2026-11-19",
+   "date_modifiee": "2026-11-23",
+   "complementaires": [
+    "combien-eau-stocker-par-personne",
+    "aliments-sans-cuisson-kit-urgence",
+    "radio-a-piles-kit-urgence",
+    "trousse-de-secours-kit-urgence",
+    "sac-de-secours",
+    "kit-de-survie-72h-pas-cher"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "kit-de-survie-gouvernement-pdf.html": {
+   "title": "Kit de survie gouvernement PDF : guide officiel et liste 72h",
+   "description": "Où télécharger le PDF officiel du guide « Tous responsables » (kit d'urgence 72h), ce qu'il contient, et une checklist gratuite à imprimer et cocher.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "informationnelle",
+   "requete": "kit de survie gouvernement pdf",
+   "secondaires": [
+    "guide tous responsables pdf kit 72h",
+    "télécharger guide kit urgence 72h pdf",
+    "liste kit 72h gouvernement à imprimer"
+   ],
+   "cannibalisation": [
+    "kit-urgence-72h-gouvernement.html",
+    "guide-tous-responsables-resume.html",
+    "checklist-kit-urgence-72h.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "complementaires": [
+    "kit-urgence-72h-gouvernement",
+    "guide-tous-responsables-resume",
+    "checklist-kit-urgence-72h",
+    "arnaque-kit-urgence-gratuit",
+    "combien-eau-stocker-par-personne"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "kit-urgence-72h-famille-appartement-voiture.html": {
+   "title": "Kit d’urgence 72h : famille, bébé, appartement ou voiture",
+   "description": "Que mettre dans son kit 72h selon votre situation : enfants, bébé, appartement, voiture, animaux. Liste officielle + ajouts concrets. Checklist gratuite.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "pratique",
+   "requete": "adapter kit d'urgence 72h famille appartement voiture",
+   "secondaires": [
+    "kit urgence 72h bébé enfants",
+    "kit urgence 72h en appartement",
+    "kit urgence 72h animaux",
+    "kit 72h voiture évacuation"
+   ],
+   "cannibalisation": [
+    "kit-de-survie-72h.html",
+    "proteger-son-foyer.html",
+    "sac-de-secours.html"
+   ],
+   "date_publiee": "2026-11-19",
+   "date_modifiee": "2026-11-23",
+   "alt_hero": "Immeuble d'habitation en briques rouges entouré de palmiers",
+   "complementaires": [
+    "combien-eau-stocker-par-personne",
+    "plan-familial-mise-en-surete",
+    "sac-de-secours",
+    "aliments-sans-cuisson-kit-urgence",
+    "kit-urgence-bebe",
+    "kit-urgence-enfants-ecole",
+    "kit-urgence-animaux",
+    "kit-urgence-voiture"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "kit-urgence-72h-gouvernement.html": {
+   "title": "Kit d'urgence 72h du gouvernement : ce que dit le guide",
+   "description": "Ce que recommande le guide « Tous responsables » (SGDSN) pour le kit 72h. Priorités, quantités exactes et checklist gratuite. Pas de kit officiel à acheter.",
+   "source_title": "Gemini",
+   "source_description": "actuel conservé",
+   "intention": "informationnelle",
+   "requete": "kit d'urgence 72h gouvernement",
+   "secondaires": [
+    "kit urgence 72h recommandations état",
+    "kit 72h sgdsn tous responsables",
+    "existe-t-il un kit d'urgence officiel",
+    "priorités kit 72h gouvernement"
+   ],
+   "cannibalisation": [
+    "guide-tous-responsables-resume.html",
+    "kit-de-survie-gouvernement-pdf.html",
+    "kit-de-survie-72h.html"
+   ],
+   "date_publiee": "2026-11-19",
+   "date_modifiee": "2026-11-23",
+   "alt_hero": "Drapeau français flottant sous un ciel bleu",
+   "complementaires": [
+    "guide-tous-responsables-resume",
+    "kit-de-survie-gouvernement-pdf",
+    "kit-de-survie-72h",
+    "combien-eau-stocker-par-personne",
+    "arnaque-kit-urgence-gratuit"
+   ],
+   "date_verifiee": "2026-11-19",
+   "_commit_texte": "9a77f7c"
+  },
+  "kit-urgence-animaux.html": {
+   "title": "Kit d'urgence pour chien et chat : la liste",
+   "description": "Nourriture, eau, médicaments, carnet de santé, identification, caisse de transport : le kit d'urgence de votre chien ou chat et le plan en cas d'évacuation.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "pratique",
+   "requete": "kit d'urgence animaux",
+   "secondaires": [
+    "kit d'urgence chien chat",
+    "évacuation avec un animal",
+    "que prévoir pour son chien en cas de crise"
+   ],
+   "cannibalisation": [
+    "kit-urgence-72h-famille-appartement-voiture.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "alt_hero": "Un chien et un chat allongés côte à côte dans l'herbe",
+   "complementaires": [
+    "combien-eau-stocker-par-personne",
+    "sac-de-secours",
+    "kit-urgence-72h-famille-appartement-voiture",
+    "plan-familial-mise-en-surete",
+    "canicule-que-faire"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "kit-urgence-bebe.html": {
+   "title": "Kit d'urgence bébé : la liste pour 72h",
+   "description": "Couches, lait infantile, eau pour les biberons, petits pots, carnet de santé : ce qu'il faut ajouter au kit d'urgence 72h quand on a un bébé.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "pratique",
+   "requete": "kit d'urgence bébé",
+   "secondaires": [
+    "kit urgence bébé 72h",
+    "lait infantile eau biberon coupure",
+    "que prévoir pour un bébé en cas de crise"
+   ],
+   "cannibalisation": [
+    "kit-urgence-72h-famille-appartement-voiture.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "alt_hero": "Biberon de lait posé sur un meuble",
+   "complementaires": [
+    "combien-eau-stocker-par-personne",
+    "aliments-sans-cuisson-kit-urgence",
+    "kit-urgence-72h-famille-appartement-voiture",
+    "trousse-de-secours-kit-urgence",
+    "kit-urgence-enfants-ecole"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "kit-urgence-enfants-ecole.html": {
+   "title": "Kit urgence 72 h et enfants à l'école : règles et réflexes",
+   "description": "Comprendre le PPMS à l'école, ne pas aller chercher ses enfants en crise, parler aux enfants et adapter le kit d'urgence 72 h aux besoins du foyer.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "pratique",
+   "requete": "kit urgence 72h et enfants à l'école",
+   "secondaires": [
+    "ppms école ne pas aller chercher son enfant",
+    "parler des risques aux enfants",
+    "adapter kit 72h aux enfants"
+   ],
+   "cannibalisation": [
+    "proteger-son-foyer.html",
+    "kit-urgence-72h-famille-appartement-voiture.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "alt_hero": "Bâtiment scolaire en briques rouges au bord d'une rue",
+   "complementaires": [
+    "plan-familial-mise-en-surete",
+    "kit-urgence-bebe",
+    "fr-alert-que-faire",
+    "kit-urgence-72h-famille-appartement-voiture",
+    "signal-alerte-sirene"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "kit-urgence-guadeloupe.html": {
+   "title": "Kit d'urgence Guadeloupe : cyclones, séismes, volcan",
+   "description": "Kit 72 h adapté à la Guadeloupe : cyclones de juin à novembre, séismes, La Soufrière, inondations. Risques, contenu du kit et sites d'alerte officiels.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "pratique",
+   "requete": "kit d'urgence guadeloupe cyclones séismes",
+   "secondaires": [
+    "préparation urgence guadeloupe saison cyclonique",
+    "risques guadeloupe soufrière inondations",
+    "alertes officielles guadeloupe kit 72h"
+   ],
+   "cannibalisation": [
+    "preparation-outre-mer.html",
+    "cyclone-que-faire.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "alt_hero": "Vagues qui se brisent sur des rochers au bord de la mer",
+   "complementaires": [
+    "cyclone-que-faire",
+    "seisme-que-faire",
+    "kit-urgence-martinique",
+    "combien-eau-stocker-par-personne",
+    "kit-urgence-saint-martin-saint-barthelemy",
+    "purifier-eau-pastilles-filtre"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "kit-urgence-guyane.html": {
+   "title": "Kit d'urgence Guyane : inondations, orages, coupures",
+   "description": "Préparer le kit 72h en Guyane face aux fortes pluies, inondations et coupures d'eau ou d'électricité, avec les alertes officielles.",
+   "source_title": "actuel conservé",
+   "source_description": "Gemini",
+   "intention": "pratique",
+   "requete": "kit d'urgence guyane inondations coupures",
+   "secondaires": [
+    "préparation urgence guyane pluies coupures eau électricité",
+    "risques guyane orages inondations kit 72h",
+    "alertes officielles guyane urgence"
+   ],
+   "cannibalisation": [
+    "preparation-outre-mer.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "complementaires": [
+    "inondation-que-faire",
+    "coupure-electricite-que-faire",
+    "purifier-eau-pastilles-filtre",
+    "combien-eau-stocker-par-personne",
+    "preparation-outre-mer"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "kit-urgence-handicap.html": {
+   "title": "Kit urgence 72 h et handicap : 114, matériel et aidants",
+   "description": "Préparer une crise de 72 h en situation de handicap : numéro d'urgence 114 (SMS, visio, appli), matériel médical électrique et coordination avec les aidants.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "pratique",
+   "requete": "kit urgence 72h et handicap",
+   "secondaires": [
+    "numéro urgence 114 sms visio handicap",
+    "matériel médical électrique coupure urgence",
+    "aidants préparation crise handicap"
+   ],
+   "cannibalisation": [
+    "proteger-son-foyer.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "complementaires": [
+    "recharger-telephone-coupure-courant",
+    "batterie-externe-station-electrique",
+    "entraide-voisins-crise",
+    "kit-urgence-personne-agee",
+    "plan-familial-mise-en-surete"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "kit-urgence-la-reunion.html": {
+   "title": "Kit d'urgence La Réunion : cyclones, volcan, séismes",
+   "description": "Kit 72 h à La Réunion : saison cyclonique de novembre à avril, Piton de la Fournaise, séismes, inondations. Contenu du kit et alertes officielles.",
+   "source_title": "actuel conservé",
+   "source_description": "corrigé",
+   "intention": "pratique",
+   "requete": "kit d'urgence la réunion cyclone volcan",
+   "secondaires": [
+    "saison cyclonique la réunion piton de la fournaise",
+    "préparation inondations séismes la réunion",
+    "alertes officielles la réunion cyclone"
+   ],
+   "cannibalisation": [
+    "preparation-outre-mer.html",
+    "cyclone-que-faire.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "complementaires": [
+    "cyclone-que-faire",
+    "seisme-que-faire",
+    "kit-urgence-mayotte",
+    "combien-eau-stocker-par-personne",
+    "radio-a-piles-kit-urgence"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "kit-urgence-martinique.html": {
+   "title": "Kit d'urgence Martinique : cyclone, séisme, Pelée",
+   "description": "Kit 72 h en Martinique : saison cyclonique de juin à novembre, séismes, Montagne Pelée, inondations. Contenu du kit et canaux d'alerte officiels.",
+   "source_title": "actuel conservé",
+   "source_description": "corrigé",
+   "intention": "pratique",
+   "requete": "kit d'urgence martinique cyclone séisme",
+   "secondaires": [
+    "préparation urgence martinique montagne pelée",
+    "saison cyclonique martinique kit 72h",
+    "alertes officielles martinique urgence"
+   ],
+   "cannibalisation": [
+    "preparation-outre-mer.html",
+    "cyclone-que-faire.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "alt_hero": "Plage de sable bordée de cocotiers et eau turquoise",
+   "complementaires": [
+    "cyclone-que-faire",
+    "seisme-que-faire",
+    "kit-urgence-guadeloupe",
+    "combien-eau-stocker-par-personne",
+    "radio-a-piles-kit-urgence"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "kit-urgence-mayotte.html": {
+   "title": "Kit d'urgence Mayotte : cyclones, séismes, eau",
+   "description": "Kit 72 h à Mayotte : cyclones violents comme Chido en 2024, séismes, pénurie d'eau chronique. Risques, contenu du kit et canaux d'alerte officiels.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "pratique",
+   "requete": "kit d'urgence mayotte cyclones séismes eau",
+   "secondaires": [
+    "préparation urgence mayotte pénurie d'eau cyclones",
+    "risques séismes cyclones mayotte kit 72h",
+    "alertes officielles mayotte urgence"
+   ],
+   "cannibalisation": [
+    "preparation-outre-mer.html",
+    "cyclone-que-faire.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "alt_hero": "Ville côtière au bord du lagon, au pied d'une colline boisée",
+   "complementaires": [
+    "cyclone-que-faire",
+    "seisme-que-faire",
+    "purifier-eau-pastilles-filtre",
+    "combien-eau-stocker-par-personne",
+    "kit-urgence-la-reunion"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "kit-urgence-personne-agee.html": {
+   "title": "Kit urgence 72 h et personne âgée : santé, CCAS et météo",
+   "description": "Préparer l'autonomie 72 h d'une personne âgée : traitements, ordonnances, registre communal du CCAS, canicule, grand froid et téléassistance.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "pratique",
+   "requete": "kit urgence 72h personne âgée",
+   "secondaires": [
+    "préparer personne âgée crise canicule froid",
+    "registre communal ccas personne âgée",
+    "médicaments ordonnances kit urgence senior"
+   ],
+   "cannibalisation": [
+    "proteger-son-foyer.html",
+    "canicule-que-faire.html",
+    "vague-de-froid-que-faire.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "complementaires": [
+    "canicule-que-faire",
+    "vague-de-froid-que-faire",
+    "entraide-voisins-crise",
+    "combien-eau-stocker-par-personne",
+    "kit-urgence-handicap"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "kit-urgence-saint-martin-saint-barthelemy.html": {
+   "title": "Kit 72 h Saint-Martin et Saint-Barthélemy",
+   "description": "Kit d'urgence 72 h pour Saint-Martin et Saint-Barthélemy : cyclones violents (Irma 2017), séismes, tsunamis, eau. Risques, contenu du kit et canaux officiels.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "pratique",
+   "requete": "kit 72h saint-martin saint-barthélemy",
+   "secondaires": [
+    "préparation urgence îles du nord cyclones séismes",
+    "risques tsunamis eau saint-martin saint-barthélemy",
+    "alertes officielles îles du nord kit 72h"
+   ],
+   "cannibalisation": [
+    "preparation-outre-mer.html",
+    "cyclone-que-faire.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "complementaires": [
+    "cyclone-que-faire",
+    "seisme-que-faire",
+    "kit-urgence-guadeloupe",
+    "combien-eau-stocker-par-personne",
+    "purifier-eau-pastilles-filtre"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "kit-urgence-voiture.html": {
+   "title": "Kit urgence voiture : gilet, triangle, loi Montagne et neige",
+   "description": "Gilet et triangle, équipements hivernaux loi Montagne, affaires utiles dans le coffre et bons réflexes si vous êtes immobilisé par la neige.",
+   "source_title": "actuel conservé",
+   "source_description": "Gemini",
+   "intention": "pratique",
+   "requete": "kit d'urgence voiture hiver neige",
+   "secondaires": [
+    "gilet triangle loi montagne équipements hiver",
+    "affaires à garder dans le coffre voiture",
+    "bloqué dans la neige en voiture que faire"
+   ],
+   "cannibalisation": [
+    "kit-urgence-72h-famille-appartement-voiture.html",
+    "vague-de-froid-que-faire.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "alt_hero": "Voiture sur une étendue enneigée au coucher du soleil",
+   "complementaires": [
+    "vague-de-froid-que-faire",
+    "couverture-de-survie",
+    "sac-de-secours",
+    "inondation-que-faire",
+    "recharger-telephone-coupure-courant"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "lampe-frontale-lanterne-kit-urgence.html": {
+   "title": "Lampe frontale et lanterne : éclairer sans risque",
+   "description": "Pourquoi préférer une lampe frontale ou une lanterne aux bougies dans un kit d'urgence ? Risques incendie, autonomie, piles : les critères objectifs.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "informationnelle",
+   "requete": "lampe frontale ou lanterne kit d'urgence",
+   "secondaires": [
+    "pourquoi éviter les bougies en cas de coupure",
+    "choisir lampe kit urgence autonomie piles",
+    "éclairage sûr kit 72h"
+   ],
+   "cannibalisation": [
+    "s-equiper-kit-urgence.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "complementaires": [
+    "piles-kit-urgence",
+    "radio-a-piles-kit-urgence",
+    "coupure-electricite-que-faire",
+    "detecteur-de-fumee",
+    "batterie-externe-station-electrique"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "licence-visuels.html": {
+   "title": "Infographies libres de droits : conditions de réutilisation",
+   "description": "Les infographies Tous prêts sont sous licence CC BY 4.0 : réutilisation libre, y compris imprimée, en citant tousprets.fr. Formulation à copier.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "navigation",
+   "requete": "infographies libres de droits préparation crise",
+   "secondaires": [
+    "réutiliser infographie kit urgence",
+    "licence CC BY 4.0 tous prêts"
+   ],
+   "cannibalisation": [],
+   "date_publiee": "2026-11-19",
+   "date_modifiee": "2026-11-23",
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "c03bb90"
+  },
+  "mentions-legales.html": {
+   "title": "Mentions légales du site Tous prêts",
+   "description": "Mentions légales de Tous prêts, appli citoyenne gratuite : éditeur, hébergeur GitHub Pages, sources publiques réutilisées, licences et responsabilité.",
+   "source_title": "corrigé",
+   "source_description": "actuel conservé",
+   "intention": "navigation",
+   "requete": "mentions légales tous prêts",
+   "secondaires": [
+    "éditeur hébergeur tous prêts",
+    "responsabilité site tous prêts"
+   ],
+   "cannibalisation": [
+    "confidentialite.html"
+   ],
+   "date_publiee": "2026-11-19",
+   "date_modifiee": "2026-11-23"
+  },
+  "piles-kit-urgence.html": {
+   "title": "Piles du kit d'urgence : types et stockage",
+   "description": "Alcalines ou lithium ? Combien en stocker ? Comment les conserver et les faire tourner dans un kit d'urgence 72 h. Conseils factuels et sans marques.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "informationnelle",
+   "requete": "piles kit d'urgence stockage et choix",
+   "secondaires": [
+    "piles alcalines ou lithium kit urgence",
+    "combien de piles stocker kit 72h",
+    "conserver renouveler piles kit urgence"
+   ],
+   "cannibalisation": [
+    "s-equiper-kit-urgence.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "complementaires": [
+    "lampe-frontale-lanterne-kit-urgence",
+    "radio-a-piles-kit-urgence",
+    "batterie-externe-station-electrique",
+    "kit-de-survie-72h-pas-cher",
+    "detecteur-de-fumee"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "plan-familial-mise-en-surete.html": {
+   "title": "Plan familial de mise en sûreté (PFMS) : rôles et contacts",
+   "description": "Organiser son plan familial de mise en sûreté : qui fait quoi, point de rendez-vous, contacts utiles et articulation avec le kit d'urgence 72 h.",
+   "source_title": "corrigé",
+   "source_description": "actuel conservé",
+   "intention": "pratique",
+   "requete": "plan familial de mise en sûreté pfms",
+   "secondaires": [
+    "organiser pfms point de rendez-vous contacts",
+    "qui fait quoi plan familial urgence",
+    "numéros urgence papier plan familial"
+   ],
+   "cannibalisation": [
+    "anticiper-s-entraider.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "complementaires": [
+    "kit-urgence-enfants-ecole",
+    "entraide-voisins-crise",
+    "fr-alert-que-faire",
+    "sac-de-secours",
+    "diagnostic-suis-je-pret"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "pourquoi.html": {
+   "title": "Pourquoi Tous prêts existe : appli citoyenne gratuite",
+   "description": "Tous prêts transforme le guide officiel « Tous responsables » en checklist interactive. Gratuit, sans pub, sans collecte de données, entièrement hors ligne.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "navigation",
+   "requete": "pourquoi tous prêts existe",
+   "secondaires": [
+    "à propos application tous prêts",
+    "qui a créé tous prêts",
+    "engagements tous prêts gratuit hors ligne"
+   ],
+   "cannibalisation": [
+    "sources.html",
+    "charte-editoriale.html"
+   ],
+   "date_publiee": "2026-11-19",
+   "date_modifiee": "2026-11-23",
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "preparation-catastrophe-naturelle.html": {
+   "title": "Catastrophe naturelle : comment se préparer en famille",
+   "description": "Inondation, tempête, séisme, feu de forêt, canicule : connaître les risques près de chez vous, préparer son kit 72 h et savoir réagir à l'alerte.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "pratique",
+   "requete": "se préparer à une catastrophe naturelle",
+   "secondaires": [
+    "préparation familiale catastrophe naturelle",
+    "connaître risques naturels près de chez soi",
+    "kit 72h plan familial catastrophe naturelle"
+   ],
+   "cannibalisation": [
+    "reagir-en-cas-de-crise.html",
+    "inondation-que-faire.html",
+    "feu-de-foret-que-faire.html",
+    "seisme-que-faire.html"
+   ],
+   "date_publiee": "2026-11-19",
+   "date_modifiee": "2026-11-23",
+   "alt_hero": "Arbres tombés sur un sol enneigé",
+   "complementaires": [
+    "combien-eau-stocker-par-personne",
+    "radio-a-piles-kit-urgence",
+    "inondation-que-faire",
+    "tempete-que-faire",
+    "plan-familial-mise-en-surete"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "preparation-outre-mer.html": {
+   "title": "Kit d'urgence en outre-mer : cyclones, séismes, volcans",
+   "description": "Guides adaptés à la Guadeloupe, la Martinique, la Guyane, La Réunion, Mayotte, Saint-Martin et Saint-Barthélemy : risques locaux, kit et alertes.",
+   "source_title": "actuel conservé",
+   "source_description": "Gemini",
+   "intention": "navigation",
+   "requete": "préparation urgence outre-mer cyclones séismes volcans",
+   "secondaires": [
+    "kit 72h guadeloupe martinique guyane réunion mayotte",
+    "risques outre-mer préparation crise",
+    "guides kit urgence territoire outre-mer"
+   ],
+   "cannibalisation": [
+    "kit-urgence-guadeloupe.html",
+    "kit-urgence-martinique.html",
+    "kit-urgence-la-reunion.html",
+    "kit-urgence-guyane.html",
+    "kit-urgence-mayotte.html",
+    "kit-urgence-saint-martin-saint-barthelemy.html",
+    "cyclone-que-faire.html",
+    "tous-les-guides.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "schema": "CollectionPage",
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "privacy.html": {
+   "title": "Confidentialité – Tous prêts (aucune donnée personnelle)",
+   "description": "Tous prêts ne collecte aucune donnée personnelle. Ce que vous saisissez reste sur votre appareil.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "technique",
+   "requete": "(non indexée : redirection vers confidentialite.html)",
+   "secondaires": [],
+   "cannibalisation": [],
+   "date_publiee": "2026-11-19",
+   "date_modifiee": "2026-11-23"
+  },
+  "proteger-son-foyer.html": {
+   "title": "Protéger son foyer : enfants, aînés, handicap, animaux",
+   "description": "Préparer toute la famille à une crise : bébé, enfants et école, personne âgée, handicap, animaux, appartement, voiture et plan familial de mise en sûreté.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "navigation",
+   "requete": "protéger son foyer en cas de crise",
+   "secondaires": [
+    "préparer famille bébé enfants aînés handicap crise",
+    "guides urgence appartement voiture animaux",
+    "adapter préparation foyer situation d'urgence"
+   ],
+   "cannibalisation": [
+    "kit-urgence-72h-famille-appartement-voiture.html",
+    "tous-les-guides.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "schema": "CollectionPage",
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "purifier-eau-pastilles-filtre.html": {
+   "title": "Purifier l'eau : ébullition, pastilles, filtres",
+   "description": "Ébullition, pastilles de chlore ou filtre : ce qui marche contre les bactéries, les virus et les parasites. Durées et limites.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "pratique",
+   "requete": "purifier l'eau ébullition pastilles filtre",
+   "secondaires": [
+    "rendre eau potable urgence ébullition chlore",
+    "filtre à eau bactéries virus parasites limites",
+    "pastilles purification eau efficacité"
+   ],
+   "cannibalisation": [
+    "combien-eau-stocker-par-personne.html",
+    "s-equiper-kit-urgence.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "complementaires": [
+    "combien-eau-stocker-par-personne",
+    "inondation-que-faire",
+    "cyclone-que-faire",
+    "kit-urgence-mayotte",
+    "questions-reponses-kit-urgence"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "que-mettre-dans-un-kit-d-urgence.html": {
+   "title": "Que mettre dans un kit d’urgence ? La liste essentielle",
+   "description": "Que mettre dans un kit d'urgence pour tenir 72 heures : eau, nourriture, lumière, radio, soins, papiers. Liste tirée du guide public + checklist gratuite.",
+   "source_title": "actuel conservé",
+   "source_description": "corrigé",
+   "intention": "informationnelle",
+   "requete": "que mettre dans un kit d'urgence",
+   "secondaires": [
+    "liste essentielle kit d'urgence 72h",
+    "familles objets kit d'urgence",
+    "où ranger kit d'urgence"
+   ],
+   "cannibalisation": [
+    "kit-de-survie-72h.html",
+    "kit-de-survie-72h-pas-cher.html"
+   ],
+   "date_publiee": "2026-11-19",
+   "date_modifiee": "2026-11-23",
+   "complementaires": [
+    "kit-de-survie-72h",
+    "combien-eau-stocker-par-personne",
+    "aliments-sans-cuisson-kit-urgence",
+    "trousse-de-secours-kit-urgence",
+    "radio-a-piles-kit-urgence"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "questions-reponses-kit-urgence.html": {
+   "title": "Kit d'urgence : vos questions pratiques, nos réponses",
+   "description": "Plus de réseau, toilettes sèches avec un seau, chauffe-eau comme réserve d'eau, talkies, rangement : réponses claires et visuels à partager.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "informationnelle",
+   "requete": "questions kit d'urgence",
+   "secondaires": [
+    "communiquer sans réseau",
+    "toilettes sèches seau coupure d'eau",
+    "chauffe-eau réserve d'eau",
+    "ranger kit urgence petit appartement"
+   ],
+   "cannibalisation": [
+    "kit-de-survie-72h.html",
+    "glossaire-preparation-crise.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "alt_hero": "Point d'interrogation dessiné à la craie sur un tableau noir",
+   "complementaires": [
+    "combien-eau-stocker-par-personne",
+    "recharger-telephone-coupure-courant",
+    "purifier-eau-pastilles-filtre",
+    "aliments-sans-cuisson-kit-urgence",
+    "kit-de-survie-72h"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "radio-a-piles-kit-urgence.html": {
+   "title": "Radio à piles kit d’urgence : pourquoi c’est indispensable",
+   "description": "Pourquoi le guide officiel recommande une radio à piles dans le kit 72h. Critères de choix, stations à écouter et alternatives (manivelle, solaire).",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "informationnelle",
+   "requete": "radio à piles kit d'urgence",
+   "secondaires": [
+    "pourquoi une radio à piles en cas de crise",
+    "quelle radio choisir kit urgence",
+    "radio manivelle ou solaire urgence",
+    "quelle station écouter en crise"
+   ],
+   "cannibalisation": [
+    "s-equiper-kit-urgence.html"
+   ],
+   "date_publiee": "2026-11-19",
+   "date_modifiee": "2026-11-23",
+   "alt_hero": "Main allumant une petite radio portable posée sur un bureau",
+   "complementaires": [
+    "piles-kit-urgence",
+    "lampe-frontale-lanterne-kit-urgence",
+    "fr-alert-que-faire",
+    "recharger-telephone-coupure-courant",
+    "batterie-externe-station-electrique"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "reagir-en-cas-de-crise.html": {
+   "title": "Réagir en cas de crise : les bons réflexes par situation",
+   "description": "Inondation, tempête, séisme, feu de forêt, coupure, confinement, alerte : les bons réflexes officiels pour chaque situation, avant, pendant et après.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "navigation",
+   "requete": "bons réflexes en cas de crise par situation",
+   "secondaires": [
+    "réagir urgence inondation tempête séisme coupure",
+    "guides bons réflexes crise avant pendant après",
+    "quoi faire selon type de crise"
+   ],
+   "cannibalisation": [
+    "tous-les-guides.html",
+    "preparation-catastrophe-naturelle.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "schema": "CollectionPage",
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "recharger-telephone-coupure-courant.html": {
+   "title": "Recharger son téléphone pendant une coupure de courant",
+   "description": "Batterie externe, voiture, manivelle, solaire : comment garder un téléphone chargé pendant une coupure longue, et comment économiser la batterie.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "pratique",
+   "requete": "recharger téléphone sans courant",
+   "secondaires": [
+    "recharger téléphone coupure électricité",
+    "économiser batterie téléphone panne",
+    "chargeur manivelle solaire téléphone"
+   ],
+   "cannibalisation": [
+    "batterie-externe-station-electrique.html",
+    "coupure-electricite-que-faire.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "alt_hero": "Smartphones branchés à une batterie externe sur une table en bois",
+   "complementaires": [
+    "batterie-externe-station-electrique",
+    "coupure-electricite-que-faire",
+    "radio-a-piles-kit-urgence",
+    "cyberattaque-que-faire",
+    "piles-kit-urgence"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "fa52250"
+  },
+  "s-equiper-kit-urgence.html": {
+   "title": "S'équiper pour une crise : le matériel utile, sans gadgets",
+   "description": "Radio à piles, lampe frontale, piles, batterie externe, trousse de secours, purification de l'eau, détecteur de fumée : quoi choisir, sans marques ni gadgets.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "navigation",
+   "requete": "matériel kit d'urgence que choisir",
+   "secondaires": [
+    "équipement utile crise radio lampe piles batterie",
+    "guides matériel kit 72h sans gadgets",
+    "s'équiper pour une coupure ou urgence"
+   ],
+   "cannibalisation": [
+    "radio-a-piles-kit-urgence.html",
+    "lampe-frontale-lanterne-kit-urgence.html",
+    "piles-kit-urgence.html",
+    "trousse-de-secours-kit-urgence.html",
+    "batterie-externe-station-electrique.html",
+    "couverture-de-survie.html",
+    "detecteur-de-fumee.html",
+    "purifier-eau-pastilles-filtre.html",
+    "tous-les-guides.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "schema": "CollectionPage",
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "sac-de-secours.html": {
+   "title": "Sac de secours : que mettre dedans pour évacuer vite ?",
+   "description": "Sac de secours ou sac d'évacuation : la liste légère à emporter si l'on doit partir vite, ce qui reste à la maison, et les bons gestes au moment de partir.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "pratique",
+   "requete": "sac de secours que mettre dedans",
+   "secondaires": [
+    "sac d'évacuation urgence liste",
+    "différence kit maison sac évacuation",
+    "où ranger sac de secours",
+    "que faire au moment d'évacuer"
+   ],
+   "cannibalisation": [
+    "kit-de-survie-72h.html",
+    "kit-urgence-72h-famille-appartement-voiture.html"
+   ],
+   "date_publiee": "2026-11-19",
+   "date_modifiee": "2026-11-23",
+   "alt_hero": "Randonneur avec un sac à dos face à des montagnes dans la brume",
+   "complementaires": [
+    "kit-urgence-voiture",
+    "trousse-de-secours-kit-urgence",
+    "lampe-frontale-lanterne-kit-urgence",
+    "plan-familial-mise-en-surete",
+    "kit-urgence-animaux"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "seisme-que-faire.html": {
+   "title": "Séisme : que faire pendant et après une secousse",
+   "description": "Les bons réflexes pendant et après un séisme, les zones sismiques en France et la préparation spécifique aux Antilles selon Géorisques et le guide officiel.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "pratique",
+   "requete": "que faire pendant et après un séisme",
+   "secondaires": [
+    "bons réflexes tremblement de terre",
+    "zones sismiques france antilles",
+    "évacuer après un séisme"
+   ],
+   "cannibalisation": [
+    "reagir-en-cas-de-crise.html",
+    "preparation-catastrophe-naturelle.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "alt_hero": "Bâtiments effondrés, photo ancienne en noir et blanc",
+   "complementaires": [
+    "combien-eau-stocker-par-personne",
+    "sac-de-secours",
+    "trousse-de-secours-kit-urgence",
+    "lampe-frontale-lanterne-kit-urgence",
+    "kit-urgence-la-reunion",
+    "plan-familial-mise-en-surete"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "signal-alerte-sirene.html": {
+   "title": "Signal national d'alerte (sirène) : son, durée et FR-Alert",
+   "description": "Reconnaître le signal national d'alerte : son modulé, durée, essai mensuel le 1er mercredi à midi, signal de fin d'alerte et complémentarité avec FR-Alert.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "informationnelle",
+   "requete": "signal national d'alerte sirène",
+   "secondaires": [
+    "essai sirène alerte premier mercredi du mois",
+    "que faire quand sonne sirène d'alerte",
+    "différence sirène et fr-alert"
+   ],
+   "cannibalisation": [
+    "fr-alert-que-faire.html",
+    "confinement-que-faire.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "complementaires": [
+    "fr-alert-que-faire",
+    "confinement-que-faire",
+    "radio-a-piles-kit-urgence",
+    "combien-eau-stocker-par-personne",
+    "accident-nucleaire-iode"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "sources.html": {
+   "title": "Sources et méthode – Tous prêts (transparence totale)",
+   "description": "Toutes les sources officielles utilisées par Tous prêts (SGDSN, info.gouv.fr, Géorisques…). Méthode de mise à jour et engagement d’indépendance.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "navigation",
+   "requete": "sources tous prêts préparation urgence",
+   "secondaires": [
+    "sources officielles sgdsn géorisques",
+    "méthode mise à jour tous prêts",
+    "indépendance site tous prêts"
+   ],
+   "cannibalisation": [
+    "charte-editoriale.html",
+    "pourquoi.html"
+   ],
+   "date_publiee": "2026-11-19",
+   "date_modifiee": "2026-11-23"
+  },
+  "tempete-que-faire.html": {
+   "title": "Tempête : que faire avant, pendant et après ? Bons réflexes",
+   "description": "Consignes pratiques face à une tempête ou à des vents violents : vigilance, mise à l'abri, vérifications après le passage et kit d'urgence 72h.",
+   "source_title": "actuel conservé",
+   "source_description": "Gemini",
+   "intention": "pratique",
+   "requete": "que faire en cas de tempête",
+   "secondaires": [
+    "bons réflexes tempête vent violent vigilance",
+    "avant pendant après tempête consignes",
+    "préparer kit 72h tempête coupure"
+   ],
+   "cannibalisation": [
+    "reagir-en-cas-de-crise.html",
+    "cyclone-que-faire.html"
+   ],
+   "date_publiee": "2026-11-19",
+   "date_modifiee": "2026-11-23",
+   "alt_hero": "Arbre déraciné tombé en travers d'un chemin forestier",
+   "complementaires": [
+    "combien-eau-stocker-par-personne",
+    "lampe-frontale-lanterne-kit-urgence",
+    "radio-a-piles-kit-urgence",
+    "coupure-electricite-que-faire",
+    "frigo-congelateur-coupure-electricite"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "tensions-internationales-se-preparer.html": {
+   "title": "Tensions internationales : se préparer sans paniquer",
+   "description": "Tensions internationales : comment se préparer calmement, comme le recommande le guide « Tous responsables » ? Kit 72 h, informations fiables, entraide.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "informationnelle",
+   "requete": "tensions internationales comment se préparer",
+   "secondaires": [
+    "préparation calme tensions internationales tous responsables",
+    "kit 72h informations fiables tensions géopolitiques",
+    "entraide préparation face aux tensions"
+   ],
+   "cannibalisation": [
+    "guide-tous-responsables-resume.html"
+   ],
+   "date_publiee": "2026-11-19",
+   "date_modifiee": "2026-11-23",
+   "alt_hero": "Carte de l'Europe reliée par des fils tendus entre des épingles",
+   "complementaires": [
+    "kit-7-jours-strategie-europeenne-72h",
+    "combien-eau-stocker-par-personne",
+    "radio-a-piles-kit-urgence",
+    "entraide-voisins-crise",
+    "guide-tous-responsables-resume"
+   ],
+   "date_verifiee": "2026-11-19",
+   "_commit_texte": "e242d22"
+  },
+  "tous-les-guides.html": {
+   "title": "Kit d'urgence 72h : tous nos guides pratiques",
+   "description": "Tous les guides Tous prêts : la liste du kit 72h, l'eau, les aliments, le guide officiel, FR-Alert, les risques (coupure, inondation, tempête) et le matériel.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "navigation",
+   "requete": "tous les guides kit d'urgence 72h",
+   "secondaires": [
+    "liste complète guides préparation crise",
+    "guides réflexes urgences kit 72h",
+    "index des guides tous prêts"
+   ],
+   "cannibalisation": [
+    "reagir-en-cas-de-crise.html",
+    "proteger-son-foyer.html",
+    "s-equiper-kit-urgence.html",
+    "anticiper-s-entraider.html",
+    "preparation-outre-mer.html",
+    "comprendre-s-informer.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "alt_hero": "Rangée de livres et de dossiers alignés sur une étagère",
+   "schema": "CollectionPage",
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "9a77f7c"
+  },
+  "trousse-de-secours-kit-urgence.html": {
+   "title": "Trousse de secours : contenu et formation",
+   "description": "Contenu de base d'une trousse de secours pour le kit 72 h, et pourquoi se former aux gestes qui sauvent (GQS, PSC1) avant d'en avoir besoin.",
+   "source_title": "actuel conservé",
+   "source_description": "actuel conservé",
+   "intention": "pratique",
+   "requete": "trousse de secours kit d'urgence contenu",
+   "secondaires": [
+    "que mettre dans une trousse de secours 72h",
+    "formation gestes qui sauvent gqs psc1",
+    "organiser trousse de secours maison"
+   ],
+   "cannibalisation": [
+    "s-equiper-kit-urgence.html"
+   ],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "complementaires": [
+    "kit-urgence-bebe",
+    "sac-de-secours",
+    "couverture-de-survie",
+    "seisme-que-faire",
+    "attaque-terroriste-que-faire"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  },
+  "vague-de-froid-que-faire.html": {
+   "title": "Vague de froid : que faire pour se protéger ? Grand froid",
+   "description": "Bons réflexes face au grand froid : maintenir la chaleur en sécurité, s'habiller et se déplacer prudemment, veiller aux plus fragiles et préparer 72h.",
+   "source_title": "actuel conservé",
+   "source_description": "Gemini",
+   "intention": "pratique",
+   "requete": "que faire en cas de vague de froid",
+   "secondaires": [
+    "se protéger grand froid logement",
+    "réflexes vague de froid personnes vulnérables",
+    "déplacements grand froid précautions"
+   ],
+   "cannibalisation": [
+    "reagir-en-cas-de-crise.html",
+    "kit-urgence-personne-agee.html",
+    "kit-urgence-voiture.html"
+   ],
+   "date_publiee": "2026-11-19",
+   "date_modifiee": "2026-11-23",
+   "alt_hero": "Village enneigé sous un ciel d'hiver",
+   "complementaires": [
+    "combien-eau-stocker-par-personne",
+    "couverture-de-survie",
+    "coupure-electricite-que-faire",
+    "kit-urgence-personne-agee",
+    "groupe-electrogene-securite"
+   ],
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d"
+  }
+ },
+ "familles": {
+  "kit": [
+   "kit-de-survie-72h",
+   "kit-urgence-72h-gouvernement",
+   "checklist-kit-urgence-72h",
+   "que-mettre-dans-un-kit-d-urgence",
+   "combien-eau-stocker-par-personne",
+   "aliments-sans-cuisson-kit-urgence",
+   "sac-de-secours",
+   "kit-de-survie-72h-pas-cher",
+   "kit-7-jours-strategie-europeenne-72h",
+   "kit-de-survie-gouvernement-pdf"
+  ],
+  "reagir": [
+   "signal-alerte-sirene",
+   "fr-alert-que-faire",
+   "confinement-que-faire",
+   "attaque-terroriste-que-faire",
+   "accident-nucleaire-iode",
+   "feu-de-foret-que-faire",
+   "inondation-que-faire",
+   "seisme-que-faire",
+   "cyclone-que-faire",
+   "tempete-que-faire",
+   "canicule-que-faire",
+   "vague-de-froid-que-faire",
+   "coupure-electricite-que-faire",
+   "cyberattaque-que-faire",
+   "tensions-internationales-se-preparer",
+   "preparation-catastrophe-naturelle"
+  ],
+  "foyer": [
+   "kit-urgence-72h-famille-appartement-voiture",
+   "kit-urgence-bebe",
+   "kit-urgence-enfants-ecole",
+   "kit-urgence-personne-agee",
+   "kit-urgence-handicap",
+   "kit-urgence-animaux",
+   "kit-urgence-voiture",
+   "plan-familial-mise-en-surete"
+  ],
+  "equiper": [
+   "radio-a-piles-kit-urgence",
+   "lampe-frontale-lanterne-kit-urgence",
+   "piles-kit-urgence",
+   "batterie-externe-station-electrique",
+   "recharger-telephone-coupure-courant",
+   "couverture-de-survie",
+   "detecteur-de-fumee",
+   "trousse-de-secours-kit-urgence",
+   "purifier-eau-pastilles-filtre",
+   "groupe-electrogene-securite",
+   "frigo-congelateur-coupure-electricite"
+  ],
+  "anticiper": [
+   "diagnostic-suis-je-pret",
+   "entraide-voisins-crise",
+   "plan-familial-mise-en-surete",
+   "arnaque-kit-urgence-gratuit"
+  ],
+  "outremer": [
+   "kit-urgence-guadeloupe",
+   "kit-urgence-martinique",
+   "kit-urgence-guyane",
+   "kit-urgence-la-reunion",
+   "kit-urgence-mayotte",
+   "kit-urgence-saint-martin-saint-barthelemy"
+  ],
+  "comprendre": [
+   "guide-tous-responsables-resume",
+   "questions-reponses-kit-urgence",
+   "glossaire-preparation-crise",
+   "sources",
+   "charte-editoriale",
+   "pourquoi",
+   "licence-visuels"
+  ]
+ }
+}

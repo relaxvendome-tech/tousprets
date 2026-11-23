@@ -344,8 +344,9 @@ if __name__ == "__main__":
     _o = os.path.join(SITE, "_outils")
     # v5 : pages légales (legal_v5), précédent/suivant (prevnext_v5), accueil (apply_landing)
     # v6 : v6_structure (outils des pages test, guides, questions, glossaire, checklist, privacy)
+    # v8 : seo_v8 (titles, descriptions, JSON-LD, Guides complémentaires, sitemap ; données dans seo_v8.json)
     for _cmd in (["legal_v5.py"], ["nav_v4.py"], ["template_v4.py"], ["essentiels.py"], ["merge_now.py"], ["template_v4.py"],
-                 ["prevnext_v5.py"], ["v6_structure.py"], ["apply_landing.py", "@index"], ["webp.py", "--lazy"], ["typo_fr.py"], ["brand_v7.py"]):
+                 ["prevnext_v5.py"], ["v6_structure.py"], ["apply_landing.py", "@index"], ["webp.py", "--lazy"], ["typo_fr.py"], ["brand_v7.py"], ["seo_v8.py"]):
         _f = os.path.join(_o, _cmd[0])
         if os.path.exists(_f):
             _args = [os.path.join(SITE, "index.html")] if _cmd[1:] == ["@index"] else [SITE] + _cmd[1:]

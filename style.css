@@ -668,3 +668,12 @@ input.ck:checked+label{color:var(--muted);text-decoration:line-through;text-deco
 @media (max-width:480px){.site-head .brand img{width:38px;height:38px}.site-head .brand-n{font-size:1.4rem}}
 @media (max-width:360px){.site-head .brand-n{font-size:1.25rem}}
 .foot-tag{margin:1rem 0 0;font-size:.85rem;opacity:.8}
+/* v8 : Guides complémentaires */
+.gcompl{margin:2rem 0 1.4rem;padding:1rem 1.2rem;border:1px solid var(--border,#D6DEE8);border-radius:var(--r,12px);background:var(--surface,#fff)}
+.gcompl h2{font-size:1.05rem;margin:0 0 .5rem}
+.gcompl ul{margin:0;padding-left:1.1rem;columns:2 16rem;column-gap:2rem}
+.gcompl li{margin:.25rem 0;break-inside:avoid}
+/* contraste du titre « À ne surtout pas faire » : 4,49:1 -> 4,85:1 (thème clair) */
+.box--interdit .box-t{color:#B8352A}
+@media (prefers-color-scheme:dark){.box--interdit .box-t{color:var(--box-c,var(--danger))}}
+/* /v8 */
