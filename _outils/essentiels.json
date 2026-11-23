@@ -15,13 +15,13 @@
  },
  "feu-de-foret-que-faire": {
   "essentiel": [
-   "Alertez les pompiers au 18 ou au 112, ou par SMS au 114.",
+   "Alertez les pompiers au 18 ou au 112. Le 114, par SMS, est réservé aux personnes sourdes ou malentendantes.",
    "Abritez-vous dans un bâtiment en dur fermé.",
    "Fermez portes, fenêtres et volets.",
    "Bouchez aérations et bas de portes avec des linges mouillés."
   ],
   "interdit": [
-   "Ne pas fuir en voiture sans ordre d'évacuation des autorités.",
+   "N'utilisez votre voiture pour évacuer que si les autorités le demandent ; sinon, mettez-vous à l'abri dans un bâtiment en dur.",
    "Ne pas se réfugier dans sa voiture : elle n'est pas un abri sûr.",
    "Ne pas se rendre sur les lieux du feu.",
    "Ne pas retourner en forêt sans autorisation de la préfecture."
@@ -32,7 +32,7 @@
    "Pendant la secousse, abritez-vous sous un meuble solide ou contre un mur porteur.",
    "Protégez votre tête et votre nuque avec vos bras.",
    "Après la secousse, évacuez calmement par les escaliers.",
-   "Près du littoral, gagnez à pied un point haut (risque de tsunami)."
+   "Près du littoral, si la secousse a été forte ou longue, éloignez-vous immédiatement du rivage et gagnez à pied un point haut, sans attendre d'autres signes."
   ],
   "interdit": [
    "Ne pas sortir pendant la secousse.",
@@ -46,7 +46,7 @@
    "Mettez-vous à l'abri dans un bâtiment solide, loin des fenêtres.",
    "Rentrez ou fixez les objets qui pourraient s'envoler.",
    "Fermez portes, fenêtres et volets.",
-   "Suivez la vigilance Météo-France et les consignes officielles."
+   "Suivez la vigilance Météo-France et les consignes des autorités locales, notamment de la préfecture et de la mairie."
   ],
   "interdit": [
    "Ne pas prendre la route sans nécessité.",
@@ -66,7 +66,7 @@
    "Ne jamais sortir pendant l'accalmie de l'œil du cyclone.",
    "Ne pas circuler en alerte rouge ou violette.",
    "Ne pas traverser un cours d'eau ou une route submergée.",
-   "Ne pas boire l'eau du robinet avant confirmation officielle de sa potabilité."
+   "Ne buvez l'eau du robinet que si les autorités confirment qu'elle reste potable ; suivez sinon leurs consignes sur l'eau embouteillée ou traitée."
   ]
  },
  "canicule-que-faire": {
@@ -74,7 +74,7 @@
    "Buvez de l'eau régulièrement, sans attendre d'avoir soif.",
    "Fermez volets et fenêtres le jour, aérez la nuit.",
    "Rafraîchissez-vous le corps plusieurs fois par jour.",
-   "Prenez des nouvelles de vos proches âgés ou isolés."
+   "Prenez des nouvelles des personnes âgées, isolées, malades ou dépendantes de votre entourage."
   ],
   "interdit": [
    "Ne pas boire d'alcool.",
@@ -87,7 +87,7 @@
    "Limitez vos sorties et couvrez-vous en plusieurs couches.",
    "Chauffez le logement et aérez-le quelques minutes chaque jour.",
    "Mangez régulièrement et buvez chaud.",
-   "Prenez des nouvelles des personnes vulnérables ; pour un sans-abri, appelez le 115."
+   "Prenez des nouvelles des personnes âgées, isolées, malades ou dépendantes ; pour une personne sans abri en danger, appelez le 115."
   ],
   "interdit": [
    "Ne jamais utiliser en continu un chauffage d'appoint à combustion.",
@@ -99,7 +99,7 @@
  "accident-nucleaire-iode": {
   "essentiel": [
    "Mettez-vous immédiatement à l'abri dans un bâtiment en dur.",
-   "Fermez portes et fenêtres et coupez la ventilation.",
+   "Fermez portes et fenêtres, coupez la ventilation et la climatisation, puis calfeutrez si possible les fentes.",
    "Écoutez la radio et suivez les instructions du préfet."
   ],
   "interdit": [
@@ -113,7 +113,7 @@
    "Éclairez-vous avec une lampe à piles ou une frontale.",
    "Débranchez les appareils électriques sensibles.",
    "Gardez réfrigérateur et congélateur fermés.",
-   "Écoutez les informations sur une radio à piles."
+   "Écoutez les informations sur une radio à piles ou suivez les canaux officiels si votre téléphone dispose encore d'une batterie."
   ],
   "interdit": [
    "Ne jamais faire fonctionner un groupe électrogène à l'intérieur, même garage ouvert.",
@@ -124,7 +124,7 @@
  "confinement-que-faire": {
   "essentiel": [
    "Entrez dans le bâtiment en dur le plus proche.",
-   "Fermez portes, fenêtres, volets et aérations.",
+   "Fermez et verrouillez portes et fenêtres, fermez volets et aérations, puis calfeutrez si possible les fentes.",
    "Coupez ventilation, VMC et climatisation.",
    "Écoutez la radio jusqu'à la fin officielle de l'alerte."
   ],
@@ -137,9 +137,9 @@
  },
  "attaque-terroriste-que-faire": {
   "essentiel": [
-   "Échappez-vous si c'est possible sans danger.",
+   "Essayez de vous échapper sans vous exposer, en utilisant si possible une sortie et un itinéraire connus.",
    "Sinon, cachez-vous et barricadez-vous.",
-   "Coupez la sonnerie et le vibreur de votre téléphone.",
+   "Mettez votre téléphone en silencieux et désactivez le vibreur.",
    "Une fois en sécurité, alertez le 17 ou le 112 (SMS au 114)."
   ],
   "interdit": [
@@ -150,9 +150,9 @@
  },
  "cyberattaque-que-faire": {
   "essentiel": [
-   "Coupez la connexion réseau de l'appareil touché, sans l'éteindre.",
+   "Déconnectez l'appareil touché du réseau, sans l'éteindre, afin de préserver les traces de l'incident.",
    "Gardez toutes les traces et preuves de l'attaque.",
-   "Changez vos mots de passe depuis un appareil sain.",
+   "Changez les mots de passe concernés depuis un appareil sain, en commençant par les comptes les plus importants, et activez la double authentification lorsque c'est possible.",
    "Faites-vous aider sur cybermalveillance.gouv.fr et portez plainte."
   ],
   "interdit": [
@@ -163,7 +163,7 @@
  },
  "tensions-internationales-se-preparer": {
   "essentiel": [
-   "Préparez un kit d'urgence pour 72 h : eau, vivres, papiers.",
+   "Préparez un kit d'urgence pour 72 h : eau potable, aliments non périssables, médicaments essentiels, papiers importants, lampe et radio à piles.",
    "Gardez une radio à piles et suivez les sources officielles.",
    "Établissez un plan familial de mise en sûreté.",
    "Faites connaissance avec vos voisins, surtout les plus isolés."
@@ -178,8 +178,8 @@
   "essentiel": [
    "Lisez le message en entier : danger, zone, consignes.",
    "Appliquez immédiatement les consignes indiquées.",
-   "Prévenez vos proches et voisins, surtout les personnes isolées.",
-   "Suivez l'évolution sur les canaux officiels et la radio."
+   "Prévenez vos proches et voisins, surtout les personnes isolées, en privilégiant les messages écrits plutôt que les appels.",
+   "Suivez l'évolution sur les canaux officiels, notamment ceux de la préfecture et de la mairie, ainsi qu'à la radio."
   ],
   "interdit": [
    "Ne pas ignorer le message.",
@@ -191,7 +191,7 @@
  "signal-alerte-sirene": {
   "essentiel": [
    "Mettez-vous à l'abri dans le bâtiment en dur le plus proche.",
-   "Fermez portes et fenêtres et coupez la ventilation.",
+   "Fermez portes et fenêtres, coupez la ventilation et la climatisation, puis calfeutrez si possible les fentes.",
    "Écoutez la radio pour connaître la nature du danger.",
    "Attendez le signal de fin d'alerte (son continu) avant de sortir."
   ],
@@ -205,7 +205,7 @@
   "essentiel": [
    "Installez toujours le groupe électrogène à l'extérieur.",
    "Éloignez l'échappement des portes, fenêtres et prises d'air.",
-   "Au moindre mal de tête ou malaise, évacuez tout le monde.",
+   "En cas de maux de tête, vertiges, nausées ou malaise, aérez, évacuez les personnes et appelez le 15, le 18 ou le 112.",
    "Appelez le 15, le 18 ou le 112 en cas d'intoxication."
   ],
   "interdit": [
