@@ -186,3 +186,4 @@ main.wide .hero .wrap{width:min(100% - 2.5rem,72rem)}
 @media (max-width:700px){.site-head .head-in{gap:.7rem}.brand{flex:1;min-width:0}.search{order:3;flex-basis:100%;max-width:none;margin-left:0}.head-cta{font-size:.85rem;padding:.45rem .75rem}.brand-s{font-size:.72rem}}
 @media print{.topnav,.search,.hero-cta,.hero-note,.disclaimer,#voir-aussi{display:none}}
 @media (prefers-color-scheme:dark){.search button{color:#fff}}
+.report{font-size:.9rem;color:var(--muted);margin:1.5rem 0 0}

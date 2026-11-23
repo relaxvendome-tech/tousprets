@@ -49,6 +49,7 @@ CAT = {
  "sources": ("apropos", "scale", "#3F6F5E", "#5B8C78", "Sources et méthode"),
  "licence-visuels": ("apropos", "image", "#3F6F5E", "#5B8C78", "Réutiliser nos visuels"),
  "diagnostic-suis-je-pret": ("bases", "clipboard-check", "#2F5D4E", "#4E8A73", "Test : suis-je prêt ?"),
+ "charte-editoriale": ("apropos", "badge-check", "#3F6F5E", "#5B8C78", "Charte éditoriale"),
  "tous-les-guides": ("apropos", "layout-grid", "#3F6F5E", "#5B8C78", "Tous les guides"),
  # Ajouts 2026-11-23 (pages rédigées avec les IA, vérifiées)
  "kit-urgence-enfants-ecole": ("foyer", "school", "#8A6420", "#B88A36", "Les enfants et l'école"),
@@ -205,6 +206,15 @@ def transform(f):
         s = re.sub(r'(property="og:image" content=")[^"]*"', lambda m: m.group(1) + url + '"', s, count=1)
         s = re.sub(r'(name="twitter:image" content=")[^"]*"', lambda m: m.group(1) + url + '"', s, count=1)
         s = re.sub(r'<meta property="og:image:(?:width|height|type)"[^>]*>\n?', "", s)
+    # 4 quater. lien « Signaler une erreur »
+    if 'class="report' not in s and '<div class="cta-box' in s:
+        import urllib.parse
+        t = re.search(r"<title>(.*?)</title>", s)
+        subj = urllib.parse.quote("Erreur sur " + slug + ".html")
+        rep = (f'<p class="report noprint">Une information vous semble fausse ou dépassée ? '
+               f'<a href="mailto:relaxvendome@gmail.com?subject={subj}">Signaler une erreur</a> · '
+               f'<a href="charte-editoriale.html">Notre charte éditoriale</a></p>\n')
+        s = s.replace('<div class="cta-box', rep + '<div class="cta-box', 1)
     # 5. scripts
     if "search.js" not in s:
         s = s.replace("</body>", '<script src="search.js" defer></script>\n</body>', 1)
