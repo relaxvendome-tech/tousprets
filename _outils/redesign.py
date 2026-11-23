@@ -350,7 +350,7 @@ if __name__ == "__main__":
     # v9 : lisibilite_v9 (bloc CSS v9 de style.css, FAQ de sécurité ouvertes, sources avant la FAQ, appli : CSS, progression, confirmation)
     # v8 : seo_v8 (titles, descriptions, JSON-LD, Guides complémentaires, sitemap ; données dans seo_v8.json)
     for _cmd in (["legal_v5.py"], ["nav_v4.py"], ["template_v4.py"], ["essentiels.py"], ["merge_now.py"], ["template_v4.py"],
-                 ["prevnext_v5.py"], ["v6_structure.py"], ["apply_landing.py", "@index"], ["webp.py", "--lazy"], ["typo_fr.py"], ["brand_v7.py"], ["seo_v8.py"], ["lisibilite_v9.py"]):
+                 ["prevnext_v5.py"], ["v6_structure.py"], ["apply_landing.py", "@index"], ["webp.py", "--lazy"], ["typo_fr.py"], ["brand_v7.py"], ["seo_v8.py"], ["lisibilite_v9.py"], ["goatcounter.py"]):
         _f = os.path.join(_o, _cmd[0])
         if os.path.exists(_f):
             _args = [os.path.join(SITE, "index.html")] if _cmd[1:] == ["@index"] else [SITE] + _cmd[1:]
