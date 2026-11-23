@@ -327,7 +327,10 @@ if __name__ == "__main__":
     # PIPELINE v4 : enchaîne automatiquement les étapes suivantes (voir _outils/PIPELINE_V4.md)
     import subprocess, sys as _s
     _o = os.path.join(SITE, "_outils")
-    for _cmd in (["nav_v4.py"], ["template_v4.py"], ["essentiels.py"], ["merge_now.py"], ["template_v4.py"], ["webp.py", "--lazy"], ["typo_fr.py"]):
+    # v5 : pages légales (legal_v5), précédent/suivant (prevnext_v5), accueil (apply_landing)
+    for _cmd in (["legal_v5.py"], ["nav_v4.py"], ["template_v4.py"], ["essentiels.py"], ["merge_now.py"], ["template_v4.py"],
+                 ["prevnext_v5.py"], ["apply_landing.py", "@index"], ["webp.py", "--lazy"], ["typo_fr.py"]):
         _f = os.path.join(_o, _cmd[0])
         if os.path.exists(_f):
-            subprocess.run([_s.executable, _f, SITE] + _cmd[1:], check=True)
+            _args = [os.path.join(SITE, "index.html")] if _cmd[1:] == ["@index"] else [SITE] + _cmd[1:]
+            subprocess.run([_s.executable, _f] + _args, check=True)

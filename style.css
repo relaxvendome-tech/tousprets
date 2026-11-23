@@ -494,3 +494,30 @@ main tbody tr:nth-child(even){background:color-mix(in srgb,var(--alt) 45%,transp
 @media (prefers-reduced-motion:reduce){.mainnav.is-open{animation:none}.mn-chev{transition:none}}
 @media print{.mainnav,.nav-toggle,.nav-kit,.nav-sos,.mn-backdrop{display:none!important}}
 @media (prefers-color-scheme:light){.search-res .sr-cat{color:#A8540E}}
+/* ===== v5 (2026-11-23) : pages légales, précédent / suivant, menu 8 liens ===== */
+.pg-legal{padding:2rem 0 3rem}
+.pg-legal h1{font-size:clamp(1.75rem,1.3rem + 2vw,2.5rem);margin:0 0 .4rem}
+.pg-legal h2{font-size:1.3rem;margin:2rem 0 .5rem;color:var(--primary)}
+.pg-legal .meta{color:var(--muted);font-size:.92rem;margin:0 0 1.2rem}
+.pg-legal .box{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:.9rem 1.1rem;margin:1rem 0}
+.pg-legal .box.warn{border-left:4px solid var(--danger)}
+.pg-legal .todo{background:var(--accent-s);font-weight:700;padding:0 .25rem}
+.pg-legal ul{padding-left:1.25rem}
+.pg-legal li{margin:.3rem 0}
+.pg-legal a{overflow-wrap:anywhere}
+.pn{margin:2rem 0 1.25rem;padding:1rem 0 0;border-top:1px solid var(--border)}
+.pn-u{margin:0 0 .6rem;font-size:.9rem;color:var(--muted)}
+.pn-u a{font-weight:600}
+.pn-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem}
+.pn-a{display:flex;align-items:center;gap:.6rem;min-height:64px;padding:.75rem .9rem;border:1px solid var(--border);border-radius:12px;background:var(--surface);color:var(--text);text-decoration:none}
+a.pn-a:hover{border-color:var(--primary);color:var(--primary)}
+.pn-empty{border:0;background:none;padding:0;min-height:0}
+.pn-next{justify-content:flex-end;text-align:right}
+.pn-t{display:flex;flex-direction:column;gap:.1rem;min-width:0}
+.pn-t small{font-size:.8rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.pn-t strong{font-size:.98rem;line-height:1.3;overflow-wrap:anywhere}
+.pn-ar{flex:none;font-size:1.2rem;color:var(--accent);font-weight:700}
+@media (max-width:480px){.pn-row{grid-template-columns:minmax(0,1fr)}.pn-empty{display:none}.pn-next{justify-content:space-between;text-align:left}.pn-next .pn-ar{margin-left:auto}}
+@media (min-width:1181px) and (max-width:1400px){.mn-a,.mn-btn{font-size:.9rem;padding:.55rem .5rem}}
+@media (min-width:901px) and (max-width:1180px){.mn-a,.mn-btn{font-size:.84rem;padding:.5rem .35rem}}
+@media print{.pn{display:none}}

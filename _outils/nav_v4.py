@@ -19,13 +19,13 @@ MAIN = [
     ("reagir-en-cas-de-crise.html", "Réagir en cas de crise"),
     ("proteger-son-foyer.html", "Protéger sa famille"),
     ("anticiper-s-entraider.html", "S'entraider"),
+    ("tous-les-guides.html", "Tous les guides"),
 ]
 TOOLS = [
     ("diagnostic-suis-je-pret.html", "Suis-je prêt ?"),
     ("checklist-kit-urgence-72h.html", "Ma checklist"),
     ("plan-familial-mise-en-surete.html", "Plan familial"),
     ("glossaire-preparation-crise.html", "Glossaire"),
-    ("tous-les-guides.html", "Tous les guides"),
     ("preparation-outre-mer.html", "Outre-mer"),
 ]
 # univers (3e lien du fil d'Ariane, ou page hub hors menu) -> entrée du menu
