@@ -50,6 +50,7 @@ CAT = {
  "licence-visuels": ("apropos", "image", "#3F6F5E", "#5B8C78", "Réutiliser nos visuels"),
  "diagnostic-suis-je-pret": ("bases", "clipboard-check", "#2F5D4E", "#4E8A73", "Test : suis-je prêt ?"),
  "charte-editoriale": ("apropos", "badge-check", "#3F6F5E", "#5B8C78", "Charte éditoriale"),
+ "glossaire-preparation-crise": ("guide", "book-a", "#3E3A6B", "#5F5A9A", "Glossaire"),
  "tous-les-guides": ("apropos", "layout-grid", "#3F6F5E", "#5B8C78", "Tous les guides"),
  # Ajouts 2026-11-23 (pages rédigées avec les IA, vérifiées)
  "kit-urgence-enfants-ecole": ("foyer", "school", "#8A6420", "#B88A36", "Les enfants et l'école"),

@@ -104,6 +104,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;}
 .score-top .pct{font-family:var(--serif);font-size:28px;color:var(--teal);}
 .score-bar{height:10px;background:var(--bg-soft);border-radius:6px;overflow:hidden;}
 .score-bar-fill{height:100%;background:var(--teal);border-radius:6px;transition:width .3s;}
+.note.tip{font-size:12.5px;line-height:1.5;margin:6px 0 4px}.note.tip a{font-weight:600}.note.tip.warn{border-left:3px solid var(--brick)}
 .score-note{font-size:12.5px;color:var(--text-dim);margin-top:8px;}
 .parcours{background:var(--bg-raised);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:16px 0;}
 .parcours h3{font-family:var(--serif);font-size:18px;margin:0 0 4px;}
@@ -617,15 +618,19 @@ html.ts-xlarge body{zoom:1.3;}
     <div class="section-title"><h2>Stock du foyer</h2><span class="sub" id="invSummary"></span></div>
     <p class="note" id="stockHouseholdNote"></p>
     <div id="foodCategories"></div>
+    <p class="note tip">💡 <strong>Pourquoi sans cuisson ?</strong> Sans électricité ni gaz, il faut pouvoir manger froid. Rangez au frais et au sec, mettez les plus anciens devant, et jetez toute boîte bombée ou rouillée. <a href="aliments-sans-cuisson-kit-urgence.html">Le guide complet</a> · <a href="questions-reponses-kit-urgence.html#rangement">dates DDM / DLC</a></p>
 
     <div class="section-title"><h2 style="font-size:15px;">Eau</h2></div>
     <div class="card" id="waterBlock"></div>
+    <p class="note tip">💡 <strong>Pourquoi 2 L par jour ?</strong> C'est la quantité pour boire fixée par le guide officiel (6 L par personne pour 72 h) ; l'hygiène demande de l'eau en plus. Bouteilles fermées, à l'abri de la lumière et de la chaleur, renouvelées avant leur date. <a href="combien-eau-stocker-par-personne.html">Le guide complet</a> · <a href="purifier-eau-pastilles-filtre.html">rendre l'eau potable</a></p>
 
     <div class="section-title"><h2 style="font-size:15px;">Santé & hygiène</h2></div>
     <div class="card" id="healthBlock"></div>
+    <p class="note tip">💡 Gardez la copie de vos ordonnances avec les médicaments et vérifiez les dates deux fois par an. Pour un traitement à garder au froid, demandez conseil à votre pharmacien. <a href="trousse-de-secours-kit-urgence.html">Composer sa trousse</a></p>
 
     <div class="section-title"><h2 style="font-size:15px;">Équipement</h2></div>
     <div class="card" id="gearBlock"></div>
+    <p class="note tip warn">⚠️ <strong>Monoxyde de carbone :</strong> réchaud, barbecue et groupe électrogène ne s'utilisent jamais à l'intérieur et ne servent jamais à se chauffer. Bougies : jamais sans surveillance, préférez une lampe. <a href="groupe-electrogene-securite.html">Les règles de sécurité</a> · <a href="piles-kit-urgence.html">choisir ses piles</a></p>
 
     <p class="note"><strong>Repère :</strong> les quantités se recalculent selon le nombre de personnes du foyer (onglet Foyer) et la durée choisie dans Réglages ⚙️ (de 72 h à 3 mois). Priorité : le kit 72 h, minimum recommandé par le guide « Tous responsables ». Les durées plus longues sont un objectif facultatif, à construire petit à petit.</p>
     <p class="note"><strong>Repère du guide « Tous responsables » :</strong> le guide « Tous responsables » du Gouvernement recommande un kit d'urgence pour 72 heures, dont 6 litres d'eau par personne. C'est le minimum à avoir en premier. La liste exacte du kit est dans Scénarios → Kit 72 h.</p>
