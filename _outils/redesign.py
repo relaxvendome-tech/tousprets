@@ -184,6 +184,21 @@ def transform(f):
         sec = ('<section id="voir-aussi" aria-labelledby="voir-aussi-t"><h2 id="voir-aussi-t">À lire aussi</h2>'
                + cards(rel) + "</section>\n")
         s = s.replace('<div class="cta-box', sec + '<div class="cta-box', 1)
+    # 4 ter. fil d'Ariane : Tous prêts › Tous les guides › Rubrique › page
+    cat = CAT.get(slug, (None,))[0]
+    gname = dict((g[0], g[1]) for g in GROUPS).get(cat)
+    if gname and 'class="crumbs"' in s and 'tous-les-guides.html' not in s[s.find('class="crumbs"'):s.find('class="crumbs"')+400]:
+        s = s.replace('<div class="crumbs"><a href="./">Tous prêts</a> › ',
+                      f'<div class="crumbs"><a href="./">Tous prêts</a> › <a href="tous-les-guides.html">Tous les guides</a> › <a href="tous-les-guides.html#{cat}">{gname}</a> › ', 1)
+        def bc(mm):
+            j = json.loads(mm.group(1))
+            for node in j.get("@graph", [j]):
+                if node.get("@type") == "BreadcrumbList":
+                    it = node["itemListElement"]
+                    if len(it) == 2:
+                        node["itemListElement"] = [it[0], {"@type": "ListItem", "position": 2, "name": "Tous les guides", "item": "https://tousprets.fr/tous-les-guides.html"}, dict(it[1], position=3)]
+            return '<script type="application/ld+json">' + json.dumps(j, ensure_ascii=False) + '</script>'
+        s = re.sub(r'<script type="application/ld\+json">(.*?)</script>', bc, s, flags=re.S)
     # 4 bis. image de partage = photo de la page si elle existe
     if os.path.exists(f"{SITE}/img/photos/{slug}.jpg"):
         url = f"https://tousprets.fr/img/photos/{slug}.jpg"
