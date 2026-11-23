@@ -6,7 +6,7 @@
   IMPORTANT : incrémente CACHE_VERSION à chaque mise à jour.
 */
 
-const CACHE_VERSION = 'tous-prets-v41';
+const CACHE_VERSION = 'tous-prets-v42';
 const PRECACHE_URLS = [
   './',
   './index.html',
