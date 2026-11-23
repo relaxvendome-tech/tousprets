@@ -6,11 +6,14 @@
   IMPORTANT : incrémente CACHE_VERSION à chaque mise à jour.
 */
 
-const CACHE_VERSION = 'tous-prets-v63';
+const CACHE_VERSION = 'tous-prets-v64';
 const PRECACHE_URLS = [
   './',
   './index.html',
   './manifest.json',
+  './share.js',
+  './nav.js',
+  './fonts/inter-latin-wght-normal.woff2',
   './icon-192.png',
   './icon-512.png',
   './icon-512-maskable.png',
@@ -80,7 +83,9 @@ self.addEventListener('fetch', (event) => {
     // Réseau d'abord, repli cache
     event.respondWith(
       fetch(req)
-        .then((res) => (res.ok ? putInCache(req, res) : offlinePage(req).then((c) => (c.status === 503 ? res : c))))
+        // En ligne, une erreur HTTP (404…) reste une erreur : on ne sert une copie que pour CETTE page
+        // (jamais index.html à la place d'une page inexistante). Hors ligne : repli inchangé (catch).
+        .then((res) => (res.ok ? putInCache(req, res) : caches.match(req, { ignoreSearch: true }).then((c) => c || res)))
         .then((res) => cleanResponse(res))
         .catch(() => offlinePage(req))
     );

@@ -44,7 +44,8 @@
     results = find(input.value);
     if (!input.value.trim()) { list.hidden = true; list.innerHTML = ''; return; }
     list.innerHTML = results.length ? results.map(function (p) {
-      return '<li><a href="' + p.u + '"><em class="sr-cat">' + esc(p.c || '') + '</em><strong>' + esc(p.t) + '</strong><span>' + esc(p.d) + '</span></a></li>';
+      var u = /^[a-z0-9-]+\.html(#[\w-]*)?$/i.test(p.u || '') ? p.u : 'tous-les-guides.html';
+      return '<li><a href="' + esc(u) + '"><em class="sr-cat">' + esc(p.c || '') + '</em><strong>' + esc(p.t) + '</strong><span>' + esc(p.d) + '</span></a></li>';
     }).join('') : '<li class="none">Aucun guide trouvé pour cette recherche. Essayez un mot plus simple (« eau », « radio », « coupure ») ou parcourez <a href="tous-les-guides.html">tous les guides</a>.</li>';
     list.hidden = false;
   }

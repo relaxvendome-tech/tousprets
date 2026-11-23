@@ -1,0 +1,217 @@
+{
+ "inondation-que-faire": {
+  "essentiel": [
+   "Montez immédiatement à l'étage ou sur un point haut.",
+   "Coupez l'électricité et le gaz si vous pouvez le faire sans danger.",
+   "Écoutez la radio et suivez les consignes des autorités.",
+   "Réservez le téléphone aux secours ; appelez le 112 si vous êtes en danger."
+  ],
+  "interdit": [
+   "Ne pas descendre dans un sous-sol ou un parking souterrain.",
+   "Ne pas s'engager à pied ou en voiture sur une route inondée.",
+   "Ne pas aller chercher ses enfants à l'école.",
+   "Ne jamais toucher un fil électrique tombé au sol."
+  ]
+ },
+ "feu-de-foret-que-faire": {
+  "essentiel": [
+   "Alertez les pompiers au 18 ou au 112, ou par SMS au 114.",
+   "Abritez-vous dans un bâtiment en dur fermé.",
+   "Fermez portes, fenêtres et volets.",
+   "Bouchez aérations et bas de portes avec des linges mouillés."
+  ],
+  "interdit": [
+   "Ne pas fuir en voiture sans ordre d'évacuation des autorités.",
+   "Ne pas se réfugier dans sa voiture : elle n'est pas un abri sûr.",
+   "Ne pas se rendre sur les lieux du feu.",
+   "Ne pas retourner en forêt sans autorisation de la préfecture."
+  ]
+ },
+ "seisme-que-faire": {
+  "essentiel": [
+   "Pendant la secousse, abritez-vous sous un meuble solide ou contre un mur porteur.",
+   "Protégez votre tête et votre nuque avec vos bras.",
+   "Après la secousse, évacuez calmement par les escaliers.",
+   "Près du littoral, gagnez à pied un point haut (risque de tsunami)."
+  ],
+  "interdit": [
+   "Ne pas sortir pendant la secousse.",
+   "Ne jamais prendre l'ascenseur.",
+   "Ne pas allumer de flamme ni provoquer d'étincelle (risque de fuite de gaz).",
+   "Ne pas rester près des façades, balcons ou lignes électriques."
+  ]
+ },
+ "tempete-que-faire": {
+  "essentiel": [
+   "Mettez-vous à l'abri dans un bâtiment solide, loin des fenêtres.",
+   "Rentrez ou fixez les objets qui pourraient s'envoler.",
+   "Fermez portes, fenêtres et volets.",
+   "Suivez la vigilance Météo-France et les consignes officielles."
+  ],
+  "interdit": [
+   "Ne pas prendre la route sans nécessité.",
+   "Ne pas se promener en forêt, en bord de mer ou sur un chantier.",
+   "Ne pas monter sur le toit.",
+   "Ne jamais toucher un fil électrique tombé au sol."
+  ]
+ },
+ "cyclone-que-faire": {
+  "essentiel": [
+   "Restez strictement confiné pendant l'alerte rouge ou violette.",
+   "Abritez-vous dans la pièce la plus sûre du logement.",
+   "Protégez les ouvertures et rentrez les objets extérieurs avant l'alerte.",
+   "Suivez les consignes de la préfecture à la radio."
+  ],
+  "interdit": [
+   "Ne jamais sortir pendant l'accalmie de l'œil du cyclone.",
+   "Ne pas circuler en alerte rouge ou violette.",
+   "Ne pas traverser un cours d'eau ou une route submergée.",
+   "Ne pas boire l'eau du robinet avant confirmation officielle de sa potabilité."
+  ]
+ },
+ "canicule-que-faire": {
+  "essentiel": [
+   "Buvez de l'eau régulièrement, sans attendre d'avoir soif.",
+   "Fermez volets et fenêtres le jour, aérez la nuit.",
+   "Rafraîchissez-vous le corps plusieurs fois par jour.",
+   "Prenez des nouvelles de vos proches âgés ou isolés."
+  ],
+  "interdit": [
+   "Ne pas boire d'alcool.",
+   "Ne pas faire d'efforts aux heures les plus chaudes.",
+   "Ne jamais laisser un enfant, une personne âgée ou un animal dans une voiture."
+  ]
+ },
+ "vague-de-froid-que-faire": {
+  "essentiel": [
+   "Limitez vos sorties et couvrez-vous en plusieurs couches.",
+   "Chauffez le logement et aérez-le quelques minutes chaque jour.",
+   "Mangez régulièrement et buvez chaud.",
+   "Prenez des nouvelles des personnes vulnérables ; pour un sans-abri, appelez le 115."
+  ],
+  "interdit": [
+   "Ne jamais utiliser en continu un chauffage d'appoint à combustion.",
+   "Ne jamais utiliser un groupe électrogène ou un barbecue à l'intérieur.",
+   "Ne pas boucher les aérations du logement.",
+   "Ne pas boire d'alcool pour se réchauffer."
+  ]
+ },
+ "accident-nucleaire-iode": {
+  "essentiel": [
+   "Mettez-vous immédiatement à l'abri dans un bâtiment en dur.",
+   "Fermez portes et fenêtres et coupez la ventilation.",
+   "Écoutez la radio et suivez les instructions du préfet."
+  ],
+  "interdit": [
+   "Ne jamais prendre de comprimé d'iode sans ordre du préfet.",
+   "Ne pas aller chercher ses enfants à l'école.",
+   "Ne pas sortir ni utiliser son véhicule sans consigne officielle."
+  ]
+ },
+ "coupure-electricite-que-faire": {
+  "essentiel": [
+   "Éclairez-vous avec une lampe à piles ou une frontale.",
+   "Débranchez les appareils électriques sensibles.",
+   "Gardez réfrigérateur et congélateur fermés.",
+   "Écoutez les informations sur une radio à piles."
+  ],
+  "interdit": [
+   "Ne jamais faire fonctionner un groupe électrogène à l'intérieur, même garage ouvert.",
+   "Ne pas utiliser de barbecue ou de brasero à l'intérieur.",
+   "Ne pas laisser de bougie allumée sans surveillance."
+  ]
+ },
+ "confinement-que-faire": {
+  "essentiel": [
+   "Entrez dans le bâtiment en dur le plus proche.",
+   "Fermez portes, fenêtres, volets et aérations.",
+   "Coupez ventilation, VMC et climatisation.",
+   "Écoutez la radio jusqu'à la fin officielle de l'alerte."
+  ],
+  "interdit": [
+   "Ne pas rester à l'extérieur ou dans un véhicule.",
+   "Ne pas aller chercher ses enfants à l'école : ils y sont protégés.",
+   "Ne pas téléphoner, sauf urgence vitale.",
+   "Ne pas sortir avant la fin de l'alerte."
+  ]
+ },
+ "attaque-terroriste-que-faire": {
+  "essentiel": [
+   "Échappez-vous si c'est possible sans danger.",
+   "Sinon, cachez-vous et barricadez-vous.",
+   "Coupez la sonnerie et le vibreur de votre téléphone.",
+   "Une fois en sécurité, alertez le 17 ou le 112 (SMS au 114)."
+  ],
+  "interdit": [
+   "Ne pas faire de geste brusque à l'arrivée des forces de l'ordre.",
+   "Ne pas essayer d'aider les forces de l'ordre.",
+   "Ne pas diffuser de rumeur ni d'image sur les réseaux sociaux."
+  ]
+ },
+ "cyberattaque-que-faire": {
+  "essentiel": [
+   "Coupez la connexion réseau de l'appareil touché, sans l'éteindre.",
+   "Gardez toutes les traces et preuves de l'attaque.",
+   "Changez vos mots de passe depuis un appareil sain.",
+   "Faites-vous aider sur cybermalveillance.gouv.fr et portez plainte."
+  ],
+  "interdit": [
+   "Ne jamais payer de rançon.",
+   "Ne pas éteindre l'appareil touché.",
+   "Ne pas supprimer les messages ou fichiers liés à l'attaque."
+  ]
+ },
+ "tensions-internationales-se-preparer": {
+  "essentiel": [
+   "Préparez un kit d'urgence pour 72 h : eau, vivres, papiers.",
+   "Gardez une radio à piles et suivez les sources officielles.",
+   "Établissez un plan familial de mise en sûreté.",
+   "Faites connaissance avec vos voisins, surtout les plus isolés."
+  ],
+  "interdit": [
+   "Ne pas relayer de rumeurs ou d'informations non vérifiées.",
+   "Ne pas cliquer sur des liens promettant un « kit gratuit ».",
+   "Ne jamais prendre de comprimé d'iode sans ordre du préfet."
+  ]
+ },
+ "fr-alert-que-faire": {
+  "essentiel": [
+   "Lisez le message en entier : danger, zone, consignes.",
+   "Appliquez immédiatement les consignes indiquées.",
+   "Prévenez vos proches et voisins, surtout les personnes isolées.",
+   "Suivez l'évolution sur les canaux officiels et la radio."
+  ],
+  "interdit": [
+   "Ne pas ignorer le message.",
+   "Ne pas aller chercher ses enfants à l'école.",
+   "Ne pas appeler les numéros d'urgence pour se renseigner.",
+   "Ne relayer aucune information non officielle."
+  ]
+ },
+ "signal-alerte-sirene": {
+  "essentiel": [
+   "Mettez-vous à l'abri dans le bâtiment en dur le plus proche.",
+   "Fermez portes et fenêtres et coupez la ventilation.",
+   "Écoutez la radio pour connaître la nature du danger.",
+   "Attendez le signal de fin d'alerte (son continu) avant de sortir."
+  ],
+  "interdit": [
+   "Ne pas rester dehors ni dans sa voiture.",
+   "Ne pas aller chercher ses enfants à l'école.",
+   "Ne pas téléphoner, sauf urgence vitale."
+  ]
+ },
+ "groupe-electrogene-securite": {
+  "essentiel": [
+   "Installez toujours le groupe électrogène à l'extérieur.",
+   "Éloignez l'échappement des portes, fenêtres et prises d'air.",
+   "Au moindre mal de tête ou malaise, évacuez tout le monde.",
+   "Appelez le 15, le 18 ou le 112 en cas d'intoxication."
+  ],
+  "interdit": [
+   "Ne jamais le faire fonctionner à l'intérieur.",
+   "Ne jamais l'utiliser dans un garage, même porte ouverte.",
+   "Ne jamais le brancher directement sur une prise murale du logement."
+  ]
+ }
+}
