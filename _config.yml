@@ -1,0 +1,13 @@
+# tousprets.fr : site statique publié par GitHub Pages (Jekyll).
+# Aucune page n'a de front matter : Jekyll copie les fichiers tels quels, sans Liquid.
+# Jekyll ne publie pas les dossiers et fichiers commençant par « _ » ou « . » :
+# _outils/ (scripts, rapports, JSON de travail) et ce fichier restent dans le dépôt seulement.
+
+# Fichiers commençant par un point à publier malgré tout
+include:
+  - .well-known
+
+# Fichiers internes, inutiles au site
+exclude:
+  - README.md
+  - img/photos/credits.json

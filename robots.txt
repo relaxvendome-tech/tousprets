@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-# Dossier de travail (scripts, rapports) : non lié, sans intérêt pour les internautes
-Disallow: /_outils/
 
 Sitemap: https://tousprets.fr/sitemap.xml

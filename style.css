@@ -707,3 +707,5 @@ main tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--alt) 55%,tra
 }
 @media print{.essentiel,.start,.note,.card.danger{background:none!important;border-left:3px solid #000}main .wrap p,main .wrap li{max-width:none}}
 /* /v9 */
+/* ===== v13 : impression (v13.py) ===== */
+@media print{.noprint,.hero-cta,.hero-note{display:none!important}}
