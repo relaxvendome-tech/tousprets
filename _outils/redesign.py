@@ -185,6 +185,12 @@ def transform(f):
         sec = ('<section id="voir-aussi" aria-labelledby="voir-aussi-t"><h2 id="voir-aussi-t">À lire aussi</h2>'
                + cards(rel) + "</section>\n")
         s = s.replace('<div class="cta-box', sec + '<div class="cta-box', 1)
+    # 3 bis. image du héros (photo de la page, sinon illustration)
+    if 'class="hero-img"' not in s and '<p class="hero-note' in s:
+        src = f"img/photos/{slug}.jpg" if os.path.exists(f"{SITE}/img/photos/{slug}.jpg") else (f"img/cards/{slug}.svg" if slug in CAT else None)
+        if src:
+            s = s.replace('<div class="hero"><div class="wrap">', '<div class="hero hero--img"><div class="wrap">', 1)
+            s = re.sub(r'(<p class="hero-note[^>]*>.*?</p>)', lambda m: m.group(1) + f'<figure class="hero-img"><img src="{src}" alt="" width="960" height="540" fetchpriority="high"></figure>', s, count=1)
     # 4 ter. fil d'Ariane : Tous prêts › Tous les guides › Rubrique › page
     cat = CAT.get(slug, (None,))[0]
     gname = dict((g[0], g[1]) for g in GROUPS).get(cat)
