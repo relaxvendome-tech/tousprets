@@ -69,12 +69,15 @@ def qa(s):
                + " / ".join(f'<a href="tel:{n}">{n}</a>' for n in nums) + "</span></p>")
         return f'<details class="qa-sos"><summary>{summ}</summary>{tag}{body}</details>'
     s = re.sub(r"<details(?: class=\"qa-sos\")?><summary>(.*?)</summary>(.*?)</details>", det, s, flags=re.S)
-    if 'id="qa-tools"' in s:
-        return s
     secs = re.findall(r'<section id="([^"]+)" aria-labelledby="[^"]+"><h2[^>]*>(.*?)</h2><div class="faq">(.*?)</div></section>', s, re.S)
     secs = [(i, t, b.count("<details")) for i, t, b in secs if b.count("<details")]
     total = sum(n for _, _, n in secs)
     nav = "".join(f'<li><a href="#{i}">{t} <span class="qa-c">{n}</span></a></li>' for i, t, n in secs)
+    if 'id="qa-tools"' in s:
+        # compteurs tenus à jour quand on ajoute une question
+        s = re.sub(r'(<p class="qa-nav-t">Aller au thème</p><ul>).*?(</ul></nav>)', lambda m: m.group(1) + nav + m.group(2), s, count=1, flags=re.S)
+        s = re.sub(r'Filtrer les \d+ questions', f'Filtrer les {total} questions', s, count=1)
+        return s
     tools = (f'<div class="qa-tools" id="qa-tools"><nav class="qa-nav" aria-label="Thèmes des questions"><p class="qa-nav-t">Aller au thème</p><ul>{nav}</ul></nav>'
              f'<div class="lf noprint" hidden><label class="lf-l" for="qaq">Filtrer les {total} questions</label>'
              f'<div class="lf-in">{SEARCH_SVG}<input id="qaq" type="search" placeholder="Ex. : toilettes, médicaments, radio…" autocomplete="off" aria-describedby="qa-n"></div>'

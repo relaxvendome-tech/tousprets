@@ -1,59 +1,60 @@
 {
-  "titre": "Kit d'urgence 72h",
-  "source": "Guide « Tous responsables », Gouvernement / SGDSN, 20 novembre 2025",
-  "verifie_le": "2026-11-19",
-  "licence": "Licence Ouverte 2.0 (Etalab)",
-  "site": "https://tousprets.fr",
-  "categories": [
-    {
-      "nom": "Boire et manger",
-      "elements": [
-        "Eau potable en bouteilles : 6 litres par personne pour 72 heures",
-        "Nourriture non périssable sans cuisson (conserves, petits pots pour bébé, nourriture pour animaux)",
-        "Couteau multifonction et ouvre-boîte",
-        "En dernier recours : pastilles de désinfection de l'eau"
-      ]
-    },
-    {
-      "nom": "Avoir chaud et s'éclairer",
-      "elements": [
-        "Vêtements chauds et couverture de survie",
-        "Lampe de poche et piles de rechange",
-        "Briquet ou allumettes ; bougies jamais sans surveillance"
-      ]
-    },
-    {
-      "nom": "Se soigner",
-      "elements": [
-        "Trousse de premiers secours (pansements, compresses, désinfectant)",
-        "Médicaments personnels et ordonnances",
-        "Paire de lunettes de secours"
-      ]
-    },
-    {
-      "nom": "S'informer et rester joignable",
-      "elements": [
-        "Radio à piles et piles de rechange",
-        "Chargeur de téléphone",
-        "Les numéros d'urgence : 15, 17, 18, 112 et 114 par SMS"
-      ]
-    },
-    {
-      "nom": "Papiers, argent et clés",
-      "elements": [
-        "Argent liquide",
-        "Photocopies des papiers importants dans une pochette étanche",
-        "Double des clés de la maison et de la voiture",
-        "De quoi occuper les enfants (jeux, livres)"
-      ]
-    },
-    {
-      "nom": "Entretien",
-      "elements": [
-        "Ranger le kit dans un endroit facile d'accès, à l'abri de l'eau",
-        "Vérifier deux fois par an (péremption, piles)",
-        "Compléter après chaque utilisation"
-      ]
-    }
-  ]
+ "titre": "Kit d'urgence 72h",
+ "source": "Guide « Tous responsables », Gouvernement / SGDSN, 20 novembre 2025",
+ "verifie_le": "2026-11-19",
+ "licence": "Licence Ouverte 2.0 (Etalab)",
+ "site": "https://tousprets.fr",
+ "categories": [
+  {
+   "nom": "Boire et manger",
+   "elements": [
+    "Eau potable en bouteilles : 6 litres par personne pour 72 heures",
+    "Nourriture non périssable sans cuisson (conserves, petits pots pour bébé, nourriture pour animaux)",
+    "Couteau multifonction et ouvre-boîte",
+    "En dernier recours : pastilles de désinfection de l'eau",
+    "Petits plaisirs pour le moral et varier les repas : épices et condiments, bonbons, chocolat"
+   ]
+  },
+  {
+   "nom": "Avoir chaud et s'éclairer",
+   "elements": [
+    "Vêtements chauds et couverture de survie",
+    "Lampe de poche et piles de rechange",
+    "Briquet ou allumettes ; bougies jamais sans surveillance"
+   ]
+  },
+  {
+   "nom": "Se soigner",
+   "elements": [
+    "Trousse de premiers secours (pansements, compresses, désinfectant)",
+    "Médicaments personnels et ordonnances",
+    "Paire de lunettes de secours"
+   ]
+  },
+  {
+   "nom": "S'informer et rester joignable",
+   "elements": [
+    "Radio à piles et piles de rechange",
+    "Chargeur de téléphone",
+    "Les numéros d'urgence : 15, 17, 18, 112 et 114 par SMS"
+   ]
+  },
+  {
+   "nom": "Papiers, argent et clés",
+   "elements": [
+    "Argent liquide",
+    "Photocopies des papiers importants dans une pochette étanche",
+    "Double des clés de la maison et de la voiture",
+    "De quoi occuper les enfants (jeux, livres)"
+   ]
+  },
+  {
+   "nom": "Entretien",
+   "elements": [
+    "Ranger le kit dans un endroit facile d'accès, à l'abri de l'eau",
+    "Vérifier deux fois par an (péremption, piles)",
+    "Compléter après chaque utilisation"
+   ]
+  }
+ ]
 }
