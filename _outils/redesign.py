@@ -5,7 +5,7 @@ héros éditorial (signature, 2 boutons, encart), cartes illustrées « À lire 
 À relancer après toute régénération (newpages.py, qa.py…)."""
 import re, glob, json, html, os, unicodedata
 
-SITE = "/home/claude/tousprets"
+SITE = os.environ.get("TP_SITE") or os.path.dirname(os.path.dirname(os.path.abspath(__file__))) if os.path.basename(os.path.dirname(os.path.abspath(__file__)))=="_outils" else "/home/claude/tousprets"
 ICONS = "/home/claude/icons/node_modules/lucide-static/icons"
 
 # slug: (catégorie, icône lucide, couleur1, couleur2, titre court)
@@ -323,3 +323,11 @@ if __name__ == "__main__":
         if f.endswith(".html") and f != "index.html" and '<div class="site-head">' in open(f"{SITE}/{f}").read():
             n += transform(f)
     print("pages transformées", n, "index recherche", search_index())
+
+    # PIPELINE v4 : enchaîne automatiquement les étapes suivantes (voir _outils/PIPELINE_V4.md)
+    import subprocess, sys as _s
+    _o = os.path.join(SITE, "_outils")
+    for _cmd in (["nav_v4.py"], ["template_v4.py"], ["essentiels.py"], ["merge_now.py"], ["template_v4.py"], ["webp.py", "--lazy"], ["typo_fr.py"]):
+        _f = os.path.join(_o, _cmd[0])
+        if os.path.exists(_f):
+            subprocess.run([_s.executable, _f, SITE] + _cmd[1:], check=True)

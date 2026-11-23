@@ -10,3 +10,4 @@ Après tout générateur de pages (newpages, qa, hub, univers…) :
 8. python3 _outils/typo_fr.py .
 Accueil : python3 _outils/apply_landing.py index.html (landing.html / landing.css).
 Tous les scripts sont idempotents. Incrémenter CACHE_VERSION dans sw.js à chaque publication.
+redesign.py enchaîne désormais automatiquement les étapes 2 à 8.
