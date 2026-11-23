@@ -48,7 +48,7 @@ CAT = {
  # À propos
  "pourquoi": ("apropos", "info", "#0F2440", "#2A4A78", "Pourquoi cette appli"),
  "sources": ("apropos", "scale", "#0F2440", "#2A4A78", "Sources et méthode"),
- "licence-visuels": ("apropos", "image", "#0F2440", "#2A4A78", "Réutiliser nos visuels"),
+ "licence-visuels": ("apropos", "image", "#0F2440", "#2A4A78", "Droits d'auteur"),
  "diagnostic-suis-je-pret": ("bases", "clipboard-check", "#173F70", "#2F6DB5", "Test : suis-je prêt ?"),
  "charte-editoriale": ("apropos", "badge-check", "#0F2440", "#2A4A78", "Charte éditoriale"),
  "glossaire-preparation-crise": ("guide", "book-a", "#3E3A6B", "#5F5A9A", "Glossaire"),
@@ -350,7 +350,7 @@ if __name__ == "__main__":
     # v9 : lisibilite_v9 (bloc CSS v9 de style.css, FAQ de sécurité ouvertes, sources avant la FAQ, appli : CSS, progression, confirmation)
     # v8 : seo_v8 (titles, descriptions, JSON-LD, Guides complémentaires, sitemap ; données dans seo_v8.json)
     for _cmd in (["legal_v5.py"], ["nav_v4.py"], ["template_v4.py"], ["essentiels.py"], ["merge_now.py"], ["template_v4.py"],
-                 ["prevnext_v5.py"], ["v6_structure.py"], ["apply_landing.py", "@index"], ["webp.py", "--lazy"], ["typo_fr.py"], ["brand_v7.py"], ["seo_v8.py"], ["us_v10.py"], ["lisibilite_v9.py"], ["goatcounter.py"]):
+                 ["prevnext_v5.py"], ["v6_structure.py"], ["apply_landing.py", "@index"], ["webp.py", "--lazy"], ["typo_fr.py"], ["brand_v7.py"], ["seo_v8.py"], ["us_v10.py"], ["lisibilite_v9.py"], ["goatcounter.py"], ["droits_v11.py"]):
         _f = os.path.join(_o, _cmd[0])
         if os.path.exists(_f):
             _args = [os.path.join(SITE, "index.html")] if _cmd[1:] == ["@index"] else [SITE] + _cmd[1:]
