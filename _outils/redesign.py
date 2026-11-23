@@ -184,6 +184,12 @@ def transform(f):
         sec = ('<section id="voir-aussi" aria-labelledby="voir-aussi-t"><h2 id="voir-aussi-t">À lire aussi</h2>'
                + cards(rel) + "</section>\n")
         s = s.replace('<div class="cta-box', sec + '<div class="cta-box', 1)
+    # 4 bis. image de partage = photo de la page si elle existe
+    if os.path.exists(f"{SITE}/img/photos/{slug}.jpg"):
+        url = f"https://tousprets.fr/img/photos/{slug}.jpg"
+        s = re.sub(r'(property="og:image" content=")[^"]*"', lambda m: m.group(1) + url + '"', s, count=1)
+        s = re.sub(r'(name="twitter:image" content=")[^"]*"', lambda m: m.group(1) + url + '"', s, count=1)
+        s = re.sub(r'<meta property="og:image:(?:width|height|type)"[^>]*>\n?', "", s)
     # 5. scripts
     if "search.js" not in s:
         s = s.replace("</body>", '<script src="search.js" defer></script>\n</body>', 1)

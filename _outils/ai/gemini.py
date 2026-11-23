@@ -156,7 +156,7 @@ page(
 page(
  slug="arnaque-kit-urgence-gratuit", emoji="🛡️",
  title="Arnaque au faux kit d'urgence gratuit : vérifier et signaler",
- desc="Méfiez-vous des faux « kits gratuits du gouvernement » par SMS, mail ou site trompeur. Comment vérifier les sources officielles et signaler au 33700 ou internet-signalement.gouv.fr.",
+ desc="Faux « kit gratuit du gouvernement » par SMS ou site trompeur : comment vérifier et où signaler (33700, internet-signalement.gouv.fr). L'État ne vend aucun kit.",
  h1="Faux « kit d'urgence gratuit » : vérifier et signaler l'arnaque",
  lead="Les pouvoirs publics diffusent des guides et conseils gratuits sur les sites officiels en .gouv.fr, pas des « kits gratuits » via des liens douteux. Ne cliquez pas sur les liens suspects, ne payez pas de prétendus frais d'envoi et signalez les messages ou sites frauduleux au 33700 et sur internet-signalement.gouv.fr.",
  source="info.gouv.fr, SGDSN, CNIL, internet-signalement.gouv.fr, service-public.gouv.fr",

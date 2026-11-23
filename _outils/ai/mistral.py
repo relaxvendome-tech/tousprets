@@ -70,7 +70,7 @@ page(
 page(
  slug="kit-urgence-guyane", emoji="🌧️",
  title="Kit d'urgence Guyane : inondations, orages, coupures",
- desc="Kit 72 h en Guyane : inondations, orages violents, coupures d'électricité et d'eau. Pas de cyclone, mais des intarissables chutes d'eau. Contenu du kit et alertes officielles.",
+ desc="Kit d'urgence 72 h en Guyane : fortes pluies, inondations, coupures d'eau et d'électricité. Les risques du territoire, le contenu du kit et les alertes officielles.",
  h1="Kit d'urgence en Guyane : inondations et coupures en première ligne",
  lead="En Guyane, le kit 72 h répond d'abord aux inondations, aux orages violents et aux coupures prolongées d'électricité et d'eau, en particulier en saison des pluies. Pas de cyclone, mais des intempéries capables de couper les routes.",
  source="Guide « Tous responsables » (SGDSN, novembre 2025), préfecture de la Guyane, Météo-France Guyane, georisques.gouv.fr",
