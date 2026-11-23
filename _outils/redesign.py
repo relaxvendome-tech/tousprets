@@ -138,6 +138,26 @@ def header(cur):
             '<a class="head-cta" href="./">Ouvrir l\'appli</a></div></div>'
             f'<nav class="topnav" aria-label="Thèmes"><div class="wrap-w"><ul>{nav}</ul></div></nav>')
 
+EXTRA_REL = {
+ "inondation-que-faire": ["cyclone-que-faire", "kit-urgence-voiture"],
+ "tempete-que-faire": ["cyclone-que-faire", "groupe-electrogene-securite"],
+ "canicule-que-faire": ["feu-de-foret-que-faire", "kit-urgence-personne-agee"],
+ "vague-de-froid-que-faire": ["groupe-electrogene-securite", "couverture-de-survie"],
+ "coupure-electricite-que-faire": ["groupe-electrogene-securite", "batterie-externe-station-electrique", "lampe-frontale-lanterne-kit-urgence"],
+ "confinement-que-faire": ["accident-nucleaire-iode", "signal-alerte-sirene"],
+ "preparation-catastrophe-naturelle": ["seisme-que-faire", "feu-de-foret-que-faire", "cyclone-que-faire"],
+ "kit-urgence-72h-famille-appartement-voiture": ["kit-urgence-voiture", "kit-urgence-enfants-ecole", "kit-urgence-personne-agee", "kit-urgence-handicap"],
+ "radio-a-piles-kit-urgence": ["piles-kit-urgence", "lampe-frontale-lanterne-kit-urgence"],
+ "checklist-kit-urgence-72h": ["diagnostic-suis-je-pret", "plan-familial-mise-en-surete"],
+ "kit-de-survie-72h": ["diagnostic-suis-je-pret", "kit-7-jours-strategie-europeenne-72h"],
+ "fr-alert-que-faire": ["signal-alerte-sirene", "arnaque-kit-urgence-gratuit"],
+ "entraide-voisins-crise": ["kit-urgence-personne-agee", "plan-familial-mise-en-surete"],
+ "combien-eau-stocker-par-personne": ["purifier-eau-pastilles-filtre"],
+ "questions-reponses-kit-urgence": ["glossaire-preparation-crise", "diagnostic-suis-je-pret"],
+ "guide-tous-responsables-resume": ["glossaire-preparation-crise", "kit-de-survie-gouvernement-pdf"],
+ "kit-urgence-72h-gouvernement": ["arnaque-kit-urgence-gratuit", "kit-de-survie-gouvernement-pdf"],
+}
+
 def related_for(slug, have):
     cat = CAT.get(slug, ("bases",))[0]
     pool = [s for s, v in CAT.items() if v[0] == cat and s != slug and s not in have and v[0] != "apropos"]
@@ -191,7 +211,7 @@ def transform(f):
         src = f"img/photos/{slug}.jpg" if os.path.exists(f"{SITE}/img/photos/{slug}.jpg") else (f"img/cards/{slug}.svg" if slug in CAT else None)
         if src:
             s = s.replace('<div class="hero"><div class="wrap">', '<div class="hero hero--img"><div class="wrap">', 1)
-            s = re.sub(r'(<p class="hero-note[^>]*>.*?</p>)', lambda m: m.group(1) + f'<figure class="hero-img"><img src="{src}" alt="" width="960" height="540" fetchpriority="high"></figure>', s, count=1)
+            s = re.sub(r'(<p class="hero-note[^>]*>.*?</p>)', lambda m: m.group(1) + f'<figure class="hero-img"><img src="{src}" alt="{html.escape(CAT[slug][4])} : illustration" width="960" height="540" fetchpriority="high"></figure>', s, count=1)
     # 4 ter. fil d'Ariane : Tous prêts › Tous les guides › Rubrique › page
     cat = CAT.get(slug, (None,))[0]
     gname = dict((g[0], g[1]) for g in GROUPS).get(cat)
@@ -213,6 +233,14 @@ def transform(f):
         s = re.sub(r'(property="og:image" content=")[^"]*"', lambda m: m.group(1) + url + '"', s, count=1)
         s = re.sub(r'(name="twitter:image" content=")[^"]*"', lambda m: m.group(1) + url + '"', s, count=1)
         s = re.sub(r'<meta property="og:image:(?:width|height|type)"[^>]*>\n?', "", s)
+    # 4 quinquies. liens connexes supplémentaires (maillage vers les nouvelles pages)
+    if slug in EXTRA_REL and 'id="voir-aussi"' in s:
+        i = s.find('id="voir-aussi"'); j = s.find('</section>', i)
+        block = s[i:j]
+        add = "".join(card(x) for x in EXTRA_REL[slug] if f'href="{x}.html"' not in block and os.path.exists(f"{SITE}/{x}.html"))
+        if add and '<div class="gcards">' in block:
+            k = s.rfind('</div>', i, j)
+            s = s[:k] + add + s[k:]
     # 4 quater. lien « Signaler une erreur »
     if 'class="report' not in s and '<div class="cta-box' in s:
         import urllib.parse
