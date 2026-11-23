@@ -49,17 +49,45 @@ CAT = {
  "sources": ("apropos", "scale", "#3F6F5E", "#5B8C78", "Sources et méthode"),
  "licence-visuels": ("apropos", "image", "#3F6F5E", "#5B8C78", "Réutiliser nos visuels"),
  "tous-les-guides": ("apropos", "layout-grid", "#3F6F5E", "#5B8C78", "Tous les guides"),
+ # Ajouts 2026-11-23 (pages rédigées avec les IA, vérifiées)
+ "kit-urgence-enfants-ecole": ("foyer", "school", "#8A6420", "#B88A36", "Les enfants et l'école"),
+ "kit-urgence-personne-agee": ("foyer", "hand-heart", "#7A4E6B", "#A26E91", "Une personne âgée"),
+ "kit-urgence-handicap": ("foyer", "accessibility", "#2E5B7A", "#4A80A3", "Handicap"),
+ "kit-urgence-voiture": ("foyer", "car", "#3A4A5B", "#5D7086", "La voiture"),
+ "plan-familial-mise-en-surete": ("foyer", "clipboard-list", "#2E6B5E", "#469383", "Plan familial de mise en sûreté"),
+ "arnaque-kit-urgence-gratuit": ("guide", "shield-x", "#8A2E2E", "#B84A3F", "Arnaques au « kit gratuit »"),
+ "signal-alerte-sirene": ("guide", "siren", "#8A2E2E", "#B84A3F", "Le signal d'alerte (sirène)"),
+ "feu-de-foret-que-faire": ("risques", "flame", "#A8461F", "#D0673A", "Feu de forêt"),
+ "seisme-que-faire": ("risques", "activity", "#5B4A3A", "#836B56", "Séisme"),
+ "accident-nucleaire-iode": ("risques", "radiation", "#6B6B1F", "#949436", "Accident nucléaire et iode"),
+ "cyclone-que-faire": ("risques", "tornado", "#2E4F6B", "#4A7396", "Cyclone"),
+ "groupe-electrogene-securite": ("materiel", "plug-zap", "#3A3F4A", "#5D6576", "Groupe électrogène"),
+ "lampe-frontale-lanterne-kit-urgence": ("materiel", "flashlight", "#5B4A2E", "#866E45", "Lampe frontale et lanterne"),
+ "piles-kit-urgence": ("materiel", "battery-full", "#2E5B3A", "#468657", "Les piles"),
+ "trousse-de-secours-kit-urgence": ("materiel", "cross", "#8A2E2E", "#B84A3F", "Trousse de secours"),
+ "batterie-externe-station-electrique": ("materiel", "plug", "#2E4A5B", "#466E86", "Batterie et station électrique"),
+ "couverture-de-survie": ("materiel", "thermometer-snowflake", "#6B5A2E", "#968046", "Couverture de survie"),
+ "detecteur-de-fumee": ("materiel", "alarm-smoke", "#4A4A4A", "#6E6E6E", "Détecteur de fumée"),
+ "purifier-eau-pastilles-filtre": ("materiel", "glass-water", "#1F5C8A", "#3C86B8", "Purifier l'eau"),
+ "kit-7-jours-strategie-europeenne-72h": ("bases", "calendar-days", "#24405F", "#3D6491", "Tenir 7 jours"),
+ "kit-urgence-guadeloupe": ("outremer", "tree-palm", "#1F6B6B", "#3A9494", "Guadeloupe"),
+ "kit-urgence-martinique": ("outremer", "mountain-snow", "#1F6B5B", "#3A9480", "Martinique"),
+ "kit-urgence-la-reunion": ("outremer", "mountain", "#6B3A1F", "#94573A", "La Réunion"),
+ "kit-urgence-guyane": ("outremer", "trees", "#2E5B2E", "#468646", "Guyane"),
+ "kit-urgence-mayotte": ("outremer", "waves", "#1F5C8A", "#3C86B8", "Mayotte"),
+ "kit-urgence-saint-martin-saint-barthelemy": ("outremer", "sun", "#A8561F", "#D07B35", "Saint-Martin et Saint-Barthélemy"),
 }
 GROUPS = [
  ("bases", "Les bases du kit", "L'eau, les repas sans cuisson, la liste à cocher, le sac à emporter et un kit à petit prix."),
  ("guide", "Le guide officiel et l'alerte", "Ce que demande le guide « Tous responsables », où le télécharger, et comment réagir à FR-Alert."),
  ("foyer", "Selon votre foyer", "Adapter le kit à votre famille, à un bébé, à vos animaux et à votre logement."),
  ("risques", "Selon les risques", "Les bons réflexes pour chaque situation, et ce que cela change dans votre kit. Pour les risques de votre commune : georisques.gouv.fr."),
- ("materiel", "Le matériel, poste par poste", "Radio, recharge du téléphone, frigo et congélateur pendant une coupure."),
+ ("materiel", "Le matériel, poste par poste", "Radio, lampes, piles, trousse de secours, batteries, eau potable : des critères de choix neutres, sans marques."),
+ ("outremer", "Outre-mer", "Cyclones, séismes, volcans : ce qui change dans le kit selon votre territoire."),
 ]
 NAV = [("kit-de-survie-72h.html", "Kit 72 h"), ("checklist-kit-urgence-72h.html", "Ma liste"),
        ("tous-les-guides.html#foyer", "Par foyer"), ("tous-les-guides.html#risques", "Risques"),
-       ("combien-eau-stocker-par-personne.html", "Eau"), ("tous-les-guides.html#materiel", "Matériel"),
+       ("combien-eau-stocker-par-personne.html", "Eau"), ("tous-les-guides.html#materiel", "Matériel"), ("tous-les-guides.html#outremer", "Outre-mer"),
        ("kit-de-survie-gouvernement-pdf.html", "Guide officiel"), ("questions-reponses-kit-urgence.html", "Questions"),
        ("tous-les-guides.html", "Tous les guides")]
 
@@ -87,7 +115,8 @@ def desc_of(slug):
 
 def card(slug):
     t = CAT[slug][4]; d = html.escape(desc_of(slug))
-    return (f'<a class="gcard" href="{slug}.html"><img src="img/cards/{slug}.svg" alt="" width="480" height="270">'
+    img = f"img/photos/{slug}.jpg" if os.path.exists(f"{SITE}/img/photos/{slug}.jpg") else f"img/cards/{slug}.svg"
+    return (f'<a class="gcard" href="{slug}.html"><img src="{img}" alt="" width="480" height="270" loading="lazy">'
             f'<span class="gcard-b"><strong>{html.escape(t)}</strong><span>{d}</span></span></a>')
 
 def cards(slugs): return '<div class="gcards">' + "".join(card(s) for s in slugs) + "</div>"
@@ -119,6 +148,8 @@ def transform(f):
     # 1. en-tête
     if 'class="topnav"' not in s:
         s = re.sub(r'<div class="site-head">.*?</div></div></header>', lambda m: header(f) + "</header>", s, count=1, flags=re.S)
+    else:
+        s = re.sub(r'<div class="site-head">.*?</nav>', lambda m: header(f), s, count=1, flags=re.S)
     # 2. barre latérale
     s = re.sub(r'<div class="layout"><nav class="risks".*?</nav>', "", s, count=1, flags=re.S)
     s = s.replace("</main></div>\n<footer", "</main>\n<footer")
