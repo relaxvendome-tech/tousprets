@@ -613,8 +613,8 @@ html.ts-xlarge body{zoom:1.3;}
     <div class="section-title"><h2 style="font-size:15px;">Équipement</h2></div>
     <div class="card" id="gearBlock"></div>
 
-    <p class="note"><strong>Repère :</strong> les quantités affichées se recalculent automatiquement selon le nombre de personnes du foyer (onglet Foyer). Priorité : le kit 72 h (minimum recommandé par le guide « Tous responsables ») ; les quantités au-delà constituent un objectif étendu facultatif.</p>
-    <p class="note"><strong>Repère du guide « Tous responsables » :</strong> le guide « Tous responsables » du Gouvernement recommande un kit d'urgence pour 72 heures, dont 6 litres d'eau par personne. C'est le minimum à avoir en premier ; cette page vise plus large. La liste exacte du kit est dans Scénarios → Kit 72 h.</p>
+    <p class="note"><strong>Repère :</strong> les quantités se recalculent selon le nombre de personnes du foyer (onglet Foyer) et la durée choisie dans Réglages ⚙️ (de 72 h à 3 mois). Priorité : le kit 72 h, minimum recommandé par le guide « Tous responsables ». Les durées plus longues sont un objectif facultatif, à construire petit à petit.</p>
+    <p class="note"><strong>Repère du guide « Tous responsables » :</strong> le guide « Tous responsables » du Gouvernement recommande un kit d'urgence pour 72 heures, dont 6 litres d'eau par personne. C'est le minimum à avoir en premier. La liste exacte du kit est dans Scénarios → Kit 72 h.</p>
   </section>
 
   <!-- PROFILS -->
@@ -675,6 +675,10 @@ html.ts-xlarge body{zoom:1.3;}
     <div class="section-title"><h3 style="font-size:14px;" id="textSizeTitle">Taille du texte</h3></div>
     <div class="chip-row" id="textSizeChips" role="group" aria-labelledby="textSizeTitle"></div>
     <p class="note" style="margin-top:0;">Le mode nuit (filtre rouge) préserve la vision dans le noir — pratique en usage terrain de nuit.</p>
+
+    <div class="section-title"><h2 style="font-size:15px;" id="stockDaysTitle">Durée du stock</h2></div>
+    <div class="chip-row" id="stockDaysChips" role="group" aria-labelledby="stockDaysTitle"></div>
+    <p class="note" style="margin-top:0;">Les quantités de l'onglet Stock (eau, nourriture, médicaments) se calculent pour la durée choisie. Le guide « Tous responsables » demande <strong>72 heures</strong> : commencez par là, puis allongez si vous le souhaitez.</p>
 
     <div class="section-title"><h2 style="font-size:15px;">Sauvegarde de vos données</h2></div>
     <p class="note" style="margin-top:0;">Tout est stocké uniquement sur ce téléphone. Si vous changez d'appareil ou désinstallez l'app, exportez d'abord une sauvegarde.</p>
@@ -1098,7 +1102,7 @@ const FOOD_CATEGORIES = [
 /* ================= NON-FOOD (santé & équipement) ================= */
 const HEALTH_ITEMS = [
   {name:'Trousse de premiers secours', unit:'kit', target:1},
-  {name:'Médicaments essentiels (réserve)', unit:'semaines', target:2},
+  {name:'Médicaments essentiels (réserve)', unit:'semaines', target:2, perWeek:true},
   {name:'Lingettes / gel désinfectant', unit:'unités', target:3},
   {name:'Paire de lunettes de vue de secours', unit:'paire', target:1}
 ];
@@ -1387,6 +1391,40 @@ clearGuideSearchBtn.addEventListener('click', ()=>{
   guideSearchInput.focus();
 });
 
+/* ================= DURÉE DU STOCK ================= */
+const STOCK_DURATIONS = [
+  {days:3,  label:'72 h', long:'72 heures'},
+  {days:7,  label:'1 semaine', long:'1 semaine'},
+  {days:14, label:'2 semaines', long:'2 semaines'},
+  {days:30, label:'1 mois', long:'1 mois'},
+  {days:90, label:'3 mois', long:'3 mois'}
+];
+function stockDays(){
+  const d = Number(load('stock_days_v1', 3));
+  return STOCK_DURATIONS.some(x=>x.days===d) ? d : 3;
+}
+function stockDuration(){ const d = stockDays(); return STOCK_DURATIONS.find(x=>x.days===d); }
+const DECIMAL_UNITS = ['kg','litres'];
+/* Les quantités de FOOD_CATEGORIES sont données pour 1 personne sur 14 jours : on les ramène à la durée choisie, arrondi au supérieur */
+function scaledTarget(perPerson14, unit, hh){
+  const raw = perPerson14 * hh * stockDays() / 14;
+  return DECIMAL_UNITS.includes(unit) ? Math.ceil(raw*10)/10 : Math.max(1, Math.ceil(raw));
+}
+function renderStockDaysChips(){
+  const el = document.getElementById('stockDaysChips'); if(!el) return;
+  const cur = stockDays();
+  el.innerHTML = '';
+  STOCK_DURATIONS.forEach(d=>{
+    const chip = document.createElement('button');
+    chip.type = 'button';
+    chip.className = 'chip' + (d.days===cur ? ' active' : '');
+    chip.textContent = d.label;
+    chip.setAttribute('aria-pressed', d.days===cur ? 'true' : 'false');
+    chip.addEventListener('click', ()=>{ save('stock_days_v1', d.days); renderStockDaysChips(); updateDashboard(); });
+    el.appendChild(chip);
+  });
+}
+
 /* ================= INVENTORY: FOOD BY CATEGORY ================= */
 let foodStock = load('food_stock_v1', {}); if(!foodStock || typeof foodStock!=='object') foodStock = {}; // key: catId::itemName -> value
 function foodKey(catId, name){ return catId+'::'+name; }
@@ -1394,7 +1432,7 @@ function foodKey(catId, name){ return catId+'::'+name; }
 function renderFoodCategories(){
   const hh = householdSize();
   document.getElementById('stockHouseholdNote').textContent =
-    'Quantités calculées pour '+hh+' personne'+(hh>1?'s':'')+' — objectif étendu facultatif (au-delà du kit 72 h).';
+    'Quantités calculées pour '+hh+' personne'+(hh>1?'s':'')+' sur '+stockDuration().long+' (durée modifiable dans Réglages ⚙️).';
 
   const container = document.getElementById('foodCategories');
   container.innerHTML = '';
@@ -1413,7 +1451,7 @@ function renderFoodCategories(){
     card.className = 'card';
     cat.items.forEach(item=>{
       totalItems++;
-      const target = Math.round(item.perPerson * hh * 10) / 10;
+      const target = scaledTarget(item.perPerson, item.unit, hh);
       const key = foodKey(cat.id, item.name);
       const val = (Number(foodStock[key])>=0 && isFinite(foodStock[key]) ? Math.min(Number(foodStock[key]),99999) : 0);
       if(val >= target){ totalComplete++; catComplete++; }
@@ -1454,13 +1492,14 @@ if(!waterStock || typeof waterStock!=='object' || Array.isArray(waterStock)) wat
 waterStock.val = Math.round(Math.min(numOr0(waterStock.val),99999));
 function renderWater(){
   const hh = householdSize();
-  const target = hh * 6; // minimum officiel kit 72 h : 6 L/pers (2 L/jour, guide « Tous responsables »)
-  const targetExt = hh * 3 * 14; // objectif étendu facultatif : 3 L/pers/jour × 14 j
+  const days = stockDays();
+  const official = hh * 6; // minimum officiel kit 72 h : 6 L/pers (2 L/jour, guide « Tous responsables »)
+  const target = hh * 2 * days; // 2 L à boire par personne et par jour sur la durée choisie
   const block = document.getElementById('waterBlock');
   const low = waterStock.val < target;
   block.innerHTML = `
     <div class="inv-item">
-      <div><div class="name">Eau potable</div><div class="unit">litres · minimum officiel 72 h : ${target} L (6 L × ${hh} pers.) · objectif étendu (facultatif) : ${targetExt} L (3 L/pers/jour × 14 j)</div></div>
+      <div><div class="name">Eau potable</div><div class="unit">litres · cible ${stockDuration().long} : ${target} L (2 L/pers/jour × ${hh} pers. × ${days} j)${days>3 ? ' · dont minimum officiel 72 h : '+official+' L' : ' (minimum officiel)'} · eau pour l'hygiène en plus</div></div>
       <div class="stepper">
         <button data-act="dec">−</button>
         <div class="val ${low?'low-val':''}">${waterStock.val}</div>
@@ -1475,7 +1514,7 @@ function renderWater(){
       updateDashboard();
     });
   });
-  return {val: waterStock.val, target, targetExt};
+  return {val: waterStock.val, target, official};
 }
 
 let simpleStock = load('simple_stock_v1', {}); if(!simpleStock || typeof simpleStock!=='object') simpleStock = {};
@@ -1486,12 +1525,13 @@ function renderSimpleList(targetId, items){
   items.forEach((item, idx)=>{
     const key = targetId+'_'+idx;
     const val = (Number(simpleStock[key])>=0 && isFinite(simpleStock[key]) ? Math.min(Number(simpleStock[key]),99999) : 0);
-    if(val >= item.target) complete++;
-    const low = val < item.target;
+    const tgt = item.perWeek ? Math.max(1, Math.ceil(stockDays()/7)) : item.target;
+    if(val >= tgt) complete++;
+    const low = val < tgt;
     const row = document.createElement('div');
     row.className = 'inv-item';
     row.innerHTML = `
-      <div><div class="name">${item.name}</div><div class="unit">${item.unit} · cible ${item.target}</div></div>
+      <div><div class="name">${item.name}</div><div class="unit">${item.unit} · cible ${tgt}</div></div>
       <div class="stepper">
         <button data-key="${key}" data-act="dec">−</button>
         <div class="val ${low?'low-val':''}">${val}</div>
@@ -1933,8 +1973,9 @@ function updateDashboard(){
   const missingWater = Math.max(0, Math.round((water.target - water.val)*10)/10);
   let note;
   if(profiles.length===0) note = 'Première étape : indiquez combien de personnes vivent chez vous (onglet Foyer). Les quantités d\'eau et de nourriture se calculeront toutes seules.';
-  else if(waterPct < 1) note = 'Prochaine étape : l\'eau, la priorité n°1. Il vous manque ' + String(missingWater).replace('.',',') + ' L pour tenir 72 h.';
-  else if(!contactsPct) note = 'Bravo, vous avez l\'eau pour 72 h. Prochaine étape : enregistrez au moins un contact d\'urgence.';
+  else if(water.val < water.official) note = 'Prochaine étape : l\'eau, la priorité n°1. Il vous manque ' + String(Math.max(0, water.official - water.val)).replace('.',',') + ' L pour tenir 72 h.';
+  else if(waterPct < 1) note = 'Les 72 h d\'eau sont prêtes. Pour tenir ' + stockDuration().long + ', il manque encore ' + String(missingWater).replace('.',',') + ' L.';
+  else if(!contactsPct) note = 'Bravo, vous avez l\'eau pour ' + stockDuration().long + '. Prochaine étape : enregistrez au moins un contact d\'urgence.';
   else if(foodPct < 0.5) note = 'Bravo pour l\'eau et les contacts. Prochaine étape : la nourriture sans cuisson (onglet Stock).';
   else if(score < 70) note = 'Bonne base ! Complétez la trousse de secours, l\'équipement et vos checklists.';
   else note = 'Très bien préparé. Pensez à vérifier votre kit deux fois par an (péremption, piles).';
@@ -1970,8 +2011,8 @@ document.getElementById('closeEmergency').addEventListener('click', ()=>{
 })();
 
 /* ================= RÉGLAGES (thème + sauvegarde) ================= */
-const APP_VERSION = '2.0';
-const APP_UPDATED = '28 septembre 2026';
+const APP_VERSION = '2.1';
+const APP_UPDATED = '23 novembre 2026';
 const THEMES = [
   {id:'auto', label:'Auto (système)'},
   {id:'light', label:'Clair'},
@@ -2002,12 +2043,13 @@ function renderThemeChips(){
 const BACKUP_KEYS = [
   'checklist_kit72','checklist_storm','checklist_blackout','checklist_froid','checklist_canicule','checklist_confinement','checklist_attaque','checklist_conflict','checklist_cyber',
   'food_stock_v1','water_stock_v1','simple_stock_v1',
-  'profiles_v1','contacts_v1','nb_group_v1','theme_v1','tp_a11y_textsize','ex_dernier_bilan'
+  'profiles_v1','contacts_v1','nb_group_v1','theme_v1','tp_a11y_textsize','ex_dernier_bilan','stock_days_v1'
 ];
 
 document.getElementById('openSettings').addEventListener('click', ()=>{
   document.getElementById('settingsOverlay').classList.add('active');
   renderThemeChips();
+  renderStockDaysChips();
   document.getElementById('versionInfo').textContent = `Tous prêts — version ${APP_VERSION}, mise à jour le ${APP_UPDATED}. 100% gratuit, vos données restent sur votre appareil.`;
 });
 document.getElementById('closeSettings').addEventListener('click', ()=>{
@@ -2068,6 +2110,7 @@ document.getElementById('doImport').addEventListener('click', ()=>{
     if(k==='nb_group_v1'){ if(val!==null && !(val = sanitizeGroup(val))){ alert('Sauvegarde invalide (groupe de voisinage).'); return; } }
     else if((k==='profiles_v1'||k==='contacts_v1') && !Array.isArray(val)){ alert('Sauvegarde invalide (clé '+k+').'); return; }
     else if(k==='theme_v1' && typeof val!=='string'){ alert('Sauvegarde invalide (thème).'); return; }
+    else if(k==='stock_days_v1'){ if(![3,7,14,30,90].includes(val)){ alert('Sauvegarde invalide (durée du stock).'); return; } }
     else if(!['profiles_v1','contacts_v1','theme_v1'].includes(k) && (val===null || typeof val!=='object')){ alert('Sauvegarde invalide (clé '+k+').'); return; }
     clean.push([k, JSON.stringify(val)]);
   }
