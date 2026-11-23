@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url><loc>https://tousprets.fr/</loc><lastmod>2026-11-19</lastmod></url>
   <url><loc>https://tousprets.fr/kit-de-survie-72h.html</loc><lastmod>2026-11-19</lastmod></url>
   <url><loc>https://tousprets.fr/kit-urgence-72h-gouvernement.html</loc><lastmod>2026-11-19</lastmod></url>
@@ -53,5 +53,24 @@
 <url>
 <loc>https://tousprets.fr/questions-reponses-kit-urgence.html</loc>
 <lastmod>2026-11-23</lastmod>
+<image:image><image:loc>https://tousprets.fr/img/qr/toilettes-seches-seau.png</image:loc></image:image>
+<image:image><image:loc>https://tousprets.fr/img/qr/toilettes-seches-seau.webp</image:loc></image:image>
+<image:image><image:loc>https://tousprets.fr/img/qr/chauffe-eau-reserve-eau.png</image:loc></image:image>
+<image:image><image:loc>https://tousprets.fr/img/qr/chauffe-eau-reserve-eau.webp</image:loc></image:image>
+<image:image><image:loc>https://tousprets.fr/img/qr/communiquer-sans-reseau.png</image:loc></image:image>
+<image:image><image:loc>https://tousprets.fr/img/qr/communiquer-sans-reseau.webp</image:loc></image:image>
+<image:image><image:loc>https://tousprets.fr/img/qr/rangement-petit-appartement.png</image:loc></image:image>
+<image:image><image:loc>https://tousprets.fr/img/qr/rangement-petit-appartement.webp</image:loc></image:image>
+<image:image><image:loc>https://tousprets.fr/img/qr/objets-oublies-kit-urgence.png</image:loc></image:image>
+<image:image><image:loc>https://tousprets.fr/img/qr/objets-oublies-kit-urgence.webp</image:loc></image:image>
+</url>
+<url>
+<loc>https://tousprets.fr/licence-visuels.html</loc>
+<lastmod>2026-11-23</lastmod>
+<image:image><image:loc>https://tousprets.fr/img/qr/toilettes-seches-seau.png</image:loc></image:image>
+<image:image><image:loc>https://tousprets.fr/img/qr/chauffe-eau-reserve-eau.png</image:loc></image:image>
+<image:image><image:loc>https://tousprets.fr/img/qr/communiquer-sans-reseau.png</image:loc></image:image>
+<image:image><image:loc>https://tousprets.fr/img/qr/rangement-petit-appartement.png</image:loc></image:image>
+<image:image><image:loc>https://tousprets.fr/img/qr/objets-oublies-kit-urgence.png</image:loc></image:image>
 </url>
 </urlset>
