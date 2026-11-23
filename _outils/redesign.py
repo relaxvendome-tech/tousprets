@@ -51,6 +51,7 @@ CAT = {
  "licence-visuels": ("apropos", "image", "#0F2440", "#2A4A78", "Droits d'auteur"),
  "diagnostic-suis-je-pret": ("bases", "clipboard-check", "#173F70", "#2F6DB5", "Test : suis-je prêt ?"),
  "charte-editoriale": ("apropos", "badge-check", "#0F2440", "#2A4A78", "Charte éditoriale"),
+ "aide-application": ("apropos", "smartphone", "#0F2440", "#2A4A78", "Aide sur l'application"),
  "glossaire-preparation-crise": ("guide", "book-a", "#3E3A6B", "#5F5A9A", "Glossaire"),
  "reagir-en-cas-de-crise": ("apropos", "siren", "#8A2E2E", "#B84A3F", "Réagir en cas de crise"),
  "proteger-son-foyer": ("apropos", "house", "#8A6420", "#B88A36", "Protéger son foyer"),
@@ -111,7 +112,7 @@ UNIV = {
  "equiper": ["radio-a-piles-kit-urgence","lampe-frontale-lanterne-kit-urgence","piles-kit-urgence","batterie-externe-station-electrique","recharger-telephone-coupure-courant","couverture-de-survie","detecteur-de-fumee","trousse-de-secours-kit-urgence","purifier-eau-pastilles-filtre","groupe-electrogene-securite","frigo-congelateur-coupure-electricite"],
  "anticiper": ["diagnostic-suis-je-pret","entraide-voisins-crise","plan-familial-mise-en-surete","arnaque-kit-urgence-gratuit"],
  "outremer": ["kit-urgence-guadeloupe","kit-urgence-martinique","kit-urgence-guyane","kit-urgence-la-reunion","kit-urgence-mayotte","kit-urgence-saint-martin-saint-barthelemy"],
- "comprendre": ["guide-tous-responsables-resume","questions-reponses-kit-urgence","glossaire-preparation-crise","sources","charte-editoriale","pourquoi","licence-visuels"],
+ "comprendre": ["guide-tous-responsables-resume","questions-reponses-kit-urgence","glossaire-preparation-crise","sources","charte-editoriale","aide-application","pourquoi","licence-visuels"],
 }
 NAV = [("diagnostic-suis-je-pret.html", "Suis-je prêt ?"), ("kit-de-survie-72h.html", "Kit 72 h"), ("reagir-en-cas-de-crise.html", "Réagir aux crises"),
        ("proteger-son-foyer.html", "Protéger mon foyer"), ("s-equiper-kit-urgence.html", "S'équiper"), ("preparation-outre-mer.html", "Outre-mer"),

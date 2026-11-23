@@ -2076,6 +2076,31 @@
     "recharger-telephone-coupure-courant"
    ],
    "date_verifiee": "2026-11-23"
+  },
+  "aide-application.html": {
+   "title": "Aide : application Tous prêts, hors ligne, installation",
+   "description": "Installer Tous prêts sur Android ou iPhone, l'utiliser sans réseau, mettre à jour, protéger vos données : toutes les réponses sur le site, la PWA et l'appli Android.",
+   "source_title": "rédaction v12",
+   "source_description": "rédaction v12",
+   "intention": "pratique",
+   "requete": "application kit urgence hors ligne",
+   "secondaires": [
+    "installer pwa tous prêts",
+    "checklist kit urgence hors ligne",
+    "application kit urgence android"
+   ],
+   "cannibalisation": [],
+   "date_publiee": "2026-11-23",
+   "date_modifiee": "2026-11-23",
+   "date_verifiee": "2026-11-23",
+   "_commit_texte": "5d6783d",
+   "alt_hero": "",
+   "complementaires": [
+    "questions-reponses-kit-urgence",
+    "checklist-kit-urgence-72h",
+    "confidentialite",
+    "charte-editoriale"
+   ]
   }
  },
  "familles": {
@@ -2153,6 +2178,7 @@
    "glossaire-preparation-crise",
    "sources",
    "charte-editoriale",
+   "aide-application",
    "pourquoi",
    "licence-visuels"
   ]
