@@ -164,14 +164,14 @@ page(
  sections=[
   ("liste","La liste pour bébé", """
 <div class="cards"><div class="card"><h3><span class="ic" aria-hidden="true">🍼</span>Repas</h3><ul><li>Lait infantile habituel pour au moins 3 jours</li><li>Si possible du <strong>lait prêt à l'emploi</strong> : il ne demande pas d'eau</li><li>Eau en bouteille <strong>marquée « convient à la préparation des aliments des nourrissons »</strong>, réservée aux biberons</li><li>Biberons et tétines propres, petits pots, cuillère</li></ul></div>
-<div class="card"><h3><span class="ic" aria-hidden="true">🧷</span>Change et hygiène</h3><ul><li>Couches pour 3 jours (comptez large)</li><li>Lingettes, crème pour le change, sacs pour les couches sales</li><li>Gel hydroalcoolique pour les mains</li></ul></div>
+<div class="card"><h3><span class="ic" aria-hidden="true">🧷</span>Change et hygiène</h3><ul><li>Couches adaptées à la taille du bébé pour au moins 3 jours.</li><li>Lingettes, crème pour le change, sacs pour les couches sales</li><li>Gel hydroalcoolique pour les mains</li></ul></div>
 <div class="card"><h3><span class="ic" aria-hidden="true">🩺</span>Santé et papiers</h3><ul><li>Médicaments habituels et thermomètre</li><li>Copie du carnet de santé et des ordonnances</li><li>Vêtements de rechange, couverture, doudou</li></ul></div></div>"""),
   ("eau","L'eau des biberons", """
 <p>Si l'eau du robinet n'est plus potable, par exemple après une inondation, préparez les biberons <strong>uniquement avec une eau en bouteille adaptée aux nourrissons</strong> (mention « convient à la préparation des aliments des nourrissons » sur l'étiquette), jusqu'à ce que les autorités annoncent que l'eau du robinet est de nouveau potable. Respectez exactement les doses de la boîte. Préparez chaque biberon juste avant de le donner et jetez ce qui reste : sans frigo, un biberon ne se garde pas. Même règle pour le lait prêt à l'emploi entamé : suivez l'étiquette. Ajoutez cette eau à la <a href="combien-eau-stocker-par-personne.html">réserve de 6 litres par personne</a>.</p>
-<p>Si vous allaitez, poursuivez si possible : l'allaitement ne dépend ni de l'eau ni de l'électricité. Si votre bébé prend du lait infantile, prévoyez son lait habituel en quantité suffisante. Le lait en poudre n'est pas stérile : préparez-le avec des mains et un biberon propres. Le lait liquide prêt à l'emploi est précieux en cas de coupure d'eau. En cas de difficulté, demandez conseil à un professionnel de santé.</p>"""),
+<p>Si vous allaitez, poursuivez si possible : l'allaitement ne dépend ni de l'eau ni de l'électricité. Si votre bébé prend du lait infantile, prévoyez son lait habituel en quantité suffisante. Le lait infantile en poudre n'est pas stérile : lavez-vous soigneusement les mains, nettoyez et désinfectez le matériel, et reconstituez chaque biberon immédiatement avant la tétée. Le lait liquide prêt à l'emploi est précieux en cas de coupure d'eau. En cas de difficulté, demandez conseil à un professionnel de santé.</p>"""),
   ("verifier","Vérifier plus souvent", """
 <p>Un bébé grandit vite : la taille des couches, la quantité de lait et le type de repas changent tous les quelques mois. Vérifiez le kit bébé <strong>chaque mois</strong> plutôt que deux fois par an comme le reste du kit. L'<a href="./">appli Tous prêts</a> adapte la liste quand vous ajoutez un bébé au foyer.</p>
-<p class="note">En cas de fièvre, de refus de boire ou de doute sur la santé de votre bébé, appelez le 15 (ou le 112).</p>"""),
+<p class="note">En cas de fièvre, de refus de boire, de signes de déshydratation ou de doute sur la santé de votre bébé, appelez le 15 (Samu) ou le 112.</p>"""),
  ],
  faq=[
   ("Que mettre dans un kit d'urgence pour bébé ?", "Lait infantile et eau en bouteille pour 3 jours, biberons, petits pots, couches, lingettes, médicaments, thermomètre, copie du carnet de santé, vêtements chauds."),
@@ -193,11 +193,11 @@ page(
  nav_label="Kit animaux", nav_emoji="🐾",
  sections=[
   ("liste","La liste pour votre animal", """
-<div class="cards"><div class="card"><h3><span class="ic" aria-hidden="true">🥣</span>Nourriture et eau</h3><ul><li>Sa nourriture habituelle pour au moins 3 jours</li><li>De l'eau en plus de celle du foyer, et une gamelle</li><li>Ouvre-boîte si sa nourriture est en conserve</li></ul></div>
+<div class="cards"><div class="card"><h3><span class="ic" aria-hidden="true">🥣</span>Nourriture et eau</h3><ul><li>Sa nourriture habituelle pour au moins 3 jours, conservée dans un contenant hermétique et à l'abri de l'humidité.</li><li>De l'eau en plus de celle du foyer, et une gamelle</li><li>Ouvre-boîte si sa nourriture est en conserve</li></ul></div>
 <div class="card"><h3><span class="ic" aria-hidden="true">💊</span>Santé</h3><ul><li>Ses médicaments et leur ordonnance</li><li>Copie du carnet de santé et des vaccins</li><li>Coordonnées du vétérinaire</li></ul></div>
 <div class="card"><h3><span class="ic" aria-hidden="true">🦮</span>Transport</h3><ul><li>Laisse, collier ou harnais</li><li>Caisse ou sac de transport</li><li>Litière et sacs pour les déjections</li><li>Une couverture ou un jouet familier pour le calmer</li></ul></div></div>"""),
   ("identification","L'identification, votre meilleure assurance", """
-<ul class="check"><li>Vérifiez que votre animal est <strong>identifié</strong> (puce ou tatouage) et que vos coordonnées sont à jour dans le fichier national.</li>
+<ul class="check"><li>Vérifiez que votre animal est identifié (puce électronique ou tatouage) et que vos coordonnées sont à jour dans le fichier national d\'identification.</li>
 <li>Gardez une <strong>photo récente de vous avec votre animal</strong> : elle prouve qu'il est à vous si vous êtes séparés.</li>
 <li>Une médaille avec votre numéro de téléphone sur le collier aide à le retrouver vite.</li></ul>"""),
   ("evacuation","Si vous devez évacuer", """

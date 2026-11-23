@@ -6,15 +6,23 @@
   IMPORTANT : incrémente CACHE_VERSION à chaque mise à jour.
 */
 
-const CACHE_VERSION = 'tous-prets-v68';
-const PRECACHE_URLS = [
+const CACHE_VERSION = 'tous-prets-v69';
+// Indispensables au démarrage hors ligne : leur échec fait échouer l'installation (l'ancien SW reste actif).
+const CRITICAL_URLS = [
   './',
   './index.html',
   './manifest.json',
+  './style.css',
+  './fonts/inter-latin-wght-normal.woff2',
+  './icon-192.png'
+];
+// Utiles mais non bloquants : mis en cache un par un, un échec est consigné sans bloquer l'installation.
+const OPTIONAL_URLS = [
   './share.js',
   './nav.js',
-  './fonts/inter-latin-wght-normal.woff2',
-  './icon-192.png',
+  './search.js',
+  './pages.js',
+  './search-index.json',
   './icon-512.png',
   './icon-512-maskable.png',
   './apple-touch-icon.png',
@@ -24,21 +32,33 @@ const PRECACHE_URLS = [
   './mentions-legales.html',
   './accessibilite.html',
   './sources.html',
-'./style.css',
-  './search.js',
-  './search-index.json',
-  './privacy.html'
+  './privacy.html',
+  './diagnostic-suis-je-pret.html',
+  './checklist-kit-urgence-72h.html',
+  './tous-les-guides.html'
 ];
+const PRECACHE_URLS = CRITICAL_URLS.concat(OPTIONAL_URLS);
+
+async function precacheOne(cache, u) {
+  // cache: 'reload' contourne le cache HTTP pour ne pas pré-cacher une version périmée
+  const res = await fetch(new Request(u, { cache: 'reload' }));
+  if (!res.ok) throw new Error(u + ' (' + res.status + ')');
+  await cache.put(u, await cleanResponse(res));
+}
 
 self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CACHE_VERSION).then((cache) => Promise.all(PRECACHE_URLS.map(async (u) => {
-      // cache: 'reload' contourne le cache HTTP pour ne pas pré-cacher une version périmée
-      const res = await fetch(new Request(u, { cache: 'reload' }));
-      if (!res.ok) throw new Error('Précache échoué : ' + u + ' (' + res.status + ')');
-      await cache.put(u, await cleanResponse(res));
-    }))).then(() => self.skipWaiting())
-  );
+  event.waitUntil((async () => {
+    const cache = await caches.open(CACHE_VERSION);
+    // 1. Fichiers critiques : tous requis.
+    await Promise.all(CRITICAL_URLS.map((u) => precacheOne(cache, u)));
+    // 2. Fichiers optionnels : un par un, échecs consignés (non bloquants).
+    const failed = [];
+    for (const u of OPTIONAL_URLS) {
+      try { await precacheOne(cache, u); } catch (e) { failed.push(String(e && e.message || u)); }
+    }
+    if (failed.length) console.warn('[SW ' + CACHE_VERSION + '] précache partiel, fichiers ignorés :', failed);
+    await self.skipWaiting();
+  })());
 });
 
 self.addEventListener('activate', (event) => {

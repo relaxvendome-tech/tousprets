@@ -59,7 +59,7 @@ p = dict(
 </ul>
 <p>Le guide recommande de placer le kit dans un endroit facile d'accès et de <strong>vérifier son contenu deux fois par an</strong> (dates de péremption, piles). La fiche « Se préparer à une situation d'urgence » d'info.gouv.fr dit « une fois par an » : deux contrôles par an restent le plus sûr. Pour aller plus loin : <a href="combien-eau-stocker-par-personne.html">combien d'eau stocker</a>, <a href="aliments-sans-cuisson-kit-urgence.html">aliments sans cuisson</a>, <a href="radio-a-piles-kit-urgence.html">quelle radio choisir</a>.</p>"""),
   ("numeros", "Numéros d'urgence à garder sur papier dans le kit", """
-<p>Le guide demande de garder une liste des numéros utiles <strong>sur papier</strong> : en cas de panne, le téléphone peut être déchargé. Les numéros d'urgence rappelés par info.gouv.fr :</p>
+<p>Le guide demande de garder une liste des numéros utiles sur papier : en cas de panne, le téléphone peut être déchargé. À noter : le 112 peut être appelé gratuitement depuis un téléphone verrouillé. Les numéros d'urgence rappelés par info.gouv.fr :</p>
 <table class="tbl"><thead><tr><th>Numéro</th><th>Service</th></tr></thead><tbody>
 <tr><td><strong>112</strong></td><td>Numéro d'urgence européen</td></tr>
 <tr><td><strong>15</strong></td><td>Samu</td></tr>
@@ -68,9 +68,9 @@ p = dict(
 <tr><td><strong>114</strong></td><td>Personnes sourdes, malentendantes ou ne pouvant pas parler (SMS, appli, fax)</td></tr>
 <tr><td><strong>196</strong></td><td>Urgences en mer</td></tr>
 <tr><td><strong>191</strong></td><td>Urgences aéronautiques</td></tr></tbody></table>
-<p>Pour reconnaître une alerte : <a href="signal-alerte-sirene.html">le signal de la sirène</a> et <a href="fr-alert-que-faire.html">les messages FR-Alert sur le téléphone</a>.</p>"""),
+<p>Pour reconnaître une alerte : le signal de la sirène et les messages FR-Alert sur le téléphone. Le signal d'alerte est un son modulé, montant et descendant, composé de trois cycles d'une minute et quarante et une secondes ; les essais ont lieu le premier mercredi de chaque mois à midi.</p>"""),
   ("adapter", "Adapter le kit à votre foyer", """
-<p>La liste officielle est une base. Elle ne dit pas combien acheter pour <em>votre</em> foyer. Ajoutez selon votre situation :</p>
+<p>La liste officielle est une base. Elle ne dit pas combien acheter pour votre foyer ; calculez les quantités selon le nombre de personnes et la durée d'autonomie visée. Ajoutez selon votre situation :</p>
 <ul><li><strong>Bébé</strong> : lait infantile, couches, eau adaptée aux biberons (<a href="kit-urgence-bebe.html">kit bébé</a>)</li>
 <li><strong>Animaux</strong> : nourriture, eau, laisse ou caisse de transport (<a href="kit-urgence-animaux.html">kit animaux</a>)</li>
 <li><strong>Appartement ou voiture</strong> : volume et rangement différents (<a href="kit-urgence-72h-famille-appartement-voiture.html">famille, appartement, voiture</a>)</li>

@@ -13,29 +13,37 @@ Q = [
  ("bag","Avez-vous un sac prêt à emporter si l'on vous demande d'évacuer ?","sac-de-secours","Préparer un sac de secours"),
  ("risks","Connaissez-vous les risques qui concernent votre commune ?","preparation-catastrophe-naturelle","Consulter les risques de votre commune sur georisques.gouv.fr"),
 ]
+import html as _h
 qs = "".join(
- f'<fieldset class="dq" data-k="{k}" data-link="{l}" data-act="{a}"><legend>{i+1}. {q}</legend>'
- f'<label><input type="radio" name="{k}" value="2"> Oui</label><label><input type="radio" name="{k}" value="1"> En partie</label><label><input type="radio" name="{k}" value="0"> Non</label></fieldset>'
+ f'<fieldset class="dq" id="dq-{i+1}" data-k="{k}" data-link="{l}" data-act="{_h.escape(a)}"><legend tabindex="-1"><span class="dq-n">{i+1}.</span> {q}</legend>'
+ f'<div class="dq-opts"><label><input type="radio" name="{k}" value="2"> <span>Oui</span></label><label><input type="radio" name="{k}" value="1"> <span>En partie</span></label><label><input type="radio" name="{k}" value="0"> <span>Non</span></label></div></fieldset>'
  for i,(k,q,l,a) in enumerate(Q))
-quiz = f'''<style>.dq{{border:1px solid var(--border);border-radius:var(--r-sm);background:var(--surface);padding:.8rem 1rem;margin:0 0 .7rem}}.dq legend{{font-weight:700;padding:0 .3rem}}.dq label{{display:inline-flex;align-items:center;gap:.35rem;margin:.35rem 1.1rem .1rem 0;cursor:pointer}}.dres{{background:var(--primary-s);border-radius:var(--r);padding:1.2rem 1.25rem;margin-top:1rem}}.dres .big{{font-family:var(--serif);font-size:2.4rem;font-weight:700;color:var(--primary);line-height:1}}</style>
-<form id="diag" onsubmit="return false">{qs}<button class="btn" type="button" id="dgo">Voir mon résultat</button></form>
-<div id="dres" class="dres" hidden aria-live="polite"></div>
-<p class="note">Vos réponses restent sur votre appareil : rien n'est enregistré ni envoyé.</p>
-<script>(function(){{var b=document.getElementById('dgo');b.addEventListener('click',function(){{var fs=[].slice.call(document.querySelectorAll('.dq')),tot=0,miss=[],unans=0;fs.forEach(function(f){{var c=f.querySelector('input:checked');if(!c){{unans++;miss.push([0,f]);return;}}var v=+c.value;tot+=v;if(v<2)miss.push([v,f]);}});var pct=Math.round(tot/(fs.length*2)*100);var msg=pct>=80?'Très bien préparé. Pensez à vérifier votre kit deux fois par an.':pct>=50?'Bonne base. Quelques actions simples vous mettront à l\\'abri.':'Vous démarrez : chaque petit pas compte, commencez par l\\'action n° 1.';miss.sort(function(a,b){{return a[0]-b[0]}});var top=miss.slice(0,3).map(function(m){{return '<li><a href="'+m[1].dataset.link+'.html">'+m[1].dataset.act+'</a></li>'}}).join('');var r=document.getElementById('dres');r.hidden=false;r.innerHTML='<p class="big">'+pct+' %</p><p><strong>'+msg+'</strong></p>'+(unans?'<p>'+unans+' question(s) sans réponse, comptée(s) comme « non ».</p>':'')+(top?'<p>Vos 3 prochaines actions :</p><ol>'+top+'</ol>':'<p>Bravo, rien ne manque à l\\'essentiel.</p>')+'<p><a class="btn" href="./">Cocher ma liste dans l\\'appli</a></p>';r.scrollIntoView({{behavior:'smooth',block:'start'}});}});}})();</script>'''
+nojs = "".join(f'<li><a href="{l}.html">{_h.escape(a)}</a></li>' for k,q,l,a in Q)
+# v6 : une question à la fois (pages.js), barre de progression, Précédent / Suivant, résultat en mots.
+# Sans JavaScript, toutes les questions restent affichées. Rien n'est stocké.
+quiz = f'''<form id="diag" class="diag" action="#" novalidate>
+<div class="dg-top" hidden><p class="dg-count" id="dg-count">Question 1 sur {len(Q)}</p><div class="dg-bar" role="progressbar" aria-labelledby="dg-count" aria-valuemin="1" aria-valuemax="{len(Q)}" aria-valuenow="1"><span></span></div></div>
+{qs}
+<p class="dg-err" id="dg-err" role="alert" hidden></p>
+<div class="dg-nav" hidden><button type="button" class="btn btn-2" id="dg-prev">Précédent</button><button type="submit" class="btn" id="dg-next">Suivant</button></div>
+</form>
+<noscript><div class="dres"><p><strong>Le résultat se calcule avec JavaScript, désactivé sur votre navigateur.</strong> Pour chaque question où vous avez répondu « non » ou « en partie », voici l'action correspondante :</p><ol>{nojs}</ol><p><a class="btn" href="checklist-kit-urgence-72h.html">Ouvrir la checklist à imprimer</a></p></div></noscript>
+<div id="dres" class="dres" hidden></div>
+<p class="note">Vos réponses restent sur votre appareil : rien n'est enregistré ni envoyé.</p>'''
 p = dict(
  slug="diagnostic-suis-je-pret", emoji="✅",
  title="Suis-je prêt ? Le test de préparation aux crises (2 min)",
- desc="10 questions pour savoir si votre foyer est prêt à tenir 72 heures : eau, nourriture, santé, papiers, alerte. Score immédiat et 3 actions prioritaires, gratuit.",
+ desc="10 questions pour savoir si votre foyer est prêt à tenir 72 heures : eau, nourriture, santé, papiers, alerte. Votre niveau et 3 actions prioritaires, gratuit.",
  h1="Suis-je prêt à faire face à une crise ? Le test en 10 questions",
- lead="En 2 minutes, mesurez la préparation de votre foyer face à une coupure, une inondation ou une tempête. Le test s'appuie sur le guide officiel « Tous responsables » : vous obtenez un score et les 3 actions les plus utiles à faire en premier. Rien n'est enregistré.",
+ lead="En 2 minutes, mesurez la préparation de votre foyer face à une coupure, une inondation ou une tempête. Le test s'appuie sur le guide officiel « Tous responsables » : vous obtenez votre niveau de préparation et les 3 actions les plus utiles à faire en premier. Rien n'est enregistré.",
  source="guide « Tous responsables » (SGDSN, 2025), georisques.gouv.fr",
  nav_label="Suis-je prêt ?", nav_emoji="✅",
  sections=[("test","Le test : 10 questions",quiz),
-  ("ensuite","Et ensuite ?","<p>Le score n'est pas une note : c'est un point de départ. Commencez par l'action n° 1, puis avancez semaine après semaine avec le <a href=\"./\">parcours « prêt en 4 semaines »</a> de l'appli. Pour les risques de votre commune, consultez <a href=\"https://www.georisques.gouv.fr\" rel=\"noopener\">georisques.gouv.fr</a>.</p>")],
+  ("ensuite","Et ensuite ?","<p>Le résultat n'est pas une note : c'est un point de départ. Commencez par l'action n° 1, puis avancez semaine après semaine avec le <a href=\"./\">parcours « prêt en 4 semaines »</a> de l'appli. Pour les risques de votre commune, consultez <a href=\"https://www.georisques.gouv.fr\" rel=\"noopener\">georisques.gouv.fr</a>.</p>")],
  faq=[("Combien de temps dure le test ?","Environ 2 minutes : 10 questions, réponse oui, en partie ou non."),
       ("Mes réponses sont-elles enregistrées ?","Non. Le calcul se fait sur votre appareil, rien n'est envoyé ni conservé."),
       ("Sur quoi se base le test ?","Sur le guide officiel « Tous responsables » (kit d'urgence 72 h, alerte, plan familial) et les consignes de georisques.gouv.fr."),
-      ("Que faire si mon score est faible ?","Commencez par l'eau, puis suivez les 3 actions proposées. Chaque étape compte, il n'est pas nécessaire de tout faire en une fois.")],
+      ("Que faire si je débute ?","Commencez par l'eau, puis suivez les 3 actions proposées. Chaque étape compte, il n'est pas nécessaire de tout faire en une fois.")],
  related=["kit-de-survie-72h","checklist-kit-urgence-72h","plan-familial-mise-en-surete"],
 )
 N.TITLES[p["slug"]]=p["h1"]

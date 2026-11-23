@@ -16,22 +16,22 @@ p = dict(
 <li><strong>Lisez le message en entier.</strong> Il indique la nature du danger, la zone concernée et la conduite à tenir.</li>
 <li><strong>Appliquez la consigne tout de suite</strong> : se mettre à l'abri, évacuer, ou éviter un secteur.</li>
 <li><strong>Écoutez la radio</strong> (radio locale « ici », ex-France Bleu, ou France Info) pour suivre l'évolution. Une <a href="radio-a-piles-kit-urgence.html">radio à piles</a> fonctionne même sans courant ni réseau.</li>
-<li><strong>Ne téléphonez pas aux secours sans urgence vitale</strong> : laissez les lignes libres. N'allez pas chercher les enfants à l'école : l'école les protège.</li>
-<li><strong>Prévenez vos proches et voisins</strong>, surtout les personnes âgées ou isolées sans smartphone.</li>
+<li><strong>Ne téléphonez pas aux secours sans urgence vitale : laissez les lignes libres. Si vous êtes sourd ou malentendant, utilisez le 114, joignable par SMS. N'allez pas chercher les enfants à l'école : l'école les protège.</li>
+<li><strong>Prévenez vos proches et voisins, surtout les personnes âgées ou isolées sans smartphone. Prévoyez aussi un moyen d'alerte de remplacement (radio à piles, sirène locale) pour les foyers sans téléphone portable.</li>
 <li><strong>Ne relayez que des informations officielles.</strong></li>
 </ol>"""),
   ("comment", "Comment fonctionne FR-Alert ?", """
 <ul class="check">
 <li><strong>Aucune application à installer</strong> : le message est diffusé par les antennes relais à tous les téléphones présents dans la zone en danger.</li>
 <li><strong>Son spécifique et vibration</strong>, même en mode silencieux, et affichage même écran verrouillé.</li>
-<li><strong>Pas de réception</strong> si le téléphone est éteint ou en mode avion.</li>
+<li><strong>Pas de réception si le téléphone est éteint ou en mode avion. FR-Alert passe par le réseau mobile : si les antennes relais sont hors service, le message n'arrive pas non plus.</li>
 <li><strong>Qui déclenche ?</strong> Le préfet, éventuellement à la demande du maire.</li>
 <li><strong>Où ?</strong> Partout en France, métropole et outre-mer, y compris pour les visiteurs étrangers en itinérance.</li>
 <li><strong>Depuis quand ?</strong> Opérationnel depuis le 21 juin 2022.</li>
 </ul>
 <p>Les alertes peuvent concerner un risque naturel (inondation, feu de forêt, tempête), un accident industriel ou technologique, ou un grave événement de sécurité publique, comme un attentat.</p>"""),
   ("desactiver", "Faut-il désactiver FR-Alert ?", """
-<p>Non. Le son est volontairement fort pour réveiller et attirer l'attention en quelques secondes : c'est ce qui le rend utile la nuit. Vérifiez plutôt que les <strong>alertes d'urgence</strong> sont activées dans les réglages de votre téléphone (Android : Notifications › Alertes d'urgence sans fil ; iPhone : Réglages › Notifications, en bas de la page).</p>
+<p>Non. Le son est volontairement fort pour réveiller et attirer l'attention en quelques secondes : c'est ce qui le rend utile la nuit. Vérifiez que les alertes d'urgence sont activées dans les réglages de votre téléphone. Le nom exact du menu varie selon les modèles et les versions : cherchez « alertes d'urgence » dans les notifications.</p>
 <p class="note">Un vrai message FR-Alert ne demande jamais de cliquer sur un lien pour payer ou donner vos coordonnées. Un SMS qui le fait est une arnaque.</p>"""),
   ("avant", "Se préparer avant l'alerte", """
 <p>Une alerte peut imposer de rester chez soi plusieurs jours, ou de partir en quelques minutes. Préparez :</p>

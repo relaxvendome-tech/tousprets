@@ -1,9 +1,8 @@
 /* Tous prêts — recherche dans les guides (hors ligne, sans service externe) */
 (function () {
   var form = document.querySelector('form.search');
-  if (!form) return;
-  var input = form.querySelector('input');
-  var list = form.querySelector('.search-res');
+  var input = form && form.querySelector('input');
+  var list = form && form.querySelector('.search-res');
   var data = null, results = [];
   function norm(s) { return ' ' + (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, ' ') + ' '; }
   function load(cb) {
@@ -24,19 +23,30 @@
       if (a.length > b.length) i++; else if (b.length > a.length) j++; else { i++; j++; } } return e + (a.length - i) + (b.length - j) <= 1; }
   function fuzzy(w, p) { if (p._a.indexOf(' ' + w) >= 0) return 2; if (SYN[w]) { var sy = SYN[w].split(' '); if (sy.some(function (x) { return p._t.indexOf(' ' + x) >= 0; })) return 3; if (sy.some(function (x) { return p._a.indexOf(' ' + x) >= 0; })) return 1; }
     if (w.length >= 5) { if (!p._w) p._w = p._a.trim().split(' '); for (var k = 0; k < p._w.length; k++) if (lev1(w, p._w[k])) return 1; } return 0; }
-  function find(q) {
+  function words(q) {
     var STOP = ' de la le les du des en un une et au aux mon ma mes que quoi faire comment pour avec sur dans est il on se cas en ';
     var nq = norm(q).replace(/ tremblements? de terre /g, ' seisme ').replace(/ feux? de foret /g, ' feu foret ').replace(/ panne de courant | panne d electricite /g, ' coupure electricite ');
-    var words = nq.trim().split(/\s+/).filter(function (w) { return w.length > 1 && STOP.indexOf(' ' + w + ' ') < 0; });
-    if (!words.length) return [];
+    return nq.trim().split(/\s+/).filter(function (w) { return w.length > 1 && STOP.indexOf(' ' + w + ' ') < 0; });
+  }
+  /* Score d'un enregistrement { _t: titre normalisé, _a: tout le texte normalisé, u: url } ; null = ne correspond pas */
+  function score(ws, p) {
+    var sc = 0, miss = 0;
+    for (var i = 0; i < ws.length; i++) {
+      var f = fuzzy(ws[i], p); if (!f) { miss++; continue; }
+      sc += (p._t.indexOf(' ' + ws[i]) >= 0 ? 3 : f) + ((p.u || '').indexOf(ws[i]) >= 0 ? 2 : 0);
+    }
+    if (!sc || miss > Math.floor(ws.length / 2)) return null;
+    return sc - miss;
+  }
+  /* API partagée avec pages.js (filtres du hub, des questions, du glossaire) */
+  window.TPSearch = { norm: norm, words: words, score: score };
+  if (!form || !input || !list) return;
+  function find(q) {
+    var ws = words(q);
+    if (!ws.length) return [];
     return data.map(function (p) {
-      var score = 0, miss = 0;
-      for (var i = 0; i < words.length; i++) {
-        var f = fuzzy(words[i], p); if (!f) { miss++; continue; }
-        score += (p._t.indexOf(' ' + words[i]) >= 0 ? 3 : f) + (p.u.indexOf(words[i]) >= 0 ? 2 : 0);
-      }
-      if (!score || miss > Math.floor(words.length / 2)) return null;
-      return { p: p, s: score - miss };
+      var s = score(ws, p);
+      return s === null ? null : { p: p, s: s };
     }).filter(Boolean).sort(function (a, b) { return b.s - a.s; }).slice(0, 7).map(function (x) { return x.p; });
   }
   function esc(s) { return s.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }

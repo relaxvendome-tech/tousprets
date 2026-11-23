@@ -1,0 +1,67 @@
+# Rapport v6 — relecture du contenu par les IA (Gemini, DeepSeek, Mistral, Perplexity)
+
+- Pages relues : 66 (hors accueil et pages juridiques, traitées dans RAPPORT_V6_STRUCTURE.md).
+- Propositions reçues : 263 ; retrouvées mot pour mot dans les pages : 256 ; retenues après vérification : 183 (manques comblés : 91, erreurs corrigées : 5, clarté : 87).
+- Lot DeepSeek n°8 (7 propositions) non récupéré : téléchargement bloqué par Chrome — À VÉRIFIER.
+- Écartées : propositions non vérifiables ou risquées (arroser les abords en cas de feu, âge pour la prise d'iode, adresse du site du 114, consigne séisme/tsunami confuse, données de contrôle du kit non sourcées, questions du diagnostic restructuré).
+- Règle pour la clarté : retenue seulement si aucun chiffre ne change et si le texte ne s'allonge pas de plus de 50 %.
+- Corrections reportées aussi dans les générateurs (_outils, /home/claude/seo) pour survivre aux régénérations.
+
+## Modifications par page (statut CORRIGÉ, tests : 73 pages sans erreur JS, JSON-LD valide, 1 H1)
+
+- accident-nucleaire-iode.html : 1
+- anticiper-s-entraider.html : 1
+- arnaque-kit-urgence-gratuit.html : 4
+- batterie-externe-station-electrique.html : 2
+- canicule-que-faire.html : 2
+- charte-editoriale.html : 2
+- checklist-kit-urgence-72h.html : 2
+- comprendre-s-informer.html : 4
+- coupure-electricite-que-faire.html : 1
+- couverture-de-survie.html : 3
+- cyclone-que-faire.html : 1
+- detecteur-de-fumee.html : 5
+- entraide-voisins-crise.html : 4
+- feu-de-foret-que-faire.html : 2
+- fr-alert-que-faire.html : 4
+- glossaire-preparation-crise.html : 6
+- groupe-electrogene-securite.html : 2
+- guide-tous-responsables-resume.html : 3
+- inondation-que-faire.html : 2
+- kit-de-survie-72h-pas-cher.html : 2
+- kit-de-survie-72h.html : 2
+- kit-de-survie-gouvernement-pdf.html : 3
+- kit-urgence-72h-famille-appartement-voiture.html : 4
+- kit-urgence-72h-gouvernement.html : 3
+- kit-urgence-animaux.html : 2
+- kit-urgence-bebe.html : 3
+- kit-urgence-enfants-ecole.html : 4
+- kit-urgence-guadeloupe.html : 6
+- kit-urgence-guyane.html : 6
+- kit-urgence-handicap.html : 3
+- kit-urgence-la-reunion.html : 4
+- kit-urgence-martinique.html : 6
+- kit-urgence-mayotte.html : 5
+- kit-urgence-personne-agee.html : 5
+- kit-urgence-saint-martin-saint-barthelemy.html : 7
+- kit-urgence-voiture.html : 4
+- lampe-frontale-lanterne-kit-urgence.html : 2
+- piles-kit-urgence.html : 2
+- plan-familial-mise-en-surete.html : 4
+- pourquoi.html : 4
+- preparation-catastrophe-naturelle.html : 4
+- preparation-outre-mer.html : 4
+- proteger-son-foyer.html : 3
+- purifier-eau-pastilles-filtre.html : 3
+- que-mettre-dans-un-kit-d-urgence.html : 3
+- questions-reponses-kit-urgence.html : 3
+- radio-a-piles-kit-urgence.html : 5
+- reagir-en-cas-de-crise.html : 4
+- s-equiper-kit-urgence.html : 3
+- sac-de-secours.html : 3
+- seisme-que-faire.html : 4
+- signal-alerte-sirene.html : 2
+- sources.html : 1
+- tempete-que-faire.html : 4
+- trousse-de-secours-kit-urgence.html : 3
+- vague-de-froid-que-faire.html : 2

@@ -28,7 +28,7 @@ CAT = {
  "kit-urgence-72h-famille-appartement-voiture": ("foyer", "users", "#8A6420", "#B88A36", "Famille, appartement, voiture"),
  "kit-urgence-bebe": ("foyer", "baby", "#8A4C6B", "#B56E91", "Avec un bébé"),
  "kit-urgence-animaux": ("foyer", "paw-print", "#6B4A2E", "#966A45", "Un chien, un chat"),
- "entraide-voisins-crise": ("foyer", "heart-handshake", "#2E6B5E", "#469383", "Entraide entre voisins"),
+ "entraide-voisins-crise": ("foyer", "heart-handshake", "#2E6B5E", "#469383", "Entraide entre voisins. Le guide recommande aussi de se former aux premiers secours, ce qui permet d'aider concrètement les personnes blessées en attendant les secours."),
  # Selon les risques
  "coupure-electricite-que-faire": ("risques", "zap-off", "#3A3F4A", "#5D6576", "Coupure d'électricité"),
  "inondation-que-faire": ("risques", "waves", "#1F5C8A", "#3C86B8", "Inondation"),
@@ -93,7 +93,7 @@ GROUPS = [
  ("equiper", "S'équiper intelligemment", "Radio, lampes, piles, trousse, batteries, eau potable, détecteur de fumée : des critères de choix neutres, sans marques."),
  ("anticiper", "Anticiper et s'entraider", "Faire le point sur sa préparation, s'organiser en famille et avec ses voisins."),
  ("outremer", "Préparation outre-mer", "Cyclones, séismes, volcans : ce qui change dans le kit selon votre territoire."),
- ("comprendre", "Comprendre et s'informer", "Le guide officiel résumé, les questions pratiques, le glossaire, nos sources et notre méthode."),
+ ("comprendre", "Comprendre et s'informer", "Les principaux points du guide officiel, les questions fréquentes, le glossaire, les sources publiques citées et la méthode de rédaction."),
 ]
 # Pages piliers des univers (le kit 72 h a déjà sa page centrale)
 PILLARS = {"kit": "kit-de-survie-72h", "reagir": "reagir-en-cas-de-crise", "foyer": "proteger-son-foyer",
@@ -101,7 +101,11 @@ PILLARS = {"kit": "kit-de-survie-72h", "reagir": "reagir-en-cas-de-crise", "foye
            "comprendre": "comprendre-s-informer"}
 UNIV = {
  "kit": ["kit-de-survie-72h","kit-urgence-72h-gouvernement","checklist-kit-urgence-72h","que-mettre-dans-un-kit-d-urgence","combien-eau-stocker-par-personne","aliments-sans-cuisson-kit-urgence","sac-de-secours","kit-de-survie-72h-pas-cher","kit-7-jours-strategie-europeenne-72h","kit-de-survie-gouvernement-pdf"],
- "reagir": ["inondation-que-faire","feu-de-foret-que-faire","seisme-que-faire","tempete-que-faire","cyclone-que-faire","canicule-que-faire","vague-de-froid-que-faire","accident-nucleaire-iode","coupure-electricite-que-faire","confinement-que-faire","attaque-terroriste-que-faire","cyberattaque-que-faire","tensions-internationales-se-preparer","preparation-catastrophe-naturelle","fr-alert-que-faire","signal-alerte-sirene"],
+ "reagir": [  # v6 : situations les plus urgentes d'abord (alerte, mise à l'abri, danger immédiat), puis les autres
+  "signal-alerte-sirene","fr-alert-que-faire","confinement-que-faire","attaque-terroriste-que-faire","accident-nucleaire-iode",
+  "feu-de-foret-que-faire","inondation-que-faire","seisme-que-faire","cyclone-que-faire","tempete-que-faire",
+  "canicule-que-faire","vague-de-froid-que-faire","coupure-electricite-que-faire","cyberattaque-que-faire",
+  "tensions-internationales-se-preparer","preparation-catastrophe-naturelle"],
  "foyer": ["kit-urgence-72h-famille-appartement-voiture","kit-urgence-bebe","kit-urgence-enfants-ecole","kit-urgence-personne-agee","kit-urgence-handicap","kit-urgence-animaux","kit-urgence-voiture","plan-familial-mise-en-surete"],
  "equiper": ["radio-a-piles-kit-urgence","lampe-frontale-lanterne-kit-urgence","piles-kit-urgence","batterie-externe-station-electrique","recharger-telephone-coupure-courant","couverture-de-survie","detecteur-de-fumee","trousse-de-secours-kit-urgence","purifier-eau-pastilles-filtre","groupe-electrogene-securite","frigo-congelateur-coupure-electricite"],
  "anticiper": ["diagnostic-suis-je-pret","entraide-voisins-crise","plan-familial-mise-en-surete","arnaque-kit-urgence-gratuit"],
@@ -141,13 +145,24 @@ def desc_of(slug):
     m = re.search(r'name="description" content="(.*?)"', s)
     return html.unescape(m.group(1)) if m else ""
 
-def card(slug):
-    t = CAT[slug][4]; d = html.escape(desc_of(slug))
+def preview(d, n=110):
+    """Aperçu court tiré de la meta description existante (v6) : 1re phrase, sinon coupe au mot."""
+    d = re.sub(r"\s+", " ", d or "").strip()
+    m = re.match(r"(.+?[.!?])(?:\s|$)", d)
+    if m and 40 <= len(m.group(1)) <= n: return m.group(1)
+    if len(d) <= n: return d
+    return d[:n].rsplit(" ", 1)[0].rstrip(" ,;:–-") + "…"
+
+def card(slug, short=False, eager=False, attrs=""):
+    t = CAT[slug][4]; d0 = desc_of(slug); d = html.escape(preview(d0) if short else d0)
     img = f"img/photos/{slug}.jpg" if os.path.exists(f"{SITE}/img/photos/{slug}.jpg") else f"img/cards/{slug}.svg"
-    return (f'<a class="gcard" href="{slug}.html"><img src="{img}" alt="" width="480" height="270" loading="lazy">'
+    load = ' loading="eager"' if eager else ' loading="lazy"'
+    return (f'<a class="gcard" href="{slug}.html"{attrs}><img src="{img}" alt="" width="480" height="270"{load}>'
             f'<span class="gcard-b"><strong>{html.escape(t)}</strong><span>{d}</span></span></a>')
 
-def cards(slugs): return '<div class="gcards">' + "".join(card(s) for s in slugs) + "</div>"
+def cards(slugs, short=False, eager=0):
+    return ('<div class="gcards' + (' gcards--short' if short else '') + '">'
+            + "".join(card(s, short, i < eager) for i, s in enumerate(slugs)) + "</div>")
 
 SEARCH_SVG = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>'
 
@@ -328,8 +343,9 @@ if __name__ == "__main__":
     import subprocess, sys as _s
     _o = os.path.join(SITE, "_outils")
     # v5 : pages légales (legal_v5), précédent/suivant (prevnext_v5), accueil (apply_landing)
+    # v6 : v6_structure (outils des pages test, guides, questions, glossaire, checklist, privacy)
     for _cmd in (["legal_v5.py"], ["nav_v4.py"], ["template_v4.py"], ["essentiels.py"], ["merge_now.py"], ["template_v4.py"],
-                 ["prevnext_v5.py"], ["apply_landing.py", "@index"], ["webp.py", "--lazy"], ["typo_fr.py"]):
+                 ["prevnext_v5.py"], ["v6_structure.py"], ["apply_landing.py", "@index"], ["webp.py", "--lazy"], ["typo_fr.py"]):
         _f = os.path.join(_o, _cmd[0])
         if os.path.exists(_f):
             _args = [os.path.join(SITE, "index.html")] if _cmd[1:] == ["@index"] else [SITE] + _cmd[1:]
