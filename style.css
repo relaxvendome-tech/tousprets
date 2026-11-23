@@ -251,3 +251,5 @@ section{margin:0 0 2.6rem}
 .disclaimer{border-left-color:var(--accent)}
 .urgence{border-color:var(--danger)}
 .start{background:linear-gradient(135deg,var(--primary-s),var(--alt))}
+
+.search-res .sr-cat{display:block;font-style:normal;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--accent)}

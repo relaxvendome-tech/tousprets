@@ -51,6 +51,12 @@ CAT = {
  "diagnostic-suis-je-pret": ("bases", "clipboard-check", "#173F70", "#2F6DB5", "Test : suis-je prêt ?"),
  "charte-editoriale": ("apropos", "badge-check", "#0F2440", "#2A4A78", "Charte éditoriale"),
  "glossaire-preparation-crise": ("guide", "book-a", "#3E3A6B", "#5F5A9A", "Glossaire"),
+ "reagir-en-cas-de-crise": ("apropos", "siren", "#8A2E2E", "#B84A3F", "Réagir en cas de crise"),
+ "proteger-son-foyer": ("apropos", "house", "#8A6420", "#B88A36", "Protéger son foyer"),
+ "s-equiper-kit-urgence": ("apropos", "flashlight", "#3A3F4A", "#5D6576", "S'équiper"),
+ "anticiper-s-entraider": ("apropos", "heart-handshake", "#2E6B5E", "#469383", "Anticiper et s'entraider"),
+ "preparation-outre-mer": ("apropos", "tree-palm", "#1F6B6B", "#3A9494", "Préparation outre-mer"),
+ "comprendre-s-informer": ("apropos", "book-open", "#1E3A64", "#3462A3", "Comprendre et s'informer"),
  "tous-les-guides": ("apropos", "layout-grid", "#0F2440", "#2A4A78", "Tous les guides"),
  # Ajouts 2026-11-23 (pages rédigées avec les IA, vérifiées)
  "kit-urgence-enfants-ecole": ("foyer", "school", "#8A6420", "#B88A36", "Les enfants et l'école"),
@@ -81,18 +87,37 @@ CAT = {
  "kit-urgence-saint-martin-saint-barthelemy": ("outremer", "sun", "#A8561F", "#D07B35", "Saint-Martin et Saint-Barthélemy"),
 }
 GROUPS = [
- ("bases", "Les bases du kit", "L'eau, les repas sans cuisson, la liste à cocher, le sac à emporter et un kit à petit prix."),
- ("guide", "Le guide officiel et l'alerte", "Ce que demande le guide « Tous responsables », où le télécharger, et comment réagir à FR-Alert."),
- ("foyer", "Selon votre foyer", "Adapter le kit à votre famille, à un bébé, à vos animaux et à votre logement."),
- ("risques", "Selon les risques", "Les bons réflexes pour chaque situation, et ce que cela change dans votre kit. Pour les risques de votre commune : georisques.gouv.fr."),
- ("materiel", "Le matériel, poste par poste", "Radio, lampes, piles, trousse de secours, batteries, eau potable : des critères de choix neutres, sans marques."),
- ("outremer", "Outre-mer", "Cyclones, séismes, volcans : ce qui change dans le kit selon votre territoire."),
+ ("kit", "Le kit d'urgence 72 h", "L'eau, les repas sans cuisson, la liste à cocher, le sac à emporter, le guide officiel et un kit à petit prix."),
+ ("reagir", "Réagir en cas de crise", "Les bons réflexes pour chaque situation, dans l'ordre : avant, pendant, après. Pour les risques de votre commune : georisques.gouv.fr."),
+ ("foyer", "Protéger son foyer", "Adapter la préparation à votre famille, aux enfants, aux personnes fragiles, aux animaux, au logement et à la voiture."),
+ ("equiper", "S'équiper intelligemment", "Radio, lampes, piles, trousse, batteries, eau potable, détecteur de fumée : des critères de choix neutres, sans marques."),
+ ("anticiper", "Anticiper et s'entraider", "Faire le point sur sa préparation, s'organiser en famille et avec ses voisins."),
+ ("outremer", "Préparation outre-mer", "Cyclones, séismes, volcans : ce qui change dans le kit selon votre territoire."),
+ ("comprendre", "Comprendre et s'informer", "Le guide officiel résumé, les questions pratiques, le glossaire, nos sources et notre méthode."),
 ]
-NAV = [("diagnostic-suis-je-pret.html", "Suis-je prêt ?"), ("kit-de-survie-72h.html", "Kit 72 h"), ("checklist-kit-urgence-72h.html", "Ma liste"),
-       ("tous-les-guides.html#foyer", "Par foyer"), ("tous-les-guides.html#risques", "Risques"),
-       ("combien-eau-stocker-par-personne.html", "Eau"), ("tous-les-guides.html#materiel", "Matériel"), ("tous-les-guides.html#outremer", "Outre-mer"),
-       ("kit-de-survie-gouvernement-pdf.html", "Guide officiel"), ("questions-reponses-kit-urgence.html", "Questions"),
-       ("tous-les-guides.html", "Tous les guides")]
+# Pages piliers des univers (le kit 72 h a déjà sa page centrale)
+PILLARS = {"kit": "kit-de-survie-72h", "reagir": "reagir-en-cas-de-crise", "foyer": "proteger-son-foyer",
+           "equiper": "s-equiper-kit-urgence", "anticiper": "anticiper-s-entraider", "outremer": "preparation-outre-mer",
+           "comprendre": "comprendre-s-informer"}
+UNIV = {
+ "kit": ["kit-de-survie-72h","kit-urgence-72h-gouvernement","checklist-kit-urgence-72h","que-mettre-dans-un-kit-d-urgence","combien-eau-stocker-par-personne","aliments-sans-cuisson-kit-urgence","sac-de-secours","kit-de-survie-72h-pas-cher","kit-7-jours-strategie-europeenne-72h","kit-de-survie-gouvernement-pdf"],
+ "reagir": ["inondation-que-faire","feu-de-foret-que-faire","seisme-que-faire","tempete-que-faire","cyclone-que-faire","canicule-que-faire","vague-de-froid-que-faire","accident-nucleaire-iode","coupure-electricite-que-faire","confinement-que-faire","attaque-terroriste-que-faire","cyberattaque-que-faire","tensions-internationales-se-preparer","preparation-catastrophe-naturelle","fr-alert-que-faire","signal-alerte-sirene"],
+ "foyer": ["kit-urgence-72h-famille-appartement-voiture","kit-urgence-bebe","kit-urgence-enfants-ecole","kit-urgence-personne-agee","kit-urgence-handicap","kit-urgence-animaux","kit-urgence-voiture","plan-familial-mise-en-surete"],
+ "equiper": ["radio-a-piles-kit-urgence","lampe-frontale-lanterne-kit-urgence","piles-kit-urgence","batterie-externe-station-electrique","recharger-telephone-coupure-courant","couverture-de-survie","detecteur-de-fumee","trousse-de-secours-kit-urgence","purifier-eau-pastilles-filtre","groupe-electrogene-securite","frigo-congelateur-coupure-electricite"],
+ "anticiper": ["diagnostic-suis-je-pret","entraide-voisins-crise","plan-familial-mise-en-surete","arnaque-kit-urgence-gratuit"],
+ "outremer": ["kit-urgence-guadeloupe","kit-urgence-martinique","kit-urgence-guyane","kit-urgence-la-reunion","kit-urgence-mayotte","kit-urgence-saint-martin-saint-barthelemy"],
+ "comprendre": ["guide-tous-responsables-resume","questions-reponses-kit-urgence","glossaire-preparation-crise","sources","charte-editoriale","pourquoi","licence-visuels"],
+}
+NAV = [("diagnostic-suis-je-pret.html", "Suis-je prêt ?"), ("kit-de-survie-72h.html", "Kit 72 h"), ("reagir-en-cas-de-crise.html", "Réagir aux crises"),
+       ("proteger-son-foyer.html", "Protéger mon foyer"), ("s-equiper-kit-urgence.html", "S'équiper"), ("preparation-outre-mer.html", "Outre-mer"),
+       ("anticiper-s-entraider.html", "S'entraider"), ("tous-les-guides.html", "Tous les guides")]
+
+def _remap():
+    for u, lst in UNIV.items():
+        for sl in lst:
+            if sl in CAT and not getattr(_remap, "done_" + sl, False):
+                v = CAT[sl]; CAT[sl] = (u,) + tuple(v[1:]); setattr(_remap, "done_" + sl, True)
+_remap()
 
 def icon_inner(name):
     s = open(f"{ICONS}/{name}.svg").read()
@@ -160,7 +185,7 @@ EXTRA_REL = {
 
 def related_for(slug, have):
     cat = CAT.get(slug, ("bases",))[0]
-    pool = [s for s, v in CAT.items() if v[0] == cat and s != slug and s not in have and v[0] != "apropos"]
+    pool = [s for s, v in CAT.items() if v[0] == cat and s != slug and s not in have and v[0] not in ("apropos", "comprendre")]
     pool += [s for s in ("kit-de-survie-72h", "checklist-kit-urgence-72h", "questions-reponses-kit-urgence") if s != slug and s not in have and s not in pool]
     return pool
 
@@ -201,7 +226,7 @@ def transform(f):
                 + cards(sl + extra) + "</section>")
     if 'id="voir-aussi"' in s and 'class="gcards"' not in s[s.find('id="voir-aussi"'):s.find('id="voir-aussi"') + 4000]:
         s = re.sub(r'<section id="voir-aussi".*?</section>', va, s, count=1, flags=re.S)
-    elif 'id="voir-aussi"' not in s and slug in CAT and CAT[slug][0] != "apropos" and '<div class="cta-box' in s:
+    elif 'id="voir-aussi"' not in s and slug in CAT and CAT[slug][0] not in ("apropos",) and '<div class="cta-box' in s:
         rel = related_for(slug, [])[:3]
         sec = ('<section id="voir-aussi" aria-labelledby="voir-aussi-t"><h2 id="voir-aussi-t">À lire aussi</h2>'
                + cards(rel) + "</section>\n")
@@ -213,11 +238,12 @@ def transform(f):
             s = s.replace('<div class="hero"><div class="wrap">', '<div class="hero hero--img"><div class="wrap">', 1)
             s = re.sub(r'(<p class="hero-note[^>]*>.*?</p>)', lambda m: m.group(1) + f'<figure class="hero-img"><img src="{src}" alt="{html.escape(CAT[slug][4])} : illustration" width="960" height="540" fetchpriority="high"></figure>', s, count=1)
     # 4 ter. fil d'Ariane : Tous prêts › Tous les guides › Rubrique › page
+    s = re.sub(r'(<div class="crumbs"><a href="\./">Tous prêts</a> › )<a href="tous-les-guides\.html">Tous les guides</a> › <a href="[^"]*">[^<]*</a> › ', r'\1', s, count=1)
     cat = CAT.get(slug, (None,))[0]
     gname = dict((g[0], g[1]) for g in GROUPS).get(cat)
     if gname and 'class="crumbs"' in s and 'tous-les-guides.html' not in s[s.find('class="crumbs"'):s.find('class="crumbs"')+400]:
         s = s.replace('<div class="crumbs"><a href="./">Tous prêts</a> › ',
-                      f'<div class="crumbs"><a href="./">Tous prêts</a> › <a href="tous-les-guides.html">Tous les guides</a> › <a href="tous-les-guides.html#{cat}">{gname}</a> › ', 1)
+                      f'<div class="crumbs"><a href="./">Tous prêts</a> › <a href="tous-les-guides.html">Tous les guides</a> › <a href="{PILLARS.get(cat, "tous-les-guides")}.html">{gname}</a> › ', 1)
         def bc(mm):
             j = json.loads(mm.group(1))
             for node in j.get("@graph", [j]):
@@ -284,7 +310,8 @@ def search_index():
         s = open(f, encoding="utf-8").read()
         h1 = re.search(r"<h1[^>]*>(.*?)</h1>", s, re.S)
         qs = re.findall(r'"@type": "Question", "name": "(.*?)"', s)
-        out.append({"u": slug + ".html", "t": re.sub("<[^>]+>", "", h1.group(1)) if h1 else CAT[slug][4],
+        cat = CAT[slug][0]; gname = dict((g[0], g[1]) for g in GROUPS).get(cat, "Outils et repères")
+        out.append({"u": slug + ".html", "c": gname, "t": re.sub("<[^>]+>", "", h1.group(1)) if h1 else CAT[slug][4],
                     "d": desc_of(slug), "k": " ".join(qs)[:1500]})
     json.dump(out, open(f"{SITE}/search-index.json", "w"), ensure_ascii=False, separators=(",", ":"))
     return len(out)
