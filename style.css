@@ -240,3 +240,14 @@ section{margin:0 0 2.6rem}
  main .hero+.wrap>.toc{position:static;margin:0 0 1.8rem}
 }
 @media (max-width:900px){.hero{padding:1rem 0 1.4rem}.hero-note{display:none}.hero-cta{margin:.9rem 0 0}.hero-cta .btn{padding:.65rem 1.05rem;font-size:.95rem}.lead{font-size:1.08rem}main .hero+.wrap{padding-top:1.2rem}}
+
+/* ===== Palette v3 (2026-11-23) : bleu nuit, bleu, blanc, orange de prévention ===== */
+:root{--bg:#F3F6FA;--surface:#FFFFFF;--alt:#EAF0F7;--text:#14233A;--muted:#51627A;
+ --primary:#1E4F8C;--primary-h:#173F70;--primary-s:#E3ECF8;--accent:#D9731A;--accent-s:#FCEBD9;
+ --danger:#C0392B;--danger-s:#FAE5E2;--border:#D6DEE8;--focus:#D9731A;--band:#0F2440}
+@media (prefers-color-scheme:dark){:root{--bg:#0B1322;--surface:#121D30;--alt:#17243B;--text:#E6EDF7;--muted:#A3B2C7;
+ --primary:#8DB8F0;--primary-h:#B0CFF6;--primary-s:#1A2C47;--accent:#F0A055;--accent-s:#3A2814;--danger:#EE8A7E;--danger-s:#3A1D1A;--border:#24344F;--focus:#F0A055;--band:#0A1628}}
+.topnav a[aria-current="page"]{border-bottom-color:var(--accent)}
+.disclaimer{border-left-color:var(--accent)}
+.urgence{border-color:var(--danger)}
+.start{background:linear-gradient(135deg,var(--primary-s),var(--alt))}

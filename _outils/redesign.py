@@ -11,17 +11,17 @@ ICONS = "/home/claude/icons/node_modules/lucide-static/icons"
 # slug: (catégorie, icône lucide, couleur1, couleur2, titre court)
 CAT = {
  # Les bases du kit
- "kit-de-survie-72h": ("bases", "backpack", "#2F5D4E", "#4E8A73", "Kit de survie 72 h : la liste"),
- "checklist-kit-urgence-72h": ("bases", "list-checks", "#2F5D4E", "#4E8A73", "Checklist à imprimer"),
- "que-mettre-dans-un-kit-d-urgence": ("bases", "package", "#2F5D4E", "#4E8A73", "Que mettre dans un kit d'urgence"),
+ "kit-de-survie-72h": ("bases", "backpack", "#173F70", "#2F6DB5", "Kit de survie 72 h : la liste"),
+ "checklist-kit-urgence-72h": ("bases", "list-checks", "#173F70", "#2F6DB5", "Checklist à imprimer"),
+ "que-mettre-dans-un-kit-d-urgence": ("bases", "package", "#173F70", "#2F6DB5", "Que mettre dans un kit d'urgence"),
  "combien-eau-stocker-par-personne": ("bases", "droplets", "#1F5C8A", "#3C86B8", "Combien d'eau stocker"),
  "aliments-sans-cuisson-kit-urgence": ("bases", "utensils", "#8A5A1F", "#B98236", "Aliments sans cuisson"),
  "sac-de-secours": ("bases", "briefcase-medical", "#7A3B2E", "#A85A45", "Le sac de secours"),
  "kit-de-survie-72h-pas-cher": ("bases", "piggy-bank", "#5B6B2E", "#7E9142", "Un kit pas cher"),
  # Guide officiel
- "kit-de-survie-gouvernement-pdf": ("guide", "file-text", "#24405F", "#3D6491", "Le guide officiel en PDF"),
- "kit-urgence-72h-gouvernement": ("guide", "landmark", "#24405F", "#3D6491", "Ce que dit le guide de l'État"),
- "guide-tous-responsables-resume": ("guide", "book-open", "#24405F", "#3D6491", "Le guide résumé"),
+ "kit-de-survie-gouvernement-pdf": ("guide", "file-text", "#1E3A64", "#3462A3", "Le guide officiel en PDF"),
+ "kit-urgence-72h-gouvernement": ("guide", "landmark", "#1E3A64", "#3462A3", "Ce que dit le guide de l'État"),
+ "guide-tous-responsables-resume": ("guide", "book-open", "#1E3A64", "#3462A3", "Le guide résumé"),
  "fr-alert-que-faire": ("guide", "bell-ring", "#8A2E2E", "#B84A3F", "Alerte FR-Alert"),
  "questions-reponses-kit-urgence": ("guide", "circle-help", "#3E3A6B", "#5F5A9A", "Questions pratiques"),
  # Selon votre foyer
@@ -45,13 +45,13 @@ CAT = {
  "recharger-telephone-coupure-courant": ("materiel", "battery-charging", "#2E5B3A", "#468657", "Recharger son téléphone"),
  "frigo-congelateur-coupure-electricite": ("materiel", "refrigerator", "#2E4F6B", "#4A7396", "Frigo et congélateur"),
  # À propos
- "pourquoi": ("apropos", "info", "#3F6F5E", "#5B8C78", "Pourquoi cette appli"),
- "sources": ("apropos", "scale", "#3F6F5E", "#5B8C78", "Sources et méthode"),
- "licence-visuels": ("apropos", "image", "#3F6F5E", "#5B8C78", "Réutiliser nos visuels"),
- "diagnostic-suis-je-pret": ("bases", "clipboard-check", "#2F5D4E", "#4E8A73", "Test : suis-je prêt ?"),
- "charte-editoriale": ("apropos", "badge-check", "#3F6F5E", "#5B8C78", "Charte éditoriale"),
+ "pourquoi": ("apropos", "info", "#0F2440", "#2A4A78", "Pourquoi cette appli"),
+ "sources": ("apropos", "scale", "#0F2440", "#2A4A78", "Sources et méthode"),
+ "licence-visuels": ("apropos", "image", "#0F2440", "#2A4A78", "Réutiliser nos visuels"),
+ "diagnostic-suis-je-pret": ("bases", "clipboard-check", "#173F70", "#2F6DB5", "Test : suis-je prêt ?"),
+ "charte-editoriale": ("apropos", "badge-check", "#0F2440", "#2A4A78", "Charte éditoriale"),
  "glossaire-preparation-crise": ("guide", "book-a", "#3E3A6B", "#5F5A9A", "Glossaire"),
- "tous-les-guides": ("apropos", "layout-grid", "#3F6F5E", "#5B8C78", "Tous les guides"),
+ "tous-les-guides": ("apropos", "layout-grid", "#0F2440", "#2A4A78", "Tous les guides"),
  # Ajouts 2026-11-23 (pages rédigées avec les IA, vérifiées)
  "kit-urgence-enfants-ecole": ("foyer", "school", "#8A6420", "#B88A36", "Les enfants et l'école"),
  "kit-urgence-personne-agee": ("foyer", "hand-heart", "#7A4E6B", "#A26E91", "Une personne âgée"),
@@ -72,7 +72,7 @@ CAT = {
  "couverture-de-survie": ("materiel", "thermometer-snowflake", "#6B5A2E", "#968046", "Couverture de survie"),
  "detecteur-de-fumee": ("materiel", "alarm-smoke", "#4A4A4A", "#6E6E6E", "Détecteur de fumée"),
  "purifier-eau-pastilles-filtre": ("materiel", "glass-water", "#1F5C8A", "#3C86B8", "Purifier l'eau"),
- "kit-7-jours-strategie-europeenne-72h": ("bases", "calendar-days", "#24405F", "#3D6491", "Tenir 7 jours"),
+ "kit-7-jours-strategie-europeenne-72h": ("bases", "calendar-days", "#1E3A64", "#3462A3", "Tenir 7 jours"),
  "kit-urgence-guadeloupe": ("outremer", "tree-palm", "#1F6B6B", "#3A9494", "Guadeloupe"),
  "kit-urgence-martinique": ("outremer", "mountain-snow", "#1F6B5B", "#3A9480", "Martinique"),
  "kit-urgence-la-reunion": ("outremer", "mountain", "#6B3A1F", "#94573A", "La Réunion"),
