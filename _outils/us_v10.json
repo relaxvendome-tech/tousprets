@@ -39,20 +39,26 @@
   {
    "theme": "securite",
    "question": "Une route est inondée : puis-je la traverser à pied ou en voiture ?",
-   "reponse": "Non. Ne vous engagez jamais, ni à pied ni en voiture, sur une route, un pont submersible ou un chemin inondé. L'eau peut être plus profonde qu'elle n'en a l'air, le courant plus fort, et la chaussée peut s'être effondrée dessous. Une quinzaine de centimètres d'eau qui coule suffisent à faire tomber un adulte, et environ 30 cm d'eau peuvent emporter une voiture. Faites demi-tour et cherchez un autre itinéraire. Si votre véhicule est pris par l'eau et cale, quittez-le dès que possible et gagnez un point haut, puis appelez le 112. Aux États-Unis, ce réflexe est résumé par la formule « Turn Around, Don't Drown » : faites demi-tour, ne vous noyez pas.",
+   "reponse": "Non. Ne vous engagez jamais, ni à pied ni en voiture, sur une route, un pont submersible ou un chemin inondé. L'eau peut être plus profonde qu'elle n'en a l'air, le courant plus fort, et la chaussée peut s'être effondrée dessous. Une quinzaine de centimètres d'eau qui coule suffisent à faire tomber un adulte, et environ 30 cm d'eau peuvent emporter une voiture. Faites demi-tour et cherchez un autre itinéraire. Si votre véhicule est pris par l'eau et cale, quittez-le dès que possible et gagnez un point haut, puis appelez le 112.",
    "source_us": "https://www.weather.gov/safety/flood"
   },
   {
    "theme": "securite",
    "question": "En cas de séisme, que signifie « se baisser, s'abriter, s'accrocher » ?",
-   "reponse": "Lors d'une secousse sismique, la consigne internationale recommandée est de se baisser immédiatement à quatre pattes, de s'abriter sous une table ou un bureau solide et de s'y accrocher jusqu'à la fin de la secousse. Si aucun abri solide n'est à proximité, baissez-vous contre un mur intérieur et protégez votre tête et votre nuque avec vos bras. Ne vous précipitez pas vers les escaliers ou l'extérieur pendant la secousse : la majorité des blessures surviennent à cause d'objets qui tombent ou de chutes. Cet enchaînement, dit « Drop, Cover, Hold On », est promu par l'USGS et Earthquake Country Alliance. Il complète les consignes françaises sans les remplacer.",
+   "reponse": "Lors d'une secousse sismique, la consigne internationale recommandée est de se baisser immédiatement à quatre pattes, de s'abriter sous une table ou un bureau solide et de s'y accrocher jusqu'à la fin de la secousse. Si aucun abri solide n'est à proximité, baissez-vous contre un mur intérieur et protégez votre tête et votre nuque avec vos bras. Ne vous précipitez pas vers les escaliers ou l'extérieur pendant la secousse : la majorité des blessures surviennent à cause d'objets qui tombent ou de chutes. Il complète les consignes françaises sans les remplacer.",
    "source_us": "https://www.usgs.gov/programs/earthquake-hazards/science/drop-cover-and-hold"
   },
   {
    "theme": "rumeurs",
    "question": "Comment vérifier une information qui circule sur les réseaux sociaux pendant une crise ?",
-   "reponse": "En situation de crise, une rumeur peut aller très vite. Avant de relayer une information, demandez-vous : d'où vient-elle ? Est-elle reprise par un média reconnu ou par une source officielle (préfecture, Météo-France, ministère de l'Intérieur) ? Méfiez-vous des messages qui jouent sur la peur, qui promettent un « kit gratuit » ou qui demandent de cliquer sur un lien. Ne transmettez pas un contenu que vous n'avez pas vérifié. Pour les consignes de sécurité, fiez-vous à FR-Alert, aux sirènes et aux canaux officiels. La CISA recommande de « réfléchir avant de cliquer » et de signaler les messages suspects. En France, les autorités publient des points de situation réguliers.",
+   "reponse": "En situation de crise, une rumeur peut aller très vite. Avant de relayer une information, demandez-vous : d'où vient-elle ? Est-elle reprise par un média reconnu ou par une source officielle (préfecture, Météo-France, ministère de l'Intérieur) ? Méfiez-vous des messages qui jouent sur la peur, qui promettent un « kit gratuit » ou qui demandent de cliquer sur un lien. Ne transmettez pas un contenu que vous n'avez pas vérifié. Pour les consignes de sécurité, fiez-vous à FR-Alert, aux sirènes et aux canaux officiels. Réfléchissez avant de cliquer et signalez les messages suspects. En France, les autorités publient des points de situation réguliers.",
    "source_us": "https://www.cisa.gov/audiences/individuals-and-families"
+  },
+  {
+   "theme": "rangement",
+   "question": "J'habite en appartement : où ranger mon kit d'urgence ?",
+   "reponse": "Pas besoin d'une cave ou d'un garage : il suffit d'utiliser les espaces perdus, en rangeant chaque chose selon son poids et son usage. Étagères en hauteur fixées au mur : les packs d'eau et les conserves en bas, le plus léger au-dessus. Sous le lit, des bacs plats : couvertures, vêtements chauds, trousse de secours. Derrière une porte, un range-chaussures à poches : lampes, piles, radio, barres de céréales, toujours à portée de main. Au fond d'un placard : ce qui sert rarement et prend de la place, comme un sac de couchage. Un pouf ou un banc coffre : couvertures et vêtements de rechange. Le dessus des placards : seulement des choses légères. Une valise vide : votre sac d'évacuation, avec vos papiers et une trousse de toilette. Utilisez des boîtes empilables étiquetées pour l'alimentation, rangez l'eau à l'abri du soleil et de la chaleur, ne bloquez jamais un couloir ou une sortie, et faites tourner votre stock en consommant le plus ancien.",
+   "source_us": ""
   }
  ],
  "enrichissements": [
