@@ -1,0 +1,78 @@
+{
+ "questions": [
+  {
+   "theme": "hygiene",
+   "question": "Après une inondation, comment nettoyer et désinfecter sa maison sans danger ?",
+   "reponse": "Enfilez des gants épais, des bottes, un masque et des lunettes de protection avant de toucher quoi que ce soit, car l'eau des crues est souvent souillée par les égouts ou des produits chimiques. Évacuez d'abord la boue et jetez tout ce qui est poreux et a été trempé : matelas, peluches, tapis, plaques de plâtre ou isolants, qui développent vite des moisissures toxiques. Nettoyez les surfaces dures (carrelage, métal, plastique) à l'eau chaude et au détergent classique, rincez, puis désinfectez avec une solution d'eau de Javel diluée (en respectant le dosage indiqué sur l'étiquette). Attention : ne mélangez jamais l'eau de Javel avec de l'ammoniaque, du vinaigre blanc ou un détartrant, cela dégage un gaz toxique. Aérez largement les pièces pendant et après le nettoyage.",
+   "source_us": "https://www.cdc.gov/floods/safety/cleaning-and-disinfecting-your-home.html"
+  },
+  {
+   "theme": "securite",
+   "question": "Comment gérer le stress, l'angoisse et rassurer les enfants pendant une crise ?",
+   "reponse": "Ressentir de la peur, de l'irritabilité ou des troubles du sommeil face à une crise est une réaction normale. Pour garder votre calme, limitez l'exposition continue aux chaînes d'information et aux réseaux sociaux : consultez uniquement les points de situation officiels (préfecture, France Info, radio locale) à heures fixes, quelques fois par jour. Conservez autant que possible des repères quotidiens : heures des repas, hydratation régulière et moments de repos. Avec les enfants, utilisez des mots simples et vrais adaptés à leur âge, sans dramatiser ni minimiser. Éteignez les écrans diffusant des images choquantes en boucle devant eux et confiez-leur de petites tâches utiles (vérifier les lampes, ranger les jeux) pour leur redonner un sentiment de contrôle. En cas de détresse psychologique durable après l'événement, parlez-en à votre médecin ou appelez le 3114 (numéro national de prévention du suicide, gratuit et 24h/24).",
+   "source_us": "https://www.cdc.gov/mental-health/living-with/helping-children-cope-with-emergencies.html"
+  },
+  {
+   "theme": "securite",
+   "question": "Que faire avec les médicaments qui doivent rester au frais lors d'une coupure d'électricité ?",
+   "reponse": "Certains traitements vitaux comme l'insuline, certains collyres, antibiotiques liquides ou biothérapies doivent être conservés entre 2 °C et 8 °C. Dès le début de la coupure, laissez la porte du réfrigérateur fermée et transférez rapidement ces médicaments dans une petite glacière isotherme avec des pains de glace ou des sachets de légumes surgelés, en interposant un torchon propre : le contact direct avec la glace risquerait de geler et de détruire le produit. Si la coupure dure plus de 24 heures, vérifiez la notice : beaucoup d'insulines entamées se conservent jusqu'à 28 jours à température ambiante (sous 25 °C à 30 °C) une fois sorties du froid. En cas de doute sur un médicament vital ou si le produit a chauffé, contactez une pharmacie de garde ou appelez le 15 (SAMU) avant de l'utiliser.",
+   "source_us": "https://www.cdc.gov/diabetes/emergency/index.html"
+  },
+  {
+   "theme": "hygiene",
+   "question": "Que faire si l'eau du robinet est troublée ou a un goût bizarre, sans consigne officielle ?",
+   "reponse": "Après des travaux sur le réseau, de fortes pluies ou une coupure de pression, l'eau du robinet peut parfois couler trouble ou colorée. Par prudence, ne la buvez pas et ne l'utilisez pas pour cuisiner, vous brosser les dents ou préparer un biberon tant que vous n'avez pas vérifié la situation. Consultez le site de votre mairie, de votre préfecture ou de votre distributeur d'eau (ses coordonnées figurent sur votre facture d'eau) et écoutez la radio locale. Si l'eau est simplement légèrement trouble après une remise en eau sans alerte sanitaire, laissez-la couler à froid quelques minutes jusqu'à ce qu'elle redevienne limpide. En revanche, si des intempéries ou une pollution sont en cours, utilisez uniquement votre réserve d'eau en bouteille (6 litres par personne pour 72 heures) ou faites bouillir l'eau à gros bouillons pendant une minute avant consommation.",
+   "source_us": "https://www.cdc.gov/water-emergency/about/index.html"
+  },
+  {
+   "theme": "securite",
+   "question": "Comment se préparer si l'on dépend d'un appareil médical électrique à domicile ?",
+   "reponse": "Si vous ou un proche utilisez un appareil vital à domicile (concentrateur d'oxygène, respirateur, dialyse, lit médicalisé électrique), anticipez la coupure avant toute crise. Inscrivez-vous gratuitement auprès de votre mairie sur le registre nominatif des personnes vulnérables et signalez votre situation à votre prestataire de santé à domicile (PSAD) ainsi qu'à Enedis (service d'information prioritaire pour les patients à haut risque vital). Vérifiez l'autonomie de la batterie interne de votre appareil, notez le numéro d'astreinte 24h/24 de votre prestataire sur papier dans votre kit d'urgence et identifiez un proche ou un établissement de repli disposant d'une alimentation électrique de secours. En cas de coupure imprévue mettant la santé en danger, appelez immédiatement le 15 (ou le 114 par SMS pour les personnes sourdes ou malentendantes).",
+   "source_us": "https://www.redcross.org/get-help/how-to-prepare-for-emergencies/inclusive-preparedness-resources.html"
+  },
+  {
+   "theme": "securite",
+   "question": "En cas d'orage, que faire à l'intérieur de chez moi ?",
+   "reponse": "Quand le tonnerre gronde, mettez-vous à l'abri dans un bâtiment solide et restez-y jusqu'à 30 minutes après le dernier coup de tonnerre. À l'intérieur, éloignez-vous des fenêtres, des portes, des installations sanitaires (éviers, baignoire, toilettes) et des appareils électriques branchés. Évitez de prendre une douche ou un bain, de téléphoner avec un appareil filaire et d'utiliser un ordinateur de bureau. Débranchez les gros appareils (téléviseur, ordinateur) pour les protéger des surtensions. Coupez la climatisation si vous en avez une. Ces gestes simples réduisent le risque d'être blessé par la foudre, qui peut passer par les canalisations et les câbles électriques.",
+   "source_us": "https://www.weather.gov/mfl/lightning"
+  },
+  {
+   "theme": "securite",
+   "question": "Une route est inondée : puis-je la traverser à pied ou en voiture ?",
+   "reponse": "Non. Ne vous engagez jamais, ni à pied ni en voiture, sur une route, un pont submersible ou un chemin inondé. L'eau peut être plus profonde qu'elle n'en a l'air, le courant plus fort, et la chaussée peut s'être effondrée dessous. Une quinzaine de centimètres d'eau qui coule suffisent à faire tomber un adulte, et environ 30 cm d'eau peuvent emporter une voiture. Faites demi-tour et cherchez un autre itinéraire. Si votre véhicule est pris par l'eau et cale, quittez-le dès que possible et gagnez un point haut, puis appelez le 112. Aux États-Unis, ce réflexe est résumé par la formule « Turn Around, Don't Drown » : faites demi-tour, ne vous noyez pas.",
+   "source_us": "https://www.weather.gov/safety/flood"
+  },
+  {
+   "theme": "securite",
+   "question": "En cas de séisme, que signifie « se baisser, s'abriter, s'accrocher » ?",
+   "reponse": "Lors d'une secousse sismique, la consigne internationale recommandée est de se baisser immédiatement à quatre pattes, de s'abriter sous une table ou un bureau solide et de s'y accrocher jusqu'à la fin de la secousse. Si aucun abri solide n'est à proximité, baissez-vous contre un mur intérieur et protégez votre tête et votre nuque avec vos bras. Ne vous précipitez pas vers les escaliers ou l'extérieur pendant la secousse : la majorité des blessures surviennent à cause d'objets qui tombent ou de chutes. Cet enchaînement, dit « Drop, Cover, Hold On », est promu par l'USGS et Earthquake Country Alliance. Il complète les consignes françaises sans les remplacer.",
+   "source_us": "https://www.usgs.gov/programs/earthquake-hazards/science/drop-cover-and-hold"
+  },
+  {
+   "theme": "rumeurs",
+   "question": "Comment vérifier une information qui circule sur les réseaux sociaux pendant une crise ?",
+   "reponse": "En situation de crise, une rumeur peut aller très vite. Avant de relayer une information, demandez-vous : d'où vient-elle ? Est-elle reprise par un média reconnu ou par une source officielle (préfecture, Météo-France, ministère de l'Intérieur) ? Méfiez-vous des messages qui jouent sur la peur, qui promettent un « kit gratuit » ou qui demandent de cliquer sur un lien. Ne transmettez pas un contenu que vous n'avez pas vérifié. Pour les consignes de sécurité, fiez-vous à FR-Alert, aux sirènes et aux canaux officiels. La CISA recommande de « réfléchir avant de cliquer » et de signaler les messages suspects. En France, les autorités publient des points de situation réguliers.",
+   "source_us": "https://www.cisa.gov/audiences/individuals-and-families"
+  }
+ ],
+ "enrichissements": [
+  {
+   "page": "purifier-eau-pastilles-filtre.html",
+   "texte": "Si l'eau est trouble ou contient des particules, filtrez-la d'abord à travers un filtre à café en papier, un essuie-tout ou un linge propre, puis faites-la bouillir à gros bouillons pendant au moins une minute. Une fois refroidie, transvasez-la plusieurs fois d'un récipient à l'autre pour lui redonner un goût moins plat.",
+   "source_us": "https://www.cdc.gov/water-emergency/about/index.html",
+   "org": "CDC"
+  },
+  {
+   "page": "canicule-que-faire.html",
+   "texte": "Quand il fait très chaud à l'intérieur, un ventilateur seul ne suffit plus à rafraîchir le corps : il brasse de l'air chaud. Humidifiez alors régulièrement votre peau (brumisateur, linge mouillé) devant le ventilateur, ou passez quelques heures dans un lieu frais.",
+   "source_us": "https://www.cdc.gov/extreme-heat/prevention/index.html",
+   "org": "CDC"
+  },
+  {
+   "page": "coupure-electricite-que-faire.html",
+   "texte": "Quand le courant revient, si vous utilisez un chauffage d'appoint électrique, branchez-le directement sur une prise murale, sans rallonge ni multiprise, et gardez-le à distance des rideaux, du linge et des meubles.",
+   "source_us": "https://www.weather.gov/safety/winter-indoors",
+   "org": "National Weather Service"
+  }
+ ]
+}
