@@ -233,6 +233,24 @@ def transform(f):
         s = re.sub(r'(property="og:image" content=")[^"]*"', lambda m: m.group(1) + url + '"', s, count=1)
         s = re.sub(r'(name="twitter:image" content=")[^"]*"', lambda m: m.group(1) + url + '"', s, count=1)
         s = re.sub(r'<meta property="og:image:(?:width|height|type)"[^>]*>\n?', "", s)
+        try:
+            cred = {c["slug"]: c for c in json.load(open(f"{SITE}/img/photos/credits.json"))}.get(slug, {})
+        except Exception:
+            cred = {}
+        auteur = (cred.get("auteur") or "").strip()
+        imgobj = {"@type": "ImageObject", "url": url, "contentUrl": url, "width": 960, "height": 540,
+                  "caption": CAT.get(slug, (0, 0, 0, 0, slug))[4] + " : illustration",
+                  "license": "https://creativecommons.org/publicdomain/zero/1.0/deed.fr",
+                  "acquireLicensePage": "https://tousprets.fr/licence-visuels.html#photos-credits",
+                  "creditText": (auteur + " (CC0)") if auteur else "Domaine public (CC0)"}
+        if auteur: imgobj["creator"] = {"@type": "Person", "name": auteur}
+        def setimg(mm):
+            j = json.loads(mm.group(1))
+            for node in j.get("@graph", [j]):
+                if node.get("@type") in ("Article", "WebPage"):
+                    node["image"] = imgobj
+            return '<script type="application/ld+json">' + json.dumps(j, ensure_ascii=False) + '</script>'
+        s = re.sub(r'<script type="application/ld\+json">(.*?)</script>', setimg, s, flags=re.S)
     # 4 quinquies. liens connexes supplémentaires (maillage vers les nouvelles pages)
     if slug in EXTRA_REL and 'id="voir-aussi"' in s:
         i = s.find('id="voir-aussi"'); j = s.find('</section>', i)
