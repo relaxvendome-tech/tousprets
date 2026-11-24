@@ -187,7 +187,7 @@
    "_commit_texte": "5d6783d"
   },
   "attaque-terroriste-que-faire.html": {
-   "title": "Attaque terroriste, que faire ? S'échapper, se cacher, alerter",
+   "title": "Attaque terroriste : s'échapper, se cacher, alerter",
    "description": "Attaque terroriste : la consigne officielle s'échapper, se cacher, alerter. Les bons gestes expliqués simplement pour se protéger et protéger les autres.",
    "source_title": "corrigé",
    "source_description": "actuel conservé",
@@ -803,7 +803,7 @@
    "_commit_texte": "5d6783d"
   },
   "index.html": {
-   "title": "Checklist kit d'urgence 72h gratuite, hors ligne | Tous prêts",
+   "title": "Checklist kit d'urgence 72h gratuite et hors ligne | Tous prêts",
    "description": "Checklist interactive et gratuite du kit d'urgence 72h : quantités d'eau et de vivres calculées selon votre foyer, hors ligne, aucune donnée envoyée.",
    "source_title": "corrigé",
    "source_description": "corrigé",
@@ -1039,7 +1039,7 @@
   },
   "kit-urgence-animaux.html": {
    "title": "Kit d'urgence pour chien et chat : la liste",
-   "description": "Nourriture, eau, médicaments, carnet de santé, identification, caisse de transport : le kit d'urgence de votre chien ou chat et le plan en cas d'évacuation.",
+   "description": "Nourriture, eau, médicaments, carnet de santé, identification, caisse de transport : le kit d'urgence de votre chien ou chat et le plan d'évacuation.",
    "source_title": "actuel conservé",
    "source_description": "actuel conservé",
    "intention": "pratique",
@@ -1407,7 +1407,7 @@
   },
   "licence-visuels.html": {
    "title": "Droits d'auteur et réutilisation des contenus | Tous prêts",
-   "description": "Textes, infographies, logo et application Tous prêts sont protégés par le droit d'auteur. Ce qui est permis, ce qui ne l'est pas et comment demander une autorisation.",
+   "description": "Textes, infographies, logo et application Tous prêts sont protégés par le droit d'auteur : ce qui est permis et comment demander une autorisation.",
    "source_title": "actuel conservé",
    "source_description": "actuel conservé",
    "intention": "navigation",
@@ -2079,7 +2079,7 @@
   },
   "aide-application.html": {
    "title": "Aide : application Tous prêts, hors ligne, installation",
-   "description": "Installer Tous prêts sur Android ou iPhone, l'utiliser sans réseau, mettre à jour, protéger vos données : toutes les réponses sur le site, la PWA et l'appli Android.",
+   "description": "Installer Tous prêts sur Android ou iPhone, l'utiliser sans réseau, le mettre à jour et protéger vos données : toutes les réponses sur l'application.",
    "source_title": "rédaction v12",
    "source_description": "rédaction v12",
    "intention": "pratique",
