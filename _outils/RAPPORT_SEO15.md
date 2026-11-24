@@ -57,18 +57,44 @@ Les sessions précédentes du jour avaient déjà ajouté : la navigation en 4 e
 
 \* GitHub Pages compresse les pages : en production, le LCP sera meilleur. À mesurer avec PageSpeed Insights après mise en ligne.
 
-## 5. Ce qui reste (et pourquoi)
+## 5. Search Console : point de départ réel (lu le 24/11/2026, 3 derniers mois, données depuis le 18/11)
 
-- **Search Console** : non connectée, je n'ai aucune donnée Google (indexation, positions, clics). Rien dans ce rapport ne prétend le contraire.
-- **Positions réelles** : non mesurées. Aucune position n'est garantie.
+La propriété « Domaine » tousprets.fr est connectée. Le rapport d'indexation est encore en cours de traitement chez Google (« réessayez dans un jour environ ») : nombre de pages indexées inconnu pour l'instant.
+
+| Indicateur | Valeur |
+|---|---|
+| Clics | 4 |
+| Impressions | 66 |
+| CTR moyen | 6,1 % |
+| Position moyenne | 21,3 |
+
+| Page | Clics | Impr. | Position |
+|---|---|---|---|
+| Accueil | 5 | 28 | 3,1 |
+| kit-de-survie-72h | 1 | 29 | 18,3 |
+| kit-urgence-72h-gouvernement | 0 | 22 | 18,0 |
+| cyberattaque-que-faire | 0 | 11 | 50,9 |
+| checklist-kit-urgence-72h | 0 | 10 | 11,7 |
+| guide-tous-responsables-resume | 0 | 10 | 16,3 |
+| preparation-catastrophe-naturelle | 0 | 6 | 7,5 |
+
+Requêtes relevées : « kit de survie gouvernement pdf » (position 2), « fr-alert » (7,5), « kit d'urgence 72h gouvernement gratuit » (10), « kit d'urgence 72h » (34,5), « liste kit de survie 72h » (31,5), « kit survie gouvernement » (70). Volumes encore trop faibles (1 à 2 impressions par requête) pour en tirer des conclusions : il faut 4 à 6 semaines de données.
+
+Lecture :
+- La requête principale « kit d'urgence 72h » est en 34e position : la nouvelle page d'accueil (titre, H1, section « en bref ») vise précisément celle-là.
+- Des adresses sans « .html » (ex. `/checklist-kit-urgence-72h`) et `http://tousprets.fr/` apparaissent. Vérifié : http redirige bien vers https, et les adresses sans « .html » portent une balise canonical vers la version « .html ». Google regroupera ; rien à corriger.
+
+## 5 bis. Ce qui reste (et pourquoi)
+
+- **Positions** : aucune n'est garantie ; à suivre chaque semaine dans la Search Console.
 - **Backlinks** : 14 domaines référents d'après ton audit OpenSEO. La liste de cibles ci-dessous est à démarcher par toi : je n'envoie aucun e-mail.
 - **« kit d'urgence 72h Croix-Rouge »** (390 recherches/mois) : pas de page dédiée. Il faut d'abord vérifier ce que la Croix-Rouge française publie réellement, sans rien inventer.
-- **Réécriture éditoriale page par page** des 74 guides (raccourcir, sourcer chaque consigne) : chantier de plusieurs semaines, prévu dans la feuille de route.
+- **Réécriture éditoriale page par page** des 74 guides : chantier de plusieurs semaines, prévu dans la feuille de route.
 
 ## 6. Après la mise en ligne (à faire par toi, 15 minutes)
 
-1. Search Console → ajouter la propriété « Domaine » tousprets.fr (validation par enregistrement DNS TXT chez ton registraire).
-2. Envoyer `https://tousprets.fr/sitemap.xml`.
+1. Search Console : déjà connectée (propriété Domaine).
+2. Vérifier que le sitemap est envoyé (Indexation › Sitemaps), sinon envoyer `https://tousprets.fr/sitemap.xml`.
 3. Inspection d'URL → « Demander une indexation » pour : l'accueil, `checklist-kit-urgence-72h.html`, `kit-urgence-72h-gouvernement.html`, `que-mettre-dans-un-kit-d-urgence.html`, `sac-de-secours.html`.
 4. PageSpeed Insights sur l'accueil (mobile) : noter LCP, INP, CLS.
 5. Relier Search Console à OpenSEO.
