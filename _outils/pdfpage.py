@@ -10,8 +10,8 @@ SG = "https://www.sgdsn.gouv.fr/publications/guide-tous-responsables"
 p = dict(
  slug="kit-de-survie-gouvernement-pdf",
  emoji="📄",
- title="Kit de survie gouvernement PDF : guide officiel et liste 72h",
- desc="Où télécharger le PDF officiel du guide « Tous responsables » (kit d'urgence 72h), ce qu'il contient, et une checklist gratuite à imprimer et cocher.",
+ title="Kit de survie gouvernement PDF : guide officiel + liste 72h",
+ desc="Guide officiel « Tous responsables » (SGDSN) en PDF gratuit sur .gouv.fr : liens directs, contenu du kit 72h et checklist gratuite à imprimer.",
  h1="Kit de survie du gouvernement en PDF : le guide officiel et la liste à imprimer",
  lead="Le « kit de survie » du gouvernement est le guide « Tous responsables », publié par le SGDSN le 20 novembre 2025. Le PDF officiel est gratuit sur sgdsn.gouv.fr et info.gouv.fr, en version standard, FALC, impression et anglais. Il demande un kit pour tenir 72 heures, dont 6 litres d'eau par personne. Liens officiels et checklist à imprimer ci-dessous.",
  source="guide « Tous responsables » (SGDSN, 2025), info.gouv.fr",
@@ -34,10 +34,13 @@ p = dict(
 <tr><th scope="row">Éditeur</th><td>Secrétariat général de la défense et de la sécurité nationale (SGDSN), services du Premier ministre</td></tr>
 <tr><th scope="row">Date de publication</th><td>20 novembre 2025</td></tr>
 <tr><th scope="row">Prix</th><td>Gratuit</td></tr>
-<tr><th scope="row">Versions</th><td>PDF standard (environ 13,7 Mo), version <strong>FALC</strong> « facile à lire et à comprendre » (moins de 1 Mo), version <strong>pour impression</strong> (environ 15 Mo), version anglaise <em>All Responsible Guide</em></td></tr>
+<tr><th scope="row">Versions</th><td>PDF standard (environ 13,7 Mo), version <strong>FALC</strong> « facile à lire et à comprendre » (moins de 1 Mo), version <strong>pour impression</strong> (environ 15,1 Mo), version anglaise <em>All Responsible Guide</em> (environ 15,1 Mo)</td></tr>
 <tr><th scope="row">Où le télécharger</th><td><a href="{SG}" rel="noopener">sgdsn.gouv.fr</a> et <a href="{OFF}" rel="noopener">info.gouv.fr</a></td></tr>
 </tbody></table>
 <p>Petit téléphone ou connexion lente ? Prenez la version FALC, la plus légère. Pour une impression papier à garder dans le kit, prenez la version « pour impression ».</p>"""),
+  ("pourquoi", "Pourquoi l'État a publié ce guide en novembre 2025", f"""
+<p>Selon le SGDSN, le guide « Tous responsables » fait suite à la mise à jour de la <strong>Revue nationale stratégique</strong> et au discours du Président de la République du <strong>13 juillet 2025</strong>, qui placent la résilience de la Nation au cœur de la sécurité nationale. Il est présenté comme un manuel de référence : gestes, réflexes et repères pour agir en situation de crise.</p>
+<p>Le guide s'adresse à tous les Français et il est relayé par les ministères, les collectivités et les associations. Il ne crée <strong>aucune obligation</strong> : constituer un kit d'urgence reste une recommandation. Source : <a href="{SG}" rel="noopener">page de publication du SGDSN</a>.</p>"""),
   ("contenu", "Ce que contient le guide « kit de survie » du gouvernement", """
 <p>Le guide est organisé en trois parties :</p>
 <table class="tbl"><thead><tr><th>Partie</th><th>Ce qu'on y trouve</th></tr></thead><tbody>
@@ -84,6 +87,8 @@ p = dict(
   ("Existe-t-il un « kit officiel » du gouvernement à acheter ?", "Non. Le guide donne une liste à constituer soi-même. Méfiez-vous des offres payantes présentées comme « kit officiel »."),
   ("Tous prêts est-il le site officiel ?", "Non. Tous prêts est une initiative citoyenne indépendante. Nous renvoyons vers le PDF officiel et proposons une checklist gratuite pour passer à l'action."),
   ("Existe-t-il une version simplifiée ou en anglais du guide ?", "Oui. Le SGDSN publie aussi une version FALC (facile à lire et à comprendre), une version pour impression et une version anglaise, All Responsible Guide, sur sgdsn.gouv.fr."),
+  ("Le kit d'urgence 72 heures est-il obligatoire ?", "Non. Le guide « Tous responsables » est une recommandation adressée à tous les Français. Aucune loi n'oblige à constituer un kit d'urgence chez soi."),
+  ("Pourquoi le gouvernement a-t-il publié ce guide ?", "Le SGDSN l'a publié le 20 novembre 2025, après la mise à jour de la Revue nationale stratégique et le discours du Président de la République du 13 juillet 2025, pour renforcer la résilience face aux crises."),
   ("Faut-il vérifier son kit d'urgence ?", "Oui. Le guide « Tous responsables » conseille deux fois par an, la fiche d'info.gouv.fr au moins une fois par an : dates de péremption des aliments et des médicaments, et piles."),
  ],
  related=["guide-tous-responsables-resume", "kit-urgence-72h-gouvernement", "checklist-kit-urgence-72h", "que-mettre-dans-un-kit-d-urgence"],

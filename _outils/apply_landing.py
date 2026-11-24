@@ -9,6 +9,10 @@ idx = pathlib.Path(sys.argv[1])
 html_new = pathlib.Path(sys.argv[2] if len(sys.argv) > 2 else here / 'landing.html').read_text(encoding='utf-8').strip('\n')
 css_new = pathlib.Path(sys.argv[3] if len(sys.argv) > 3 else here / 'landing.css').read_text(encoding='utf-8').strip('\n')
 s = idx.read_text(encoding='utf-8')
+# Depuis v14/seo15, l'accueil est retravaillé par v14.py puis seo15.py (idempotents, en fin de pipeline) :
+# le bloc v4 ne doit plus être réappliqué (sinon <section> imbriquée et ancre #app-start en double).
+if 'data-v14go=' in s:
+    print('apply_landing : accueil déjà au format v14, rien à faire'); sys.exit(0)
 
 # 1) Bloc HTML : <section class="lp" id="landing" ...> ... </section> (aucune <section> imbriquée)
 m = re.search(r'[ \t]*<section class="lp" id="landing"[^>]*>.*?</section>', s, re.S)
