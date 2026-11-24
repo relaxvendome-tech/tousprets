@@ -102,6 +102,25 @@ def home():
     im = Image.open(os.path.join(ROOT, 'img', 'photos', 'vague-de-froid-que-faire.jpg')).convert('RGB')
     im.resize((640, 360), Image.LANCZOS).save(os.path.join(d, 'vague-de-froid-que-faire.webp'), quality=72)
 
+def home_schema():
+    """FAQPage + HowTo du bloc « en bref » : questions et étapes strictement identiques au texte visible."""
+    import json, html as H
+    s = rd('index.html')
+    m = re.search(r'<section class="v15-bref".*?</section>', s, re.S)
+    if not m: sys.exit('seo15 : bloc en bref absent')
+    b = m.group(0)
+    txt = lambda x: re.sub(r'\s+', ' ', H.unescape(re.sub(r'<[^>]+>', '', x))).strip()
+    qa = [{"@type": "Question", "name": txt(q), "acceptedAnswer": {"@type": "Answer", "text": txt(a)}}
+          for q, a in re.findall(r'<details><summary>(.*?)</summary><p>(.*?)</p></details>', b, re.S)]
+    steps = re.findall(r'<li>(.*?)</li>', re.search(r'<ol class="v15-steps">(.*?)</ol>', b, re.S).group(1))
+    how = {"@type": "HowTo", "@id": "https://tousprets.fr/#howto", "name": "Utiliser la checklist du kit d’urgence 72 h en 3 étapes",
+           "step": [{"@type": "HowToStep", "position": i + 1, "text": txt(t)} for i, t in enumerate(steps)]}
+    faq = {"@type": "FAQPage", "@id": "https://tousprets.fr/#faq", "mainEntity": qa}
+    blk = '<script type="application/ld+json" id="v15ld">' + json.dumps({"@context": "https://schema.org", "@graph": [faq, how]}, ensure_ascii=False) + '</script>'
+    s = re.sub(r'<script type="application/ld\+json" id="v15ld">.*?</script>\n?', '', s, flags=re.S)
+    s = must(s, '</head>', blk + '\n</head>', 'ld')
+    wr('index.html', s)
+
 def titles():
     T = {'frigo-congelateur-coupure-electricite.html': 'Congélateur sans courant : combien de temps ? (frigo 4 h)',
          'sac-de-secours.html': 'Sac de secours (sac d’évacuation) : que mettre dedans ?'}
@@ -143,4 +162,4 @@ def pdf_links():
     wr('index.html', s)
 
 if __name__ == '__main__':
-    home(); titles(); pdf_links(); pdf(); print('seo15 : accueil, titres, checklist PDF à jour')
+    home(); home_schema(); titles(); pdf_links(); pdf(); print('seo15 : accueil, titres, checklist PDF à jour')
