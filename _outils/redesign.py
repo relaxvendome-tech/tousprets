@@ -352,7 +352,7 @@ if __name__ == "__main__":
     # v13 : v13 (accueil sans animation au chargement pour le LCP, GoatCounter coupé dans l'appli Android, journal des corrections de la charte)
     # v8 : seo_v8 (titles, descriptions, JSON-LD, Guides complémentaires, sitemap ; données dans seo_v8.json)
     for _cmd in (["legal_v5.py"], ["nav_v4.py"], ["template_v4.py"], ["essentiels.py"], ["merge_now.py"], ["template_v4.py"],
-                 ["prevnext_v5.py"], ["v6_structure.py"], ["apply_landing.py", "@index"], ["webp.py", "--lazy"], ["typo_fr.py"], ["brand_v7.py"], ["seo_v8.py"], ["us_v10.py"], ["lisibilite_v9.py"], ["goatcounter.py"], ["droits_v11.py"], ["v13.py"]):
+                 ["prevnext_v5.py"], ["v6_structure.py"], ["apply_landing.py", "@index"], ["webp.py", "--lazy"], ["typo_fr.py"], ["brand_v7.py"], ["seo_v8.py"], ["us_v10.py"], ["lisibilite_v9.py"], ["goatcounter.py"], ["droits_v11.py"], ["v13.py"], ["v14.py"]):
         _f = os.path.join(_o, _cmd[0])
         if os.path.exists(_f):
             _args = [os.path.join(SITE, "index.html")] if _cmd[1:] == ["@index"] else [SITE] + _cmd[1:]

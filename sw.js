@@ -6,7 +6,7 @@
   IMPORTANT : incrémente CACHE_VERSION à chaque mise à jour.
 */
 
-const CACHE_VERSION = 'tous-prets-v82';
+const CACHE_VERSION = 'tous-prets-v83';
 // Indispensables au démarrage hors ligne : leur échec fait échouer l'installation (l'ancien SW reste actif).
 const CRITICAL_URLS = [
   './',
@@ -127,3 +127,5 @@ self.addEventListener('fetch', (event) => {
     caches.match(req, { ignoreSearch: true }).then((cached) => cached || fetch(req).then((res) => putInCache(req, res)))
   );
 });
+
+/* v14 */
