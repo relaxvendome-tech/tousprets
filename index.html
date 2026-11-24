@@ -702,6 +702,7 @@ details.v14-feat>summary{cursor:pointer;font-weight:700;min-height:48px;display:
 .v15-src{font-size:.9375rem;color:var(--text-dim);margin-top:14px}
 </style>
 <script type="application/ld+json" id="v15ld">{"@context": "https://schema.org", "@graph": [{"@type": "FAQPage", "@id": "https://tousprets.fr/#faq", "mainEntity": [{"@type": "Question", "name": "Le gouvernement distribue-t-il un kit d’urgence gratuit ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Le guide officiel indique quoi préparer, mais aucun kit n’est envoyé gratuitement. Un message qui vous propose un « kit gratuit » contre des frais de livraison est une arnaque : comment la repérer. Ce que dit le guide : le kit 72 h du gouvernement."}}, {"@type": "Question", "name": "Faut-il acheter un kit tout prêt ?", "acceptedAnswer": {"@type": "Answer", "text": "Ce n’est pas nécessaire. La plupart des éléments sont déjà chez vous ; il suffit de les rassembler. Voir un kit 72 h pas cher."}}, {"@type": "Question", "name": "Combien d’eau prévoir ?", "acceptedAnswer": {"@type": "Answer", "text": "Le guide officiel indique 6 litres par personne pour 72 heures, soit 2 litres par jour pour boire et cuisiner. Le calcul détaillé."}}, {"@type": "Question", "name": "Où ranger le kit, et quand le vérifier ?", "acceptedAnswer": {"@type": "Answer", "text": "Dans un endroit facile d’accès, connu de tout le foyer. Le guide officiel conseille de vérifier son contenu deux fois par an (dates, piles, eau)."}}]}, {"@type": "HowTo", "@id": "https://tousprets.fr/#howto", "name": "Utiliser la checklist du kit d’urgence 72 h en 3 étapes", "step": [{"@type": "HowToStep", "position": 1, "text": "Indiquez combien vous êtes : les quantités se calculent."}, {"@type": "HowToStep", "position": 2, "text": "Cochez ce que vous avez déjà : « à prévoir », « en partie » ou « disponible »."}, {"@type": "HowToStep", "position": 3, "text": "Complétez à votre rythme et vérifiez votre kit deux fois par an."}]}]}</script>
+<style id="v16css">.diet-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:8px 0 14px}.diet-row label{font-weight:700}.diet-row select{min-height:48px;padding:8px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg-raised);color:var(--text);font:inherit}</style>
 </head>
 <body>
 <a class="skip-link" href="#contenu">Aller au contenu</a>
@@ -1135,6 +1136,7 @@ details.v14-feat>summary{cursor:pointer;font-weight:700;min-height:48px;display:
     <button type="button" class="v14-back" data-goto="prep"><span aria-hidden="true">←</span> Ma préparation</button>
     <div class="section-title"><h2>Stock du foyer</h2><span class="sub" id="invSummary"></span></div>
     <p class="note" id="stockHouseholdNote"></p>
+    <p class="diet-row"><label for="dietSel">Préférence alimentaire</label> <select id="dietSel"><option value="">Aucune préférence</option><option value="halal">Halal</option><option value="sans-porc">Sans porc</option><option value="vege">Végétarien</option></select></p>
     <div id="foodCategories"></div>
     <p class="note tip">💡 <strong>Pourquoi sans cuisson ?</strong> Sans électricité ni gaz, il faut pouvoir manger froid. Rangez au frais et au sec, mettez les plus anciens devant, et jetez toute boîte bombée ou rouillée. <a href="aliments-sans-cuisson-kit-urgence.html">Le guide complet</a> · <a href="questions-reponses-kit-urgence.html#rangement">dates DDM / DLC</a></p>
 
@@ -1605,11 +1607,23 @@ const FOOD_CATEGORIES = [
     {name:'Pain longue conservation / biscottes', unit:'paquets', perPerson:2},
     {name:'Farine', unit:'kg', perPerson:0.5}
   ]},
-  { id:'proteines', icon:'🥫', label:'Protéines', note:'un apport à chaque repas', items:[
+  { id:'proteines', icon:'🫘', label:'Légumineuses & œufs', note:'protéines végétales, se mangent froides', items:[
     {name:'Légumineuses en conserve (lentilles, pois chiches, haricots)', unit:'boîtes', perPerson:4},
-    {name:'Poisson en conserve (thon, sardines, maquereau)', unit:'boîtes', perPerson:4},
-    {name:'Viande en conserve / plats cuisinés', unit:'boîtes', perPerson:4},
     {name:'Œufs (longue conservation si possible)', unit:'unités', perPerson:6}
+  ]},
+  { id:'viandes', icon:'🥩', label:'Viandes en conserve & séchées', note:'longue conservation, sans frigo', diet:'meat', items:[
+    {k:'cornedbeef', name:'Corned beef (bœuf en conserve)', halal:'Corned beef halal', unit:'boîtes', perPerson:2},
+    {k:'viande', name:'Poulet ou bœuf en conserve', halal:'Poulet ou bœuf en conserve halal', unit:'boîtes', perPerson:2},
+    {k:'plats', name:'Plats cuisinés en conserve (cassoulet, chili, raviolis, couscous)', halal:'Plats cuisinés halal en conserve (couscous, chili, raviolis, tajine)', noPork:'Plats cuisinés sans porc en conserve (couscous, chili, raviolis de bœuf)', unit:'boîtes', perPerson:3},
+    {k:'pate', name:'Pâté, rillettes ou terrine en conserve', halal:'Pâté ou terrine halal (volaille, bœuf)', noPork:'Pâté ou terrine de volaille ou de bœuf', unit:'boîtes', perPerson:2},
+    {k:'sechee', name:'Viande séchée (bœuf séché, viande des Grisons)', halal:'Viande séchée halal (bœuf séché)', unit:'sachets', perPerson:2},
+    {k:'saucisson', name:'Saucisson sec', halal:'Saucisson sec halal (bœuf, volaille)', noPork:'Saucisson sec de bœuf ou de volaille', unit:'unités', perPerson:1}
+  ]},
+  { id:'poissons', icon:'🐟', label:'Poissons en conserve', note:'protéines et oméga-3, se mangent froids', diet:'fish', items:[
+    {k:'sardines', name:'Sardines', unit:'boîtes', perPerson:2},
+    {k:'maquereaux', name:'Maquereaux', unit:'boîtes', perPerson:2},
+    {k:'thon', name:'Thon', unit:'boîtes', perPerson:2},
+    {k:'saumon', name:'Saumon', unit:'boîtes', perPerson:1}
   ]},
   { id:'legumes', icon:'🥕', label:'Légumes & fruits conservables', note:'vitamines et fibres', items:[
     {name:'Légumes en conserve', unit:'boîtes', perPerson:5},
@@ -1970,6 +1984,15 @@ function renderStockDaysChips(){
 /* ================= INVENTORY: FOOD BY CATEGORY ================= */
 let foodStock = load('food_stock_v1', {}); if(!foodStock || typeof foodStock!=='object') foodStock = {}; // key: catId::itemName -> value
 function foodKey(catId, name){ return catId+'::'+name; }
+const DIETS=[['','Aucune préférence'],['halal','Halal'],['sans-porc','Sans porc'],['vege','Végétarien']];
+function dietPref(){ const d=load('tp_diet_v1',{}); return (d&&typeof d==='object'&&DIETS.some(x=>x[0]===d.d))?d.d:''; }
+function dietName(item){ const d=dietPref(); if(d==='halal'&&item.halal) return item.halal; if((d==='sans-porc'||d==='halal')&&item.noPork) return item.noPork; return item.name; }
+(function migrateFood(){ try{
+  const m={'proteines::Poisson en conserve (thon, sardines, maquereau)':'poissons::thon','proteines::Viande en conserve / plats cuisinés':'viandes::plats'};
+  let ch=false; Object.keys(m).forEach(o=>{ if(foodStock && o in foodStock){ foodStock[m[o]]=(Number(foodStock[m[o]])||0)+(Number(foodStock[o])||0); delete foodStock[o]; ch=true; } });
+  if(ch) save('food_stock_v1', foodStock);
+}catch(e){} })();
+document.addEventListener('change', e=>{ if(e.target && e.target.id==='dietSel'){ save('tp_diet_v1',{d:e.target.value}); renderFoodCategories(); updateDashboard(); } });
 
 function renderFoodCategories(){
   const hh = householdSize();
@@ -1980,7 +2003,11 @@ function renderFoodCategories(){
   container.innerHTML = '';
   let totalItems = 0, totalComplete = 0;
 
+  const diet = dietPref();
+  const sel = document.getElementById('dietSel');
+  if(sel && sel.value!==diet) sel.value = diet;
   FOOD_CATEGORIES.forEach(cat=>{
+    if(diet==='vege' && (cat.diet==='meat'||cat.diet==='fish')) return;
     const group = document.createElement('div');
     group.className = 'food-group';
     const head = document.createElement('div');
@@ -1994,14 +2021,14 @@ function renderFoodCategories(){
     cat.items.forEach(item=>{
       totalItems++;
       const target = scaledTarget(item.perPerson, item.unit, hh);
-      const key = foodKey(cat.id, item.name);
+      const key = foodKey(cat.id, item.k||item.name);
       const val = (Number(foodStock[key])>=0 && isFinite(foodStock[key]) ? Math.min(Number(foodStock[key]),99999) : 0);
       if(val >= target){ totalComplete++; catComplete++; }
       const row = document.createElement('div');
       row.className = 'inv-item';
       const low = val < target;
       row.innerHTML = `
-        <div><div class="name">${item.name}</div><div class="unit">${item.unit} · cible ${target}</div></div>
+        <div><div class="name">${dietName(item)}</div><div class="unit">${item.unit} · cible ${target}</div></div>
         <div class="stepper">
           <button data-key="${key}" data-act="dec">−</button>
           <div class="val ${low?'low-val':''}">${val}</div>
@@ -2626,7 +2653,7 @@ function renderThemeChips(){
 const BACKUP_KEYS = [
   'checklist_kit72','checklist_storm','checklist_blackout','checklist_froid','checklist_canicule','checklist_confinement','checklist_attaque','checklist_conflict','checklist_cyber',
   'food_stock_v1','water_stock_v1','simple_stock_v1',
-  'profiles_v1','contacts_v1','nb_group_v1','theme_v1','tp_a11y_textsize','ex_dernier_bilan','stock_days_v1'
+  'profiles_v1','contacts_v1','nb_group_v1','theme_v1','tp_a11y_textsize','ex_dernier_bilan','stock_days_v1','tp_diet_v1'
 ];
 
 document.getElementById('openSettings').addEventListener('click', ()=>{
