@@ -1611,6 +1611,14 @@ const FOOD_CATEGORIES = [
     {name:'Légumineuses en conserve (lentilles, pois chiches, haricots)', unit:'boîtes', perPerson:4},
     {name:'Œufs (longue conservation si possible)', unit:'unités', perPerson:6}
   ]},
+  { id:'vege', icon:'🌱', label:'Protéines végétariennes', note:'remplacent la viande et le poisson', diet:'vegeOnly', items:[
+    {k:'soja', name:'Protéines de soja texturées (sèches)', unit:'sachets', perPerson:1},
+    {k:'tofu', name:'Tofu longue conservation ou en conserve', unit:'unités', perPerson:2},
+    {k:'plats_vege', name:'Plats végétariens en conserve (chili sin carne, dahl, couscous aux légumes)', unit:'boîtes', perPerson:4},
+    {k:'pate_vege', name:'Pâté ou tartinade végétale (houmous, caviar d’aubergine)', unit:'boîtes', perPerson:2},
+    {k:'legumineuses_plus', name:'Légumineuses en conserve supplémentaires', unit:'boîtes', perPerson:4},
+    {k:'fromage', name:'Fromage longue conservation (portions, parmesan)', unit:'unités', perPerson:2}
+  ]},
   { id:'viandes', icon:'🥩', label:'Viandes en conserve & séchées', note:'longue conservation, sans frigo', diet:'meat', items:[
     {k:'cornedbeef', name:'Corned beef (bœuf en conserve)', halal:'Corned beef halal', unit:'boîtes', perPerson:2},
     {k:'viande', name:'Poulet ou bœuf en conserve', halal:'Poulet ou bœuf en conserve halal', unit:'boîtes', perPerson:2},
@@ -2015,6 +2023,7 @@ function renderFoodCategories(){
   if(sel && sel.value!==diet) sel.value = diet;
   FOOD_CATEGORIES.forEach(cat=>{
     if(diet==='vege' && (cat.diet==='meat'||cat.diet==='fish')) return;
+    if(diet!=='vege' && cat.diet==='vegeOnly') return;
     const group = document.createElement('div');
     group.className = 'food-group';
     const head = document.createElement('div');
