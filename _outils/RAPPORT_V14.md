@@ -69,3 +69,15 @@ Ces profils sont **simulés** (automates), pas des personnes réelles. Un test a
 - Le guide Gemini suggère aussi un rappel exportable dans l'agenda (.ics) : non fait.
 - Les 58 autres guides gardent leur « L'essentiel » actuel ; la structure 3 parties est appliquée aux 16 fiches risques qui ont des données vérifiées (`essentiels.json`).
 - Avant / après : `avant-apres-v14.png`.
+
+## 6. Correctifs v14b (audit externe du 24 novembre 2026)
+
+| Point de l'audit | Fait |
+|---|---|
+| FAQ : batterie externe / station électrique | Question ajoutée dans « Coupure de courant et alertes » (+ données structurées FAQPage). Précise : la station n'alimente que les appareils dont la puissance reste sous sa puissance de sortie ; sa capacité en Wh fixe la durée ; le temps de recharge solaire dépend du panneau, du soleil et du modèle ; les deux sont complémentaires ; pas de monoxyde de carbone. |
+| Checklist : distinguer les équipements | Catégorie repliable « Autonomie électrique (facultatif) » : batterie externe chargée, câbles et adaptateurs, station électrique portable, panneau solaire compatible. Mention « Ne fait pas partie du minimum officiel du kit 72 h ». Hors des 8 indispensables et du pourcentage du kit. |
+| Densité de l'accueil | La liste des 8 fonctions de la checklist est repliée (« Ce que contient la checklist »). L'application est déjà séparée dans « Ma préparation » depuis la v14. |
+| Navigation harmonisée | Sur les 74 pages éditoriales : bouton d'en-tête « Ma préparation » (au lieu de « Kit 72 h »), menu Accueil · Ma préparation · Se préparer · Bons réflexes · Comprendre les risques · Protéger sa famille · S'entraider · Tous les guides ; « Ma checklist » des outils renommé « Checklist à imprimer » pour ne plus la confondre avec celle de l'appli. |
+| Contrôle final | Appli : 66/66. Pages : 225 chargements (75 × 320, 390, 1366 px), 0 erreur JS, 0 débordement. audit_v5 : 0 erreur, 0 avertissement (liens, ancres, sitemap). JSON-LD valide. axe-core : 0 défaut sérieux ou critique. CACHE_VERSION v84. |
+
+Non fait : raccourcir les longs textes de toutes les pages (chantier éditorial à part, page par page) ; la page « Réagir en cas de crise » garde son titre, le menu l'appelle « Bons réflexes ».

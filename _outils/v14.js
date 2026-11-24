@@ -160,6 +160,11 @@ renderPhases=function(container,key,checked){
     ids.forEach(function(x){var p2=split(x[1]);h+=eq?triRow(x[0],p2[0],p2[1],st(checked[x[0]])):binRow('kit72',x[0],x[1],!!checked[x[0]])});
     h+='</ul></details>';
   });
+  var PW=[['e_bank','Batterie externe chargée','Rechargez-la tous les 3 mois'],['e_cables','Câbles et adaptateurs nécessaires','Pour vos téléphones et appareils'],['e_station','Station électrique portable','Facultatif · pour plusieurs appareils'],['e_solar','Panneau solaire compatible avec la station','Facultatif · recharge sans réseau']];
+  var pd=PW.filter(function(x){return st(checked[x[0]])===2}).length;
+  h+='<details class="card v14-card v14-cat"><summary class="card-head"><span>Autonomie électrique (facultatif)</span><span class="v14-count">'+countTxt(pd,PW.length)+'</span></summary><p class="v14-hint v14-pad">Ne fait pas partie du minimum officiel du kit 72 h. <a href="questions-reponses-kit-urgence.html#courant">Batterie ou station : la différence</a></p><ul class="v14-list">';
+  PW.forEach(function(x){h+=triRow(x[0],x[1],x[2],st(checked[x[0]]))});
+  h+='</ul></details>';
   container.innerHTML=h;
   container.querySelectorAll('.v14-seg input').forEach(function(inp){
     inp.addEventListener('change',function(){
@@ -267,7 +272,7 @@ renderNeeds();
 renderScenarioTab();
 updateDashboard();
 function fromHash(){var hs=location.hash.replace('#screen-','#');
-  if(hs==='#app-start'||hs==='#ma-preparation')showScreen('prep',true);
+  if(hs==='#app-start'||hs==='#ma-preparation'||hs==='#prep')showScreen('prep',true);
   else if(['#stock','#profils','#contacts','#voisinage','#scenarios','#guides'].indexOf(hs)>=0)showScreen(hs.slice(1),true);}
 fromHash();window.addEventListener('hashchange',fromHash);
 })();

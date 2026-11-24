@@ -155,6 +155,44 @@ def ctas():
         if u != t: open(f, 'w', encoding='utf-8').write(u); n += 1
     return n
 
+
+def editorial_nav():
+    """Harmonise le menu des pages éditoriales avec l'appli (v14b)."""
+    import glob
+    n = 0
+    for f in glob.glob(os.path.join(ROOT, '*.html')):
+        t = open(f, encoding='utf-8').read(); u = t
+        u = u.replace('<a class="head-cta nav-kit" href="./#app-start">Kit 72 h</a>', '<a class="head-cta nav-kit" href="./#screen-prep">Ma préparation</a>')
+        if 'href="./#screen-prep">Ma préparation</a></li>' not in u:
+            u = re.sub(r'(<li class="mn-i"><a class="mn-a" href="\./"[^>]*>Accueil</a></li>)', r'\1<li class="mn-i"><a class="mn-a" href="./#screen-prep">Ma préparation</a></li>', u, count=1)
+        u = re.sub(r'(<a class="mn-a" href="reagir-en-cas-de-crise\.html"[^>]*>)Réagir en cas de crise</a>', r'\1Bons réflexes</a>', u, count=1)
+        m1 = re.search(r'<li class="mn-i"><a class="mn-a" href="comprendre-s-informer\.html"[^>]*>[^<]*</a></li>', u)
+        m2 = re.search(r'<li class="mn-i"><a class="mn-a" href="reagir-en-cas-de-crise\.html"[^>]*>[^<]*</a></li>', u)
+        if m1 and m2 and m1.start() < m2.start():
+            a, b = m1.group(0), m2.group(0)
+            u = u[:m1.start()] + b + u[m1.end():m2.start()] + a + u[m2.end():]
+        u = u.replace('<a class="mn-sa" href="checklist-kit-urgence-72h.html">Ma checklist</a>', '<a class="mn-sa" href="checklist-kit-urgence-72h.html">Checklist à imprimer</a>')
+        if u != t: open(f, 'w', encoding='utf-8').write(u); n += 1
+    return n
+
+def faq_power():
+    p = 'questions-reponses-kit-urgence.html'; s = rd(p)
+    if 'v14-power' in s or 'station électrique portable ?' not in s: return 0
+    old = "s'il y a assez de soleil."
+    new = ("s'il y a assez de soleil. Le temps de recharge dépend de la puissance du panneau, de l'ensoleillement et du modèle de station.")
+    s = s.replace(old, new)
+    old2 = 'Elle ne brûle aucun carburant'
+    new2 = ("Elle n'alimente pas n'importe quel appareil : la puissance de l'appareil doit rester sous la puissance de sortie de la station, et sa capacité en Wh fixe la durée d'utilisation. Elle ne brûle aucun carburant")
+    s = s.replace(old2, new2)
+    s = s.replace('<details><summary>Quelle différence entre une batterie externe', '<details class="v14-power"><summary>Quelle différence entre une batterie externe', 1)
+    wr(p, s); return 1
+
+def home_density():
+    s = rd('index.html')
+    if '<details class="v14-feat">' in s: return 0
+    s, n = re.subn(r'(<ul class="lp-feat" role="list">.*?</ul>)', r'<details class="v14-feat"><summary>Ce que contient la checklist</summary>\1</details>', s, count=1, flags=re.S)
+    wr('index.html', s); return n
+
 def styles():
     s = rd('style.css')
     s = re.sub(r'/\* ===== v14 \(source.*?/\* /v14 \*/\n?', '', s, flags=re.S)
@@ -163,10 +201,10 @@ def styles():
 def sw():
     s = rd('sw.js')
     m = re.search(r"CACHE_VERSION = 'tous-prets-v(\d+)'", s)
-    if m and '/* v14 */' not in s:
-        s = s.replace(m.group(0), "CACHE_VERSION = 'tous-prets-v%d'" % (int(m.group(1)) + 1)) + '\n/* v14 */\n'
+    if m and '/* v14b */' not in s:
+        s = s.replace(m.group(0), "CACHE_VERSION = 'tous-prets-v%d'" % (int(m.group(1)) + 1)) + '\n/* v14b */\n'
         wr('sw.js', s)
 
 if __name__ == '__main__':
-    index(); g = guides(); c = ctas(); styles(); sw()
-    print('v14 : accueil, navigation, Ma préparation, checklist, foyer ; guides :', g, '; boutons appli :', c)
+    index(); g = guides(); c = ctas(); e = editorial_nav(); fq = faq_power(); hd = home_density(); styles(); sw()
+    print('v14 : accueil, navigation, Ma préparation, checklist, foyer ; guides :', g, '; boutons appli :', c, '; menus :', e, '; FAQ :', fq, '; accueil :', hd)

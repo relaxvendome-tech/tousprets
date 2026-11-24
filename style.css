@@ -861,4 +861,7 @@ details.v14-cat[open]>summary::after{transform:rotate(-135deg);margin-top:4px}
 @media (max-width:899px){#scenarioChips{display:flex!important;flex-direction:row!important;flex-wrap:wrap;align-items:flex-start!important;gap:8px}#scenarioChips .chip{width:auto!important;border-radius:999px!important;padding:8px 14px!important}}
 .v14-s0 input:checked+span{background:var(--bg-soft)!important;color:var(--text)!important;box-shadow:inset 0 0 0 2px var(--text-dim)}
 .screen h2[tabindex="-1"]:focus{outline:none}
+.v14-pad{padding:10px 16px 0}
+details.v14-feat{margin:14px 0 0}
+details.v14-feat>summary{cursor:pointer;font-weight:700;min-height:48px;display:flex;align-items:center;color:inherit;text-decoration:underline;text-underline-offset:3px}
 /* /v14 */

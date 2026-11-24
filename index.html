@@ -670,6 +670,9 @@ details.v14-cat[open]>summary::after{transform:rotate(-135deg);margin-top:4px}
 @media (max-width:899px){#scenarioChips{display:flex!important;flex-direction:row!important;flex-wrap:wrap;align-items:flex-start!important;gap:8px}#scenarioChips .chip{width:auto!important;border-radius:999px!important;padding:8px 14px!important}}
 .v14-s0 input:checked+span{background:var(--bg-soft)!important;color:var(--text)!important;box-shadow:inset 0 0 0 2px var(--text-dim)}
 .screen h2[tabindex="-1"]:focus{outline:none}
+.v14-pad{padding:10px 16px 0}
+details.v14-feat{margin:14px 0 0}
+details.v14-feat>summary{cursor:pointer;font-weight:700;min-height:48px;display:flex;align-items:center;color:inherit;text-decoration:underline;text-underline-offset:3px}
 /* /v14 */</style>
 </head>
 <body>
@@ -716,7 +719,7 @@ details.v14-cat[open]>summary::after{transform:rotate(-135deg);margin-top:4px}
           <p class="lp-kit-cta"><a class="lp-btn lp-btn1" href="#app-start" data-v14go="prep">Ouvrir ma checklist 72 heures</a></p>
           <p class="lp-more">Besoin de la liste complète ? <a href="kit-de-survie-72h.html">Consulter la liste du kit 72 h</a></p>
         </div>
-        <ul class="lp-feat" role="list">
+        <details class="v14-feat"><summary>Ce que contient la checklist</summary><ul class="lp-feat" role="list">
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5c3 3.9 5.5 7 5.5 10a5.5 5.5 0 0 1-11 0c0-3 2.5-6.1 5.5-10z"/></svg><span><strong>Eau</strong><small>Repère du guide officiel : 6 litres par personne pour 72 heures.</small></span></li>
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="7" width="14" height="13" rx="2"/><path d="M8 7V5h8v2M5 12h14"/></svg><span><strong>Alimentation</strong><small>Des aliments qui se mangent sans cuisson, par catégorie.</small></span></li>
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="8" width="16" height="11" rx="2"/><path d="M9 8V6a3 3 0 0 1 6 0v2M4 13h16"/></svg><span><strong>Équipement</strong><small>Lampe, radio, piles, batterie : cochez ce que vous avez déjà.</small></span></li>
@@ -725,7 +728,7 @@ details.v14-cat[open]>summary::after{transform:rotate(-135deg);margin-top:4px}
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17a8 8 0 1 1 16 0"/><path d="M12 17l4-5"/></svg><span><strong>Niveau de préparation</strong><small>Un pourcentage qui tient compte du stock, du foyer et des contacts.</small></span></li>
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg><span><strong>Parcours en 4 semaines</strong><small>Les fondamentaux, la santé et la sécurité, l’autonomie, la famille.</small></span></li>
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="9" r="3"/><circle cx="16" cy="9" r="3"/><path d="M3 19c.5-3 2.6-4.5 5-4.5s4.5 1.5 5 4.5M11 19c.5-3 2.6-4.5 5-4.5s4.5 1.5 5 4.5"/></svg><span><strong>Voisins</strong><small>Un groupe de voisinage sans compte : les informations s’échangent par un code ou un QR code que vous partagez vous-même.</small></span></li>
-        </ul>
+        </ul></details>
       </div>
 
       <div class="lp-sec" aria-labelledby="lpS2">
@@ -3060,6 +3063,11 @@ renderPhases=function(container,key,checked){
     ids.forEach(function(x){var p2=split(x[1]);h+=eq?triRow(x[0],p2[0],p2[1],st(checked[x[0]])):binRow('kit72',x[0],x[1],!!checked[x[0]])});
     h+='</ul></details>';
   });
+  var PW=[['e_bank','Batterie externe chargée','Rechargez-la tous les 3 mois'],['e_cables','Câbles et adaptateurs nécessaires','Pour vos téléphones et appareils'],['e_station','Station électrique portable','Facultatif · pour plusieurs appareils'],['e_solar','Panneau solaire compatible avec la station','Facultatif · recharge sans réseau']];
+  var pd=PW.filter(function(x){return st(checked[x[0]])===2}).length;
+  h+='<details class="card v14-card v14-cat"><summary class="card-head"><span>Autonomie électrique (facultatif)</span><span class="v14-count">'+countTxt(pd,PW.length)+'</span></summary><p class="v14-hint v14-pad">Ne fait pas partie du minimum officiel du kit 72 h. <a href="questions-reponses-kit-urgence.html#courant">Batterie ou station : la différence</a></p><ul class="v14-list">';
+  PW.forEach(function(x){h+=triRow(x[0],x[1],x[2],st(checked[x[0]]))});
+  h+='</ul></details>';
   container.innerHTML=h;
   container.querySelectorAll('.v14-seg input').forEach(function(inp){
     inp.addEventListener('change',function(){
@@ -3167,7 +3175,7 @@ renderNeeds();
 renderScenarioTab();
 updateDashboard();
 function fromHash(){var hs=location.hash.replace('#screen-','#');
-  if(hs==='#app-start'||hs==='#ma-preparation')showScreen('prep',true);
+  if(hs==='#app-start'||hs==='#ma-preparation'||hs==='#prep')showScreen('prep',true);
   else if(['#stock','#profils','#contacts','#voisinage','#scenarios','#guides'].indexOf(hs)>=0)showScreen(hs.slice(1),true);}
 fromHash();window.addEventListener('hashchange',fromHash);
 })();
